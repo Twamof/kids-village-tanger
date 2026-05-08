@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Village Tanger — Where Your Kid's Future Begins</title>
+    <meta name="description"
+        content="Kids Village Tanger is a premier playground and daycare center in Morocco. Safe, fun, and educational for your little ones.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        fredoka: ['Fredoka', 'sans-serif'],
+                        quicksand: ['Quicksand', 'sans-serif'],
+                    },
+                    colors: {
+                        'nav-blue': '#9ee0fc',
+                        'nav-green': '#9bf3d0',
+                        'nav-yellow': '#ffe97d',
+                        'nav-orange': '#ffb57b',
+                        'nav-pink': '#ffb7d5',
+                        'mint': '#a7f3d0',
+                        'sky-soft': '#a6e1fa',
+                        'hero-bg': '#f0f9ff',
+                        'yellow-bg': '#fde047',
+                    },
+                    borderRadius: {
+                        'pill': '9999px',
+                        '3xl': '1.5rem',
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-quicksand text-gray-800 overflow-x-hidden bg-white">
+
+    <!-- ========== HEADER / NAV ========== -->
+    <header class="kids-header">
+        <div class="kids-navbar">
+            <!-- Logo (Left) -->
+            <a href="#home" class="nav-brand">
+                <img src="logo.png" alt="Kids Village Logo" class="h-16 w-auto">
+            </a>
+
+            <!-- Navigation Links (Center) -->
+            <nav class="nav-menu desktop-only">
+                <a href="#home" class="nav-link nav-blue">Home</a>
+                <a href="#about" class="nav-link nav-green">About</a>
+                <a href="#gallery" class="nav-link nav-yellow active">Gallery</a>
+                <a href="#reviews" class="nav-link nav-orange">Reviews</a>
+                <a href="#contact" class="nav-link nav-pink">Contact</a>
+            </nav>
+
+            <!-- CTA Button (Right) -->
+            <div class="nav-actions">
+                <a href="#book" class="nav-cta desktop-only">Book a Visit</a>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle mobile-only" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <nav class="mobile-nav-menu" style="display: none;">
+            <a href="#home" class="mobile-link nav-blue">Home</a>
+            <a href="#about" class="mobile-link nav-green">About</a>
+            <a href="#gallery" class="mobile-link nav-yellow active">Gallery</a>
+            <a href="#reviews" class="mobile-link nav-orange">Reviews</a>
+            <a href="#contact" class="mobile-link nav-pink">Contact</a>
+            <a href="#book" class="mobile-cta">Book a Visit</a>
+        </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="home" class="hero relative bg-white overflow-hidden min-h-screen flex items-center">
+        <!-- Floating Elements & Blobs -->
+        <div class="floating-el el-1 text-4xl">🎈</div>
+        <div class="floating-el el-2 text-2xl">⭐</div>
+        <div class="floating-el el-3 text-4xl">🚗</div>
+        <div class="floating-el el-4 text-3xl">🎁</div>
+        <div class="floating-el el-5 text-2xl">⭐</div>
+        <div class="floating-el el-6 text-3xl">🧩</div>
+        <div class="floating-el el-7 text-4xl">🎉</div>
+        
+        <!-- Decorative Background Blobs -->
+        <div class="absolute top-20 -left-10 w-48 h-48 bg-nav-blue opacity-20 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-40 -right-20 w-64 h-64 bg-nav-pink opacity-20 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute top-1/2 left-1/3 w-32 h-32 bg-nav-yellow opacity-10 rounded-full blur-2xl -z-10"></div>
+
+        <div
+            class="w-full max-w-6xl mx-auto px-6 pt-28 pb-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
+            <!-- Text Side -->
+            <div class="hero-content">
+                <h1 class="font-fredoka text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
+                    Kids Village Tanger .. Where<br>your kid's future begins ✨
+                </h1>
+                <p class="text-gray-600 text-lg mb-8 font-quicksand font-medium leading-relaxed">
+                    Discover a magical world of fun, learning, and adventure for<br>
+                    your little ones. Safe, engaging, and full of joy!
+                </p>
+                <div class="flex gap-4 flex-wrap">
+                    <a href="#birthday"
+                        class="btn-hero bg-orange-400 text-white font-fredoka font-semibold text-lg px-7 py-3 rounded-pill shadow-md hover:-translate-y-1 transition-transform inline-block">
+                        Plan a Birthday
+                    </a>
+                    <a href="#video"
+                        class="btn-hero bg-green-300 text-gray-800 font-fredoka font-semibold text-lg px-7 py-3 rounded-pill shadow-md hover:-translate-y-1 transition-transform inline-flex items-center gap-2">
+                        <i class="fa-solid fa-play text-sm"></i> Watch Video
+                    </a>
+                </div>
+            </div>
+            <!-- Hero Image -->
+            <div class="hero-image-wrapper relative">
+                <div class="rounded-4xl overflow-hidden shadow-2xl border-4 border-white" style="height:420px;">
+                    <img src="https://images.unsplash.com/photo-1575783970733-1aaedde1db74?auto=format&fit=crop&w=900&q=80"
+                        alt="Kids Playground" class="w-full h-full object-cover">
+                </div>
+                <!-- Decorative dots -->
+                <div class="absolute -bottom-3 -left-3 w-16 h-16 bg-yellow-300 rounded-full opacity-60 -z-10"></div>
+                <div class="absolute -top-3 -right-3 w-12 h-12 bg-pink-300 rounded-full opacity-60 -z-10"></div>
+            </div>
+        </div>
+
+        <!-- Wave Bottom: double-layered CSS-animated wave -->
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path class="wave-back" fill="#a6e1fa" fill-opacity="0.5"
+                    d="M0,80 C180,40 360,120 540,100 C720,80 900,30 1080,60 C1260,90 1350,110 1440,95 L1440,160 L0,160 Z" />
+                <path class="wave-front" fill="#a6e1fa" fill-opacity="1"
+                    d="M0,110 C240,80 420,140 660,115 C900,90 1080,55 1260,90 C1350,107 1400,120 1440,115 L1440,160 L0,160 Z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== WHO WE ARE ========== -->
+    <section id="about" class="bg-sky-soft pb-20 px-6 relative" style="padding-top: 40px;">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-fredoka text-4xl font-bold text-center text-gray-800 mb-12">Who we are</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Collage -->
+                <div class="about-collage relative flex-1" style="height:380px; min-width:360px;">
+                    <div class="collage-img img-1"><img
+                            src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=400&q=80"
+                            alt="Kids playing"></div>
+                    <div class="collage-img img-2"><img
+                            src="https://images.unsplash.com/photo-1587691592099-24045742c181?auto=format&fit=crop&w=400&q=80"
+                            alt="Kids painting"></div>
+                    <div class="collage-img img-3"><img
+                            src="https://images.unsplash.com/photo-1519340333755-56e9c1d04579?auto=format&fit=crop&w=400&q=80"
+                            alt="Kids learning"></div>
+                    <div class="collage-img img-4"><img
+                            src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80"
+                            alt="Kids group"></div>
+                </div>
+                <!-- Text -->
+                <div class="about-text flex-1">
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8 font-quicksand font-medium">
+                        Kids Village Tanger is a premier playground and daycare center. We believe in fostering
+                        creativity, imagination, and physical development in a safe and nurturing environment. Our
+                        facilities include exciting play structures, educational zones, and a dedicated team of
+                        caregivers.
+                    </p>
+                    <a href="#learn-more"
+                        class="inline-block bg-pink-300 text-gray-800 font-fredoka font-semibold text-lg px-8 py-3 rounded-pill shadow-md hover:-translate-y-1 transition-transform">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PLAYGROUND BANNER ========== -->
+    <section class="playground-banner w-full overflow-hidden" style="height:380px;">
+        <img src="https://images.unsplash.com/photo-1575783970733-1aaedde1db74?auto=format&fit=crop&w=1920&q=80"
+            alt="Playground" class="w-full h-full object-cover">
+    </section>
+
+    <!-- ========== MEDIA GALLERY ========== -->
+    <section id="gallery" class="bg-mint py-16 px-6 text-center">
+        <h2 class="font-fredoka text-4xl font-bold text-gray-800 mb-8">Media Gallery</h2>
+
+        <!-- Filter buttons -->
+        <div class="inline-flex bg-white rounded-pill p-1 shadow-md mb-10 gallery-filters">
+            <button class="filter-btn active font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all"
+                data-filter="all">All</button>
+            <button
+                class="filter-btn filter-birthdays font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all"
+                data-filter="birthdays">Birthdays</button>
+            <button
+                class="filter-btn filter-school font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all"
+                data-filter="school">School</button>
+            <button
+                class="filter-btn filter-holidays font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all"
+                data-filter="holidays">Holidays</button>
+            <button
+                class="filter-btn filter-animals font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all"
+                data-filter="animals">Animals</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid max-w-4xl mx-auto">
+            <div class="gallery-item school"><img
+                    src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=500&q=80"
+                    alt="Boy playing with balls"></div>
+            <div class="gallery-item holidays main-clown"><img
+                    src="https://images.unsplash.com/photo-1605367332213-39f50e3957eb?auto=format&fit=crop&w=600&q=80"
+                    alt="Clown"></div>
+            <div class="gallery-item birthdays"><img
+                    src="https://images.unsplash.com/photo-1530103862676-de8892bc952f?auto=format&fit=crop&w=500&q=80"
+                    alt="Kids birthday"></div>
+            <div class="gallery-item school"><img
+                    src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=500&q=80"
+                    alt="Kids in class"></div>
+            <div class="gallery-item school"><img
+                    src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=500&q=80"
+                    alt="Outdoor play"></div>
+            <div class="gallery-item birthdays"><img
+                    src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=500&q=80"
+                    alt="Birthday cake"></div>
+            <div class="gallery-item holidays"><img
+                    src="https://images.unsplash.com/photo-1545048702-79362596cdc9?auto=format&fit=crop&w=500&q=80"
+                    alt="Christmas kids"></div>
+            <div class="gallery-item animals"><img
+                    src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=500&q=80"
+                    alt="Wooden animals"></div>
+            <div class="gallery-item animals"><img
+                    src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&w=500&q=80"
+                    alt="Toy elephant"></div>
+            <div class="gallery-item animals"><img
+                    src="https://images.unsplash.com/photo-1534415444122-38b0069351e2?auto=format&fit=crop&w=500&q=80"
+                    alt="Rocking animal"></div>
+            <div class="gallery-item animals"><img
+                    src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?auto=format&fit=crop&w=500&q=80"
+                    alt="Plush toys"></div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section id="reviews" class="bg-yellow-200 py-16 px-6 text-center">
+        <h2 class="font-fredoka text-4xl font-bold text-gray-800 mb-10">Testimonials</h2>
+
+        <div class="testimonials-slider flex items-center justify-center gap-6 max-w-4xl mx-auto">
+            <!-- Left Arrow -->
+            <button
+                class="left-arrow w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform flex-shrink-0">
+                <i class="fa-solid fa-chevron-left text-gray-600"></i>
+            </button>
+
+            <!-- Bubbles -->
+            <div class="testimonial-bubbles flex gap-6 flex-1">
+                <div class="bubble pink-bubble flex-1 bg-nav-pink p-6 rounded-3xl text-left shadow-md"
+                    style="border-radius:30px 30px 30px 5px;">
+                    <p class="text-gray-800 font-quicksand font-medium italic text-base mb-4">
+                        "An amazing place! My daughter loves it here. The staff is wonderful and the facilities are
+                        top-notch. Highly recommend!"
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-fredoka font-semibold text-gray-800">- Sarah M.</span>
+                        <div class="stars text-yellow-400">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bubble blue-bubble flex-1 bg-nav-blue p-6 rounded-3xl text-left shadow-md"
+                    style="border-radius:30px 30px 30px 5px;">
+                    <p class="text-gray-800 font-quicksand font-medium italic text-base mb-4">
+                        "Best birthday party ever! The team made everything perfect. Our son had a blast. Thank you Kids
+                        Village!"
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-fredoka font-semibold text-gray-800">- Ahmed K.</span>
+                        <div class="stars text-yellow-400">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button
+                class="right-arrow w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform flex-shrink-0">
+                <i class="fa-solid fa-chevron-right text-gray-600"></i>
+            </button>
+        </div>
+
+        <!-- Dots -->
+        <div class="slider-dots flex justify-center gap-3 mt-6">
+            <span class="dot pink-dot active"></span>
+            <span class="dot green-dot"></span>
+            <span class="dot yellow-dot"></span>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT & MAP ========== -->
+    <section id="contact" class="bg-white py-16 px-6">
+        <h2 class="font-fredoka text-4xl font-bold text-center text-gray-800 mb-10">Contact &amp; Map</h2>
+        <div class="contact-container max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-stretch">
+            <!-- Fun Info Card Wrapper -->
+            <div class="fun-info-wrapper relative flex-1 min-w-[300px]">
+                <!-- Layered background shapes -->
+                <div class="absolute -top-3 -left-3 w-24 h-24 bg-yellow-300 rounded-3xl opacity-80 rotate-12 -z-10"></div>
+                <div class="absolute -bottom-3 -right-3 w-28 h-28 bg-yellow-400 rounded-3xl opacity-80 -rotate-6 -z-10"></div>
+                
+                <div class="fun-info-card bg-orange-400 rounded-[2.5rem] shadow-2xl relative">
+                    <!-- Tab/Pill Header -->
+                    <div class="fun-info-pill absolute -top-5 left-1/2 -translate-x-1/2 bg-yellow-300 text-gray-800 font-fredoka text-xl font-bold px-10 py-3 rounded-pill shadow-md z-20 whitespace-nowrap">
+                        Fun info
+                    </div>
+                    
+                    <div class="fun-info-body p-10 pt-16 flex flex-col gap-6">
+                        <div class="info-item flex items-center gap-4 text-white font-fredoka font-semibold text-lg">
+                            <i class="fa-solid fa-phone text-2xl"></i>
+                            <span>+212 6XX XXX XXX</span>
+                        </div>
+                        <div class="info-item flex items-center gap-4 text-white font-fredoka font-semibold text-lg">
+                            <i class="fa-solid fa-location-dot text-2xl"></i>
+                            <span>Tanger, Morocco</span>
+                        </div>
+                        <div class="info-item flex items-start gap-4 text-white font-fredoka font-semibold text-lg">
+                            <i class="fa-regular fa-clock text-2xl mt-1"></i>
+                            <span>Mon-Fri: 8 AM – 6 PM<br>Sat-Sun: 9 AM – 5 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Map -->
+            <div class="map-embed flex-grow" style="min-height:280px; flex:1.5;">
+                <div class="w-full h-full rounded-4xl overflow-hidden border-4 border-sky-soft shadow-xl"
+                    style="min-height:280px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.2514101740926!2d-5.8114642!3d35.7721266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b81cb046c1643%3A0xb4f9936b24df8aa8!2sKids%20Village!5e0!3m2!1sen!2sma!4v1715018612143!5m2!1sen!2sma"
+                        width="100%" height="100%" style="border:0; min-height:280px;" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+<footer class="bg-sky-soft pt-20 pb-6 relative overflow-hidden">
+        <!-- Top Wave Divider -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-16">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+        <!-- Distributed Animal Scenery -->
+        <div class="footer-decorations absolute bottom-0 left-0 w-full h-full pointer-events-none z-0">
+            <!-- Stretched Rolling Hills Background -->
+            <div class="decor-hills">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,120 L1200,120 L1200,60 C1100,40 1000,80 900,60 C800,40 700,70 600,50 C500,30 400,60 300,40 C200,20 100,50 0,30 Z" fill="#86efac" />
+                </svg>
+            </div>
+
+            <!-- Group 1: Elephant (Left) -->
+            <div class="footer-decor-group" style="left: 5%;">
+                <svg viewBox="0 0 100 100">
+                    <g transform="translate(50, 70)">
+                        <g class="anim-sway">
+                            <ellipse cx="0" cy="0" rx="40" ry="30" fill="#94a3b8" />
+                            <circle cx="30" cy="-5" r="22" fill="#94a3b8" />
+                            <g class="anim-ear"><ellipse cx="15" cy="-10" rx="12" ry="18" fill="#64748b" /></g>
+                            <path d="M45,0 Q65,0 65,15" fill="none" stroke="#94a3b8" stroke-width="10" stroke-linecap="round" />
+                            <circle cx="38" cy="-8" r="2.5" fill="#333" class="eye-blink" />
+                            <rect x="-25" y="25" width="10" height="20" fill="#475569" rx="2" /><rect x="5" y="25" width="10" height="20" fill="#475569" rx="2" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Group 2: House & Blocks (Center-Left) -->
+            <div class="footer-decor-group" style="left: 20%;">
+                <svg viewBox="0 0 120 120">
+                    <g transform="translate(60, 60)">
+                        <rect x="0" y="40" width="40" height="50" fill="#fecaca" rx="4" />
+                        <path d="M-5,40 L45,40 L20,10 Z" fill="#a855f7" />
+                        <rect x="12" y="65" width="16" height="25" fill="#ffffff" rx="2" />
+                        <!-- Blocks -->
+                        <g transform="translate(-45, 60)">
+                            <rect x="0" y="0" width="25" height="25" fill="#fbbf24" rx="4" />
+                            <text x="6" y="18" font-family="Fredoka" font-weight="bold" font-size="14" fill="#ffffff">A</text>
+                            <rect x="28" y="-5" width="25" height="25" fill="#60a5fa" rx="4" />
+                            <text x="34" y="13" font-family="Fredoka" font-weight="bold" font-size="14" fill="#ffffff">1</text>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Group 3: Birds (Middle) -->
+            <div class="footer-decor-group" style="left: 45%; height: 200px;">
+                <svg viewBox="0 0 100 100">
+                    <g class="anim-bird" style="animation-delay: -1s;">
+                        <g transform="translate(50, 40)">
+                            <path d="M-10,0 Q0,-10 10,0" fill="none" stroke="#333" stroke-width="2" class="anim-wing" />
+                            <path d="M-10,0 Q0,10 10,0" fill="none" stroke="#333" stroke-width="2" style="transform: scaleY(-1);" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Group 4: Giraffe (Center-Right) -->
+            <div class="footer-decor-group" style="right: 25%;">
+                <svg viewBox="0 0 100 150">
+                    <g transform="translate(50, 40)">
+                        <g class="anim-neck">
+                            <ellipse cx="0" cy="80" rx="35" ry="22" fill="#fbbf24" />
+                            <path d="M20,70 L40,-10" stroke="#fbbf24" stroke-width="14" stroke-linecap="round" />
+                            <g transform="translate(45, -15)">
+                                <ellipse cx="0" cy="0" rx="18" ry="12" fill="#fbbf24" />
+                                <circle cx="8" cy="-3" r="2.5" fill="#333" class="eye-blink" />
+                                <rect x="-5" y="-15" width="4" height="8" fill="#fbbf24" /><rect x="5" y="-15" width="4" height="8" fill="#fbbf24" />
+                            </g>
+                            <circle cx="-10" cy="75" r="5" fill="#d97706" opacity="0.6" /><circle cx="10" cy="85" r="4" fill="#d97706" opacity="0.6" />
+                            <rect x="-15" y="100" width="6" height="35" fill="#d97706" /><rect x="10" y="100" width="6" height="35" fill="#d97706" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Group 5: Hippo (Far Right) -->
+            <div class="footer-decor-group" style="right: 14%;">
+                <svg viewBox="0 0 100 150">
+                    <g transform="translate(50, 100)">
+                        <g class="anim-sway">
+                            <ellipse cx="0" cy="0" rx="40" ry="25" fill="#94a3b8" />
+                            <circle cx="30" cy="-5" r="20" fill="#94a3b8" />
+                            <circle cx="35" cy="-8" r="2.5" fill="#333" class="eye-blink" />
+                            <rect x="-20" y="20" width="10" height="15" fill="#475569" rx="2" /><rect x="5" y="20" width="10" height="15" fill="#475569" rx="2" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Group 6: Llama (Far Right) -->
+            <div class="footer-decor-group" style="right: 3%;">
+                <svg viewBox="0 0 100 150">
+                    <g transform="translate(50, 90)">
+                        <g class="anim-sway">
+                            <ellipse cx="0" cy="20" rx="20" ry="30" fill="#b45309" />
+                            <path d="M12,0 Q20,-35 20,-45" fill="none" stroke="#b45309" stroke-width="10" stroke-linecap="round" />
+                            <g transform="translate(20, -55)">
+                                <circle cx="0" cy="0" r="12" fill="#b45309" />
+                                <circle cx="4" cy="-2" r="2" fill="#ffffff" />
+                            </g>
+                            <rect x="-12" y="45" width="6" height="20" fill="#78350f" rx="2" /><rect x="6" y="45" width="6" height="20" fill="#78350f" rx="2" />
+                            <path d="M-18,15 Q-30,10 -25,20" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round" class="anim-tail" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto flex flex-col items-center gap-6 pb-20 px-6 relative z-10">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="logo.png" alt="Kids Village Logo" class="h-24 w-auto mb-4">
+            </div>
+            
+            <!-- Social Icons -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://www.instagram.com/kidsvillagetanger/" target="_blank"
+                    class="h-10 px-4 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-lg font-quicksand font-bold tracking-wide"
+                    title="Instagram">
+                    <i class="fa-brands fa-instagram text-lg"></i>
+                    <span>kidsvillagetanger</span>
+                </a>
+                <a href="https://web.facebook.com/KidsVillage2023/?_rdc=1&_rdr#" target="_blank"
+                    class="h-10 px-4 bg-blue-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-lg font-quicksand font-bold tracking-wide"
+                    title="Facebook">
+                    <i class="fa-brands fa-facebook-f text-lg"></i>
+                    <span>KidsVillage2023</span>
+                </a>
+                <a href="https://www.youtube.com/@KidsVillageTanger" target="_blank"
+                    class="h-10 px-4 bg-red-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-lg font-quicksand font-bold tracking-wide"
+                    title="YouTube">
+                    <i class="fa-brands fa-youtube text-lg"></i>
+                    <span>KidsVillageTanger</span>
+                </a>
+            </div>
+
+            <!-- Links -->
+            <div class="flex items-center gap-4 text-gray-700 font-fredoka font-medium">
+                <a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
+                <span class="text-gray-300">|</span>
+                <a href="reglement.html" class="hover:text-blue-600 transition-colors">Règlement Intérieur</a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="font-quicksand text-gray-500 text-sm font-medium">
+                &copy; 2024 Kids Village Tanger. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
