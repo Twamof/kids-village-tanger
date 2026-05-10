@@ -1,0 +1,8 @@
+{
+  "name": "kids-village-tanger",
+  "version": "1.0.0",
+  "description": "Kids Village Tanger website",
+  "scripts": {
+    "dev": "npx live-server"
+  }
+}

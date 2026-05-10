@@ -56,7 +56,7 @@
         <div class="kids-navbar">
             <!-- Logo (Left) -->
             <a href="#home" class="nav-brand">
-                <img src="logo.png" alt="Kids Village Logo" class="h-16 w-auto">
+                <img src="logo-removebg-preview.png" alt="Kids Village Logo" class="h-16 w-auto">
             </a>
 
             <!-- Navigation Links (Center) -->
@@ -71,7 +71,7 @@
             <!-- CTA Button (Right) -->
             <div class="nav-actions">
                 <a href="#book" class="nav-cta desktop-only">Book a Visit</a>
-                
+
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-toggle mobile-only" aria-label="Toggle Menu">
                     <i class="fa-solid fa-bars"></i>
@@ -80,7 +80,7 @@
         </div>
 
         <!-- Mobile Navigation Menu (Hidden by default) -->
-        <nav class="mobile-nav-menu" style="display: none;">
+        <nav class="mobile-nav-menu">
             <a href="#home" class="mobile-link nav-blue">Home</a>
             <a href="#about" class="mobile-link nav-green">About</a>
             <a href="#gallery" class="mobile-link nav-yellow active">Gallery</a>
@@ -100,7 +100,7 @@
         <div class="floating-el el-5 text-2xl">⭐</div>
         <div class="floating-el el-6 text-3xl">🧩</div>
         <div class="floating-el el-7 text-4xl">🎉</div>
-        
+
         <!-- Decorative Background Blobs -->
         <div class="absolute top-20 -left-10 w-48 h-48 bg-nav-blue opacity-20 rounded-full blur-3xl -z-10"></div>
         <div class="absolute bottom-40 -right-20 w-64 h-64 bg-nav-pink opacity-20 rounded-full blur-3xl -z-10"></div>
@@ -270,11 +270,11 @@
                 <div class="bubble pink-bubble flex-1 bg-nav-pink p-6 rounded-3xl text-left shadow-md"
                     style="border-radius:30px 30px 30px 5px;">
                     <p class="text-gray-800 font-quicksand font-medium italic text-base mb-4">
-                        "An amazing place! My daughter loves it here. The staff is wonderful and the facilities are
-                        top-notch. Highly recommend!"
+                        "Excellente rapport qualité/prix. 50 dhs l'entrée pour une heure. L'endroit est propre et le
+                        personnel est très sympathique."
                     </p>
                     <div class="flex justify-between items-center">
-                        <span class="font-fredoka font-semibold text-gray-800">- Sarah M.</span>
+                        <span class="font-fredoka font-semibold text-gray-800">- Sarah Sarah</span>
                         <div class="stars text-yellow-400">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                 class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -285,11 +285,11 @@
                 <div class="bubble blue-bubble flex-1 bg-nav-blue p-6 rounded-3xl text-left shadow-md"
                     style="border-radius:30px 30px 30px 5px;">
                     <p class="text-gray-800 font-quicksand font-medium italic text-base mb-4">
-                        "Best birthday party ever! The team made everything perfect. Our son had a blast. Thank you Kids
-                        Village!"
+                        "Super expérience pour les enfants. Très bien encadré, propre et avec un super espace de jeux.
+                        Recommande vivement !"
                     </p>
                     <div class="flex justify-between items-center">
-                        <span class="font-fredoka font-semibold text-gray-800">- Ahmed K.</span>
+                        <span class="font-fredoka font-semibold text-gray-800">- Coralie Sakili</span>
                         <div class="stars text-yellow-400">
                             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                 class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -311,6 +311,9 @@
             <span class="dot pink-dot active"></span>
             <span class="dot green-dot"></span>
             <span class="dot yellow-dot"></span>
+            <span class="dot pink-dot"></span>
+            <span class="dot green-dot"></span>
+            <span class="dot yellow-dot"></span>
         </div>
     </section>
 
@@ -321,15 +324,18 @@
             <!-- Fun Info Card Wrapper -->
             <div class="fun-info-wrapper relative flex-1 min-w-[300px]">
                 <!-- Layered background shapes -->
-                <div class="absolute -top-3 -left-3 w-24 h-24 bg-yellow-300 rounded-3xl opacity-80 rotate-12 -z-10"></div>
-                <div class="absolute -bottom-3 -right-3 w-28 h-28 bg-yellow-400 rounded-3xl opacity-80 -rotate-6 -z-10"></div>
-                
+                <div class="absolute -top-3 -left-3 w-24 h-24 bg-yellow-300 rounded-3xl opacity-80 rotate-12 -z-10">
+                </div>
+                <div class="absolute -bottom-3 -right-3 w-28 h-28 bg-yellow-400 rounded-3xl opacity-80 -rotate-6 -z-10">
+                </div>
+
                 <div class="fun-info-card bg-orange-400 rounded-[2.5rem] shadow-2xl relative">
                     <!-- Tab/Pill Header -->
-                    <div class="fun-info-pill absolute -top-5 left-1/2 -translate-x-1/2 bg-yellow-300 text-gray-800 font-fredoka text-xl font-bold px-10 py-3 rounded-pill shadow-md z-20 whitespace-nowrap">
+                    <div
+                        class="fun-info-pill absolute -top-5 left-1/2 -translate-x-1/2 bg-yellow-300 text-gray-800 font-fredoka text-xl font-bold px-10 py-3 rounded-pill shadow-md z-20 whitespace-nowrap">
                         Fun info
                     </div>
-                    
+
                     <div class="fun-info-body p-10 pt-16 flex flex-col gap-6">
                         <div class="info-item flex items-center gap-4 text-white font-fredoka font-semibold text-lg">
                             <i class="fa-solid fa-phone text-2xl"></i>
@@ -361,11 +367,13 @@
     </section>
 
     <!-- ========== FOOTER ========== -->
-<footer class="bg-sky-soft pt-20 pb-6 relative overflow-hidden">
+    <footer class="bg-sky-soft pt-20 pb-6 relative overflow-hidden">
         <!-- Top Wave Divider -->
         <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-16">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    fill="#ffffff"></path>
             </svg>
         </div>
         <!-- Distributed Animal Scenery -->
@@ -373,7 +381,9 @@
             <!-- Stretched Rolling Hills Background -->
             <div class="decor-hills">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M0,120 L1200,120 L1200,60 C1100,40 1000,80 900,60 C800,40 700,70 600,50 C500,30 400,60 300,40 C200,20 100,50 0,30 Z" fill="#86efac" />
+                    <path
+                        d="M0,120 L1200,120 L1200,60 C1100,40 1000,80 900,60 C800,40 700,70 600,50 C500,30 400,60 300,40 C200,20 100,50 0,30 Z"
+                        fill="#86efac" />
                 </svg>
             </div>
 
@@ -384,10 +394,14 @@
                         <g class="anim-sway">
                             <ellipse cx="0" cy="0" rx="40" ry="30" fill="#94a3b8" />
                             <circle cx="30" cy="-5" r="22" fill="#94a3b8" />
-                            <g class="anim-ear"><ellipse cx="15" cy="-10" rx="12" ry="18" fill="#64748b" /></g>
-                            <path d="M45,0 Q65,0 65,15" fill="none" stroke="#94a3b8" stroke-width="10" stroke-linecap="round" />
+                            <g class="anim-ear">
+                                <ellipse cx="15" cy="-10" rx="12" ry="18" fill="#64748b" />
+                            </g>
+                            <path d="M45,0 Q65,0 65,15" fill="none" stroke="#94a3b8" stroke-width="10"
+                                stroke-linecap="round" />
                             <circle cx="38" cy="-8" r="2.5" fill="#333" class="eye-blink" />
-                            <rect x="-25" y="25" width="10" height="20" fill="#475569" rx="2" /><rect x="5" y="25" width="10" height="20" fill="#475569" rx="2" />
+                            <rect x="-25" y="25" width="10" height="20" fill="#475569" rx="2" />
+                            <rect x="5" y="25" width="10" height="20" fill="#475569" rx="2" />
                         </g>
                     </g>
                 </svg>
@@ -403,9 +417,11 @@
                         <!-- Blocks -->
                         <g transform="translate(-45, 60)">
                             <rect x="0" y="0" width="25" height="25" fill="#fbbf24" rx="4" />
-                            <text x="6" y="18" font-family="Fredoka" font-weight="bold" font-size="14" fill="#ffffff">A</text>
+                            <text x="6" y="18" font-family="Fredoka" font-weight="bold" font-size="14"
+                                fill="#ffffff">A</text>
                             <rect x="28" y="-5" width="25" height="25" fill="#60a5fa" rx="4" />
-                            <text x="34" y="13" font-family="Fredoka" font-weight="bold" font-size="14" fill="#ffffff">1</text>
+                            <text x="34" y="13" font-family="Fredoka" font-weight="bold" font-size="14"
+                                fill="#ffffff">1</text>
                         </g>
                     </g>
                 </svg>
@@ -413,14 +429,7 @@
 
             <!-- Group 3: Birds (Middle) -->
             <div class="footer-decor-group" style="left: 45%; height: 200px;">
-                <svg viewBox="0 0 100 100">
-                    <g class="anim-bird" style="animation-delay: -1s;">
-                        <g transform="translate(50, 40)">
-                            <path d="M-10,0 Q0,-10 10,0" fill="none" stroke="#333" stroke-width="2" class="anim-wing" />
-                            <path d="M-10,0 Q0,10 10,0" fill="none" stroke="#333" stroke-width="2" style="transform: scaleY(-1);" />
-                        </g>
-                    </g>
-                </svg>
+
             </div>
 
             <!-- Group 4: Giraffe (Center-Right) -->
@@ -433,10 +442,13 @@
                             <g transform="translate(45, -15)">
                                 <ellipse cx="0" cy="0" rx="18" ry="12" fill="#fbbf24" />
                                 <circle cx="8" cy="-3" r="2.5" fill="#333" class="eye-blink" />
-                                <rect x="-5" y="-15" width="4" height="8" fill="#fbbf24" /><rect x="5" y="-15" width="4" height="8" fill="#fbbf24" />
+                                <rect x="-5" y="-15" width="4" height="8" fill="#fbbf24" />
+                                <rect x="5" y="-15" width="4" height="8" fill="#fbbf24" />
                             </g>
-                            <circle cx="-10" cy="75" r="5" fill="#d97706" opacity="0.6" /><circle cx="10" cy="85" r="4" fill="#d97706" opacity="0.6" />
-                            <rect x="-15" y="100" width="6" height="35" fill="#d97706" /><rect x="10" y="100" width="6" height="35" fill="#d97706" />
+                            <circle cx="-10" cy="75" r="5" fill="#d97706" opacity="0.6" />
+                            <circle cx="10" cy="85" r="4" fill="#d97706" opacity="0.6" />
+                            <rect x="-15" y="100" width="6" height="35" fill="#d97706" />
+                            <rect x="10" y="100" width="6" height="35" fill="#d97706" />
                         </g>
                     </g>
                 </svg>
@@ -450,7 +462,8 @@
                             <ellipse cx="0" cy="0" rx="40" ry="25" fill="#94a3b8" />
                             <circle cx="30" cy="-5" r="20" fill="#94a3b8" />
                             <circle cx="35" cy="-8" r="2.5" fill="#333" class="eye-blink" />
-                            <rect x="-20" y="20" width="10" height="15" fill="#475569" rx="2" /><rect x="5" y="20" width="10" height="15" fill="#475569" rx="2" />
+                            <rect x="-20" y="20" width="10" height="15" fill="#475569" rx="2" />
+                            <rect x="5" y="20" width="10" height="15" fill="#475569" rx="2" />
                         </g>
                     </g>
                 </svg>
@@ -462,13 +475,16 @@
                     <g transform="translate(50, 90)">
                         <g class="anim-sway">
                             <ellipse cx="0" cy="20" rx="20" ry="30" fill="#b45309" />
-                            <path d="M12,0 Q20,-35 20,-45" fill="none" stroke="#b45309" stroke-width="10" stroke-linecap="round" />
+                            <path d="M12,0 Q20,-35 20,-45" fill="none" stroke="#b45309" stroke-width="10"
+                                stroke-linecap="round" />
                             <g transform="translate(20, -55)">
                                 <circle cx="0" cy="0" r="12" fill="#b45309" />
                                 <circle cx="4" cy="-2" r="2" fill="#ffffff" />
                             </g>
-                            <rect x="-12" y="45" width="6" height="20" fill="#78350f" rx="2" /><rect x="6" y="45" width="6" height="20" fill="#78350f" rx="2" />
-                            <path d="M-18,15 Q-30,10 -25,20" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round" class="anim-tail" />
+                            <rect x="-12" y="45" width="6" height="20" fill="#78350f" rx="2" />
+                            <rect x="6" y="45" width="6" height="20" fill="#78350f" rx="2" />
+                            <path d="M-18,15 Q-30,10 -25,20" fill="none" stroke="#b45309" stroke-width="5"
+                                stroke-linecap="round" class="anim-tail" />
                         </g>
                     </g>
                 </svg>
@@ -478,9 +494,9 @@
         <div class="max-w-4xl mx-auto flex flex-col items-center gap-6 pb-20 px-6 relative z-10">
             <!-- Logo -->
             <div class="footer-logo">
-                <img src="logo.png" alt="Kids Village Logo" class="h-24 w-auto mb-4">
+                <img src="logo-removebg-preview.png" alt="Kids Village Logo" class="h-24 w-auto mb-4">
             </div>
-            
+
             <!-- Social Icons -->
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="https://www.instagram.com/kidsvillagetanger/" target="_blank"

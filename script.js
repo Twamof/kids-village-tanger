@@ -34,24 +34,59 @@ document.addEventListener('DOMContentLoaded', () => {
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow= document.querySelector('.right-arrow');
 
-    // Extra testimonials data (shown when navigating)
-    const extraTestimonials = [
+    // Extra testimonials data (fetched from Google Maps)
+    const allTestimonials = [
         {
-            text: '"A wonderland for kids! Our children never want to leave. The variety of activities keeps them busy all day."',
-            name: '- Fatima Z.',
-            color: 'bg-nav-green',
-            colorClass: '#9bf3d0'
+            name: "Sarah Sarah",
+            text: '"Excellente rapport qualité/prix. 50 dhs l\'entrée pour une heure. L\'endroit est propre et le personnel est très sympathique."',
+            color: "#ffb7d5"
         },
         {
-            text: '"Great staff, clean facilities, and tons of fun. My kids made so many friends here at Kids Village!"',
-            name: '- Youssef A.',
-            color: 'bg-nav-yellow',
-            colorClass: '#ffe97d'
+            name: "Coralie Sakili",
+            text: '"Super expérience pour les enfants. Très bien encadré, propre et avec un super espace de jeux. Recommande vivement !"',
+            color: "#9ee0fc"
+        },
+        {
+            name: "Ahmad Hasnaoui",
+            text: '"باش يبقى ولدك او ابنتك في أمن و أمان كيدز ڤيلاج أحسن مكان... البنات كاملين متمكنات من العمل بالتوفيق"',
+            color: "#b7e4c7"
+        },
+        {
+            name: "Queen J lifestyle",
+            text: '"تجربة رائعة، قضت ابنتي أجمل أيامها هناك. كنت أتركها لساعتين أو ست ساعات، وكانت في غاية السعادة."',
+            color: "#ffe97d"
+        },
+        {
+            name: "Jordan",
+            text: '"Great place. The nicest soft play I’ve seen in Tangier. The price is affordable and they have very kind staff."',
+            color: "#ffb57b"
+        },
+        {
+            name: "Khouloud Founoune",
+            text: '"Weladi ki7ma9o 3la village kids o kiret7o tmak. Best place for kids in Tangier!"',
+            color: "#ffcbf2"
         }
     ];
 
     let currentSlide = 0;
-    const totalSlides = dots.length;
+    const slidesPerView = window.innerWidth > 768 ? 2 : 1;
+    const totalSlides = Math.ceil(allTestimonials.length / slidesPerView);
+
+    function updateBubbles() {
+        const startIndex = currentSlide * slidesPerView;
+        
+        bubbles.forEach((bubble, i) => {
+            const data = allTestimonials[startIndex + i];
+            if (data) {
+                bubble.style.display = 'block';
+                bubble.querySelector('p').textContent = data.text;
+                bubble.querySelector('span').textContent = `- ${data.name}`;
+                bubble.style.backgroundColor = data.color;
+            } else {
+                bubble.style.display = 'none';
+            }
+        });
+    }
 
     function goToSlide(index) {
         currentSlide = (index + totalSlides) % totalSlides;
@@ -65,20 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         setTimeout(() => {
-            if (currentSlide === 0) {
-                // Restore default
-                const pinkBubble = bubbles[0];
-                const blueBubble = bubbles[1];
-                if (pinkBubble && blueBubble) {
-                    pinkBubble.style.backgroundColor = '#ffb7d5';
-                    blueBubble.style.backgroundColor = '#9ee0fc';
-                }
-            } else if (currentSlide < extraTestimonials.length + 1) {
-                const ex1 = extraTestimonials[(currentSlide - 1) * 2] || extraTestimonials[0];
-                const ex2 = extraTestimonials[(currentSlide - 1) * 2 + 1] || extraTestimonials[1];
-                if (bubbles[0] && ex1) bubbles[0].style.backgroundColor = ex1.colorClass;
-                if (bubbles[1] && ex2) bubbles[1].style.backgroundColor = ex2.colorClass;
-            }
+            updateBubbles();
 
             bubbles.forEach(b => {
                 b.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
@@ -90,10 +112,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (leftArrow)  leftArrow.addEventListener('click',  () => goToSlide(currentSlide - 1));
     if (rightArrow) rightArrow.addEventListener('click', () => goToSlide(currentSlide + 1));
-    dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
+    
+    // Initial setup
+    function setupSlider() {
+        const slidesPerView = window.innerWidth > 768 ? 2 : 1;
+        const totalSlidesNeeded = Math.ceil(allTestimonials.length / slidesPerView);
+        
+        dots.forEach((dot, i) => {
+            if (i < totalSlidesNeeded) {
+                dot.style.display = 'block';
+                dot.onclick = () => goToSlide(i);
+            } else {
+                dot.style.display = 'none';
+            }
+        });
+        
+        updateBubbles();
+    }
 
-    // Auto-slide every 5 seconds
-    setInterval(() => goToSlide(currentSlide + 1), 5000);
+    window.addEventListener('resize', setupSlider);
+    setupSlider();
+
+    // Auto-slide every 6 seconds
+    setInterval(() => goToSlide(currentSlide + 1), 6000);
 
     // ─────────────────────────────────────────────
     // 3. MOBILE MENU TOGGLE
@@ -102,31 +143,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileNav     = document.querySelector('.mobile-nav-menu');
 
     if (mobileMenuIcon && mobileNav) {
-        mobileMenuIcon.addEventListener('click', () => {
-            const isHidden = mobileNav.style.display === 'none' || mobileNav.style.display === '';
-
-            if (isHidden) {
-                mobileNav.style.display = 'flex';
-                // Trigger animation in next frame
-                setTimeout(() => {
-                    mobileNav.classList.add('open');
-                }, 10);
-            } else {
-                mobileNav.classList.remove('open');
-                setTimeout(() => {
-                    mobileNav.style.display = 'none';
-                }, 300); // Matches transition duration
-            }
+        mobileMenuIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileNav.classList.toggle('open');
         });
 
         // Close menu on link click
         mobileNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileNav.classList.remove('open');
-                setTimeout(() => {
-                    mobileNav.style.display = 'none';
-                }, 300);
             });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileNav.contains(e.target) && !mobileMenuIcon.contains(e.target)) {
+                mobileNav.classList.remove('open');
+            }
         });
     }
 
