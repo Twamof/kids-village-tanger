@@ -68,9 +68,11 @@ a {
 }
 
 .nav-brand img {
-    height: 40px;
+    height: 60px;
     width: auto;
     object-fit: contain;
+    transform: scale(2.5);
+    transform-origin: left center;
 }
 
 /* ── NAVIGATION MENU ── */
@@ -195,7 +197,7 @@ a {
     position: relative;
     background: linear-gradient(to bottom, #ffffff 40%, #c8edfb 72%, #a6e1fa 100%);
     min-height: 100vh;
-    padding-top: 100px;
+    padding-top: 140px;
     padding-bottom: 80px;
     display: flex;
     flex-direction: column;
@@ -550,7 +552,8 @@ footer {
 }
 
 .footer-logo img {
-    height: 60px;
+    height: 100px;
+    transform: scale(2);
 }
 
 .footer-decorations {
