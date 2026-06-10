@@ -7,6 +7,8 @@
     <title>Kids Village Tanger — Where Your Kid's Future Begins</title>
     <meta name="description"
         content="Kids Village Tanger is a premier playground and daycare center in Morocco. Safe, fun, and educational for your little ones.">
+    <!-- Canonical HTTPS URL -->
+    <link rel="canonical" href="https://www.kidsvillage.ma/">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -359,6 +361,193 @@
                         width="100%" height="100%" style="border:0; min-height:280px;" allowfullscreen loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BOOK / INSCRIPTION SECTION ========== -->
+    <!-- ══════════════════════════════════════════════════════════════════
+         AJOUTÉ: Formulaire d'inscription en ligne
+         Les données sont envoyées à Google Sheets via Apps Script
+         Même flux que github-pages/index.html mais intégré dans le site
+         Flow: Ce formulaire → Google Apps Script → Google Sheets → Laravel Import
+    ══════════════════════════════════════════════════════════════════ -->
+    <section id="book" class="book-section bg-gradient-to-b from-white via-blue-50 to-green-50 py-20 px-6 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-10 left-10 text-6xl opacity-10 floating-el" style="animation-delay:0s">🎈</div>
+        <div class="absolute top-20 right-16 text-5xl opacity-10 floating-el" style="animation-delay:1s">⭐</div>
+        <div class="absolute bottom-20 left-20 text-5xl opacity-10 floating-el" style="animation-delay:2s">🧩</div>
+        <div class="absolute bottom-10 right-10 text-6xl opacity-10 floating-el" style="animation-delay:0.5s">🎉</div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-orange-400 rounded-3xl shadow-lg mb-6">
+                    <i class="fa-solid fa-child-reaching text-white text-3xl"></i>
+                </div>
+                <h2 class="font-fredoka text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Inscription Familiale 🎪
+                </h2>
+                <p class="font-quicksand text-gray-500 text-lg max-w-xl mx-auto">
+                    Inscrivez votre famille pour profiter de nos activités et événements spéciaux !
+                </p>
+            </div>
+
+            <!-- Registration Form -->
+            <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+
+                <!-- Card 1: Personal Info -->
+                <div class="book-card mb-8">
+                    <div class="book-card-header">
+                        <div class="book-card-icon bg-blue-100 text-blue-600">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Informations Personnelles</h3>
+                            <p class="font-quicksand text-gray-400 text-sm">Renseignez les informations des parents</p>
+                        </div>
+                    </div>
+                    <div class="book-card-body">
+                        <div class="book-grid">
+                            <div class="book-field">
+                                <label class="book-label">Nom complet du père <span class="text-red-400">*</span></label>
+                                <input type="text" id="b_father_name" required placeholder="Ex: Mohammed Alami" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Nom complet de la mère</label>
+                                <input type="text" id="b_mother_name" placeholder="Ex: Fatima Alaoui" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">WhatsApp <span class="text-red-400">*</span></label>
+                                <input type="tel" id="b_phone" required placeholder="+212 6XX XXX XXX" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Téléphone d'urgence</label>
+                                <input type="tel" id="b_emergency_phone" placeholder="Numéro alternatif" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Email</label>
+                                <input type="email" id="b_email" placeholder="parent@exemple.com" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">CIN / Carte nationale</label>
+                                <input type="text" id="b_cin" placeholder="Ex: AB123456" class="book-input">
+                            </div>
+                            <div class="book-field col-span-full">
+                                <label class="book-label">Adresse</label>
+                                <input type="text" id="b_address" placeholder="Quartier, Ville..." class="book-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Professional Info -->
+                <div class="book-card mb-8">
+                    <div class="book-card-header">
+                        <div class="book-card-icon bg-purple-100 text-purple-600">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Informations Professionnelles</h3>
+                            <p class="font-quicksand text-gray-400 text-sm">Optionnel — profession des parents</p>
+                        </div>
+                    </div>
+                    <div class="book-card-body">
+                        <div class="book-grid">
+                            <div class="book-field">
+                                <label class="book-label">Profession du père</label>
+                                <input type="text" id="b_father_job" placeholder="Ex: Ingénieur" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Lieu de travail du père</label>
+                                <input type="text" id="b_father_work_place" placeholder="Nom de l'entreprise" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Profession de la mère</label>
+                                <input type="text" id="b_mother_job" placeholder="Ex: Professeure" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Lieu de travail de la mère</label>
+                                <input type="text" id="b_mother_work_place" placeholder="Nom de l'entreprise" class="book-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Children -->
+                <div class="book-card mb-8">
+                    <div class="book-card-header">
+                        <div class="book-card-icon bg-green-100 text-green-600">
+                            <i class="fa-solid fa-children"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Vos Enfants</h3>
+                            <p class="font-quicksand text-gray-400 text-sm">Ajoutez les informations de vos enfants</p>
+                        </div>
+                    </div>
+                    <div class="book-card-body">
+                        <div id="childrenContainer">
+                            <!-- Child 1 -->
+                            <div class="child-block" data-child="1">
+                                <div class="child-label font-fredoka">
+                                    <i class="fa-solid fa-child text-green-500"></i> Enfant #1
+                                </div>
+                                <div class="book-grid">
+                                    <div class="book-field">
+                                        <label class="book-label">Prénom <span class="text-red-400">*</span></label>
+                                        <input type="text" data-field="first_name" required placeholder="Prénom" class="book-input">
+                                    </div>
+                                    <div class="book-field">
+                                        <label class="book-label">Nom <span class="text-red-400">*</span></label>
+                                        <input type="text" data-field="last_name" required placeholder="Nom de famille" class="book-input">
+                                    </div>
+                                    <div class="book-field">
+                                        <label class="book-label">Date de naissance</label>
+                                        <input type="date" data-field="date_of_birth" class="book-input">
+                                    </div>
+                                    <div class="book-field">
+                                        <label class="book-label">École</label>
+                                        <input type="text" data-field="school_name" placeholder="Nom de l'école" class="book-input">
+                                    </div>
+                                    <div class="book-field col-span-full">
+                                        <label class="book-label">Allergies / Notes médicales</label>
+                                        <input type="text" data-field="allergies" placeholder="Aucune allergie connue" class="book-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add child button -->
+                        <button type="button" onclick="addChild()" id="addChildBtn"
+                            class="mt-4 w-full py-3 rounded-2xl border-2 border-dashed border-green-300 text-green-600 font-fredoka font-bold text-base hover:bg-green-50 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-plus"></i> Ajouter un autre enfant
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="bookSubmitBtn"
+                    class="w-full py-4 bg-orange-400 hover:bg-orange-500 text-white font-fredoka font-bold text-xl rounded-3xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Soumettre l'inscription
+                </button>
+            </form>
+
+            <!-- Success Message (hidden by default) -->
+            <div id="bookingSuccess" class="hidden">
+                <div class="text-center py-16">
+                    <div class="inline-flex items-center justify-center w-24 h-24 bg-green-100 rounded-full mb-6">
+                        <i class="fa-solid fa-circle-check text-green-500 text-5xl"></i>
+                    </div>
+                    <h3 class="font-fredoka text-3xl font-bold text-gray-800 mb-3">Merci pour votre inscription ! 🎉</h3>
+                    <p class="font-quicksand text-gray-500 text-lg mb-8">
+                        Votre demande a été enregistrée avec succès.<br>
+                        Notre équipe vous contactera bientôt.
+                    </p>
+                    <button onclick="resetBookingForm()"
+                        class="bg-blue-500 hover:bg-blue-600 text-white font-fredoka font-bold text-lg px-8 py-3 rounded-pill shadow-md hover:-translate-y-1 transition-all">
+                        <i class="fa-solid fa-rotate-left"></i> Nouvelle inscription
+                    </button>
                 </div>
             </div>
         </div>
