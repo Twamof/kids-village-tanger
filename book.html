@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Village Tanger — Inscription en ligne</title>
+    <meta name="description"
+        content="Inscrivez votre famille en ligne à Kids Village Tanger.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        fredoka: ['Fredoka', 'sans-serif'],
+                        quicksand: ['Quicksand', 'sans-serif'],
+                    },
+                    colors: {
+                        'nav-blue': '#9ee0fc',
+                        'nav-green': '#9bf3d0',
+                        'nav-yellow': '#ffe97d',
+                        'nav-orange': '#ffb57b',
+                        'nav-pink': '#ffb7d5',
+                        'mint': '#a7f3d0',
+                        'sky-soft': '#a6e1fa',
+                        'hero-bg': '#f0f9ff',
+                        'yellow-bg': '#fde047',
+                    },
+                    borderRadius: {
+                        'pill': '9999px',
+                        '3xl': '1.5rem',
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-quicksand text-gray-800 overflow-x-hidden bg-white">
+
+    <!-- ========== HEADER / NAV ========== -->
+    <header class="kids-header">
+        <div class="kids-navbar">
+            <!-- Logo (Left) -->
+            <a href="index.html#home" class="nav-brand">
+                <img src="Logo Kids Village Tanger.jpg.png" alt="Kids Village Logo" class="h-40 w-auto">
+            </a>
+
+            <!-- Navigation Links (Center) -->
+            <nav class="nav-menu desktop-only">
+                <a href="index.html#home" class="nav-link nav-blue">Home</a>
+                <a href="index.html#about" class="nav-link nav-green">About</a>
+                <a href="index.html#gallery" class="nav-link nav-yellow">Gallery</a>
+                <a href="index.html#reviews" class="nav-link nav-orange">Reviews</a>
+                <a href="index.html#contact" class="nav-link nav-pink">Contact</a>
+            </nav>
+
+            <!-- CTA Button (Right) -->
+            <div class="nav-actions">
+                <a href="#" class="nav-cta desktop-only active">Booking</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle mobile-only" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <nav class="mobile-nav-menu">
+            <a href="index.html#home" class="mobile-link nav-blue">Home</a>
+            <a href="index.html#about" class="mobile-link nav-green">About</a>
+            <a href="index.html#gallery" class="mobile-link nav-yellow">Gallery</a>
+            <a href="index.html#reviews" class="mobile-link nav-orange">Reviews</a>
+            <a href="index.html#contact" class="mobile-link nav-pink">Contact</a>
+            <a href="#" class="mobile-cta">Booking</a>
+        </nav>
+    </header>
+
+    <!-- ========== BOOKING SECTION ========== -->
+    <section class="book-section bg-gradient-to-b from-white via-blue-50 to-green-50 py-32 px-6 relative overflow-hidden min-h-screen">
+        <!-- Floating Elements -->
+        <div class="floating-el el-1 text-4xl">🎈</div>
+        <div class="floating-el el-2 text-2xl">⭐</div>
+        <div class="floating-el el-3 text-4xl">🚗</div>
+        <div class="floating-el el-4 text-3xl">🎁</div>
+        <div class="floating-el el-5 text-2xl">⭐</div>
+        <div class="floating-el el-6 text-3xl">🧩</div>
+        <div class="floating-el el-7 text-4xl">🎉</div>
+
+        <div class="max-w-4xl mx-auto relative z-10 pt-10">
+            <!-- Back Button -->
+            <a href="index.html" class="btn-back mb-8">
+                <i class="fa-solid fa-arrow-left"></i> Retour à l'accueil
+            </a>
+
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-orange-400 rounded-3xl shadow-lg mb-6">
+                    <i class="fa-solid fa-child-reaching text-white text-3xl"></i>
+                </div>
+                <h2 class="font-fredoka text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Inscription Familiale 🎪
+                </h2>
+                <p class="font-quicksand text-gray-500 text-lg max-w-xl mx-auto">
+                    Inscrivez votre famille en remplissant le formulaire ci-dessous pour profiter de nos activités !
+                </p>
+            </div>
+
+            <!-- Registration Form -->
+            <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+
+                <!-- Card 1: Personal Info -->
+                <div class="book-card mb-8">
+                    <div class="book-card-header">
+                        <div class="book-card-icon bg-blue-100 text-blue-600">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Informations Personnelles</h3>
+                            <p class="font-quicksand text-gray-400 text-sm">Renseignez les informations des parents</p>
+                        </div>
+                    </div>
+                    <div class="book-card-body">
+                        <div class="book-grid">
+                            <div class="book-field">
+                                <label class="book-label">Nom complet du père <span class="text-red-400">*</span></label>
+                                <input type="text" id="b_father_name" required placeholder="Ex: Mohammed Alami" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Nom complet de la mère</label>
+                                <input type="text" id="b_mother_name" placeholder="Ex: Fatima Alaoui" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">WhatsApp <span class="text-red-400">*</span></label>
+                                <input type="tel" id="b_phone" required placeholder="+212 6XX XXX XXX" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Téléphone d'urgence</label>
+                                <input type="tel" id="b_emergency_phone" placeholder="Numéro alternatif" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Email</label>
+                                <input type="email" id="b_email" placeholder="parent@exemple.com" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">CIN / Carte nationale</label>
+                                <input type="text" id="b_cin" placeholder="Ex: AB123456" class="book-input">
+                            </div>
+                            <div class="book-field col-span-full">
+                                <label class="book-label">Adresse</label>
+                                <input type="text" id="b_address" placeholder="Quartier, Ville..." class="book-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Professional Info -->
+                <div class="book-card mb-8">
+                    <div class="book-card-header">
+                        <div class="book-card-icon bg-purple-100 text-purple-600">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Informations Professionnelles</h3>
+                            <p class="font-quicksand text-gray-400 text-sm">Optionnel — profession des parents</p>
+                        </div>
+                    </div>
+                    <div class="book-card-body">
+                        <div class="book-grid">
+                            <div class="book-field">
+                                <label class="book-label">Profession du père</label>
+                                <input type="text" id="b_father_job" placeholder="Ex: Ingénieur" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Lieu de travail du père</label>
+                                <input type="text" id="b_father_work_place" placeholder="Nom de l'entreprise" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Profession de la mère</label>
+                                <input type="text" id="b_mother_job" placeholder="Ex: Professeure" class="book-input">
+                            </div>
+                            <div class="book-field">
+                                <label class="book-label">Lieu de travail de la mère</label>
+                                <input type="text" id="b_mother_work_place" placeholder="Nom de l'entreprise" class="book-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Children -->
+                <div class="book-card mb-8">
+                    <div class="book-card-header">
+                        <div class="book-card-icon bg-green-100 text-green-600">
+                            <i class="fa-solid fa-children"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Vos Enfants</h3>
+                            <p class="font-quicksand text-gray-400 text-sm">Ajoutez les informations de vos enfants</p>
+                        </div>
+                    </div>
+                    <div class="book-card-body">
+                        <div id="childrenContainer">
+                            <!-- Child 1 -->
+                            <div class="child-block" data-child="1">
+                                <div class="child-label font-fredoka">
+                                    <i class="fa-solid fa-child text-green-500"></i> Enfant #1
+                                </div>
+                                <div class="book-grid">
+                                    <div class="book-field">
+                                        <label class="book-label">Prénom <span class="text-red-400">*</span></label>
+                                        <input type="text" data-field="first_name" required placeholder="Prénom" class="book-input">
+                                    </div>
+                                    <div class="book-field">
+                                        <label class="book-label">Nom <span class="text-red-400">*</span></label>
+                                        <input type="text" data-field="last_name" required placeholder="Nom de famille" class="book-input">
+                                    </div>
+                                    <div class="book-field">
+                                        <label class="book-label">Date de naissance</label>
+                                        <input type="date" data-field="date_of_birth" class="book-input">
+                                    </div>
+                                    <div class="book-field">
+                                        <label class="book-label">École</label>
+                                        <input type="text" data-field="school_name" placeholder="Nom de l'école" class="book-input">
+                                    </div>
+                                    <div class="book-field col-span-full">
+                                        <label class="book-label">Allergies / Notes médicales</label>
+                                        <input type="text" data-field="allergies" placeholder="Aucune allergie connue" class="book-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add child button -->
+                        <button type="button" onclick="addChild()" id="addChildBtn"
+                            class="mt-4 w-full py-3 rounded-2xl border-2 border-dashed border-green-300 text-green-600 font-fredoka font-bold text-base hover:bg-green-50 transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-plus"></i> Ajouter un autre enfant
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="bookSubmitBtn"
+                    class="w-full py-4 bg-orange-400 hover:bg-orange-500 text-white font-fredoka font-bold text-xl rounded-3xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Soumettre l'inscription
+                </button>
+            </form>
+
+            <!-- Success Message (hidden by default) -->
+            <div id="bookingSuccess" class="hidden">
+                <div class="text-center py-16 bg-white rounded-3xl shadow-lg border border-gray-100 p-8">
+                    <div class="inline-flex items-center justify-center w-24 h-24 bg-green-100 rounded-full mb-6">
+                        <i class="fa-solid fa-circle-check text-green-500 text-5xl"></i>
+                    </div>
+                    <h3 class="font-fredoka text-3xl font-bold text-gray-800 mb-3">Merci pour votre inscription ! 🎉</h3>
+                    <p class="font-quicksand text-gray-500 text-lg mb-8">
+                        Votre demande a été enregistrée avec succès.<br>
+                        Notre équipe vous contactera bientôt.
+                    </p>
+                    <button onclick="resetBookingForm()"
+                        class="bg-blue-500 hover:bg-blue-600 text-white font-fredoka font-bold text-lg px-8 py-3 rounded-pill shadow-md hover:-translate-y-1 transition-all">
+                        <i class="fa-solid fa-rotate-left"></i> Nouvelle inscription
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-sky-soft pt-20 pb-6 relative overflow-hidden">
+        <!-- Top Wave Divider -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-16">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    fill="#ffffff"></path>
+            </svg>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <a href="index.html#home" class="inline-block mb-6 footer-logo">
+                    <img src="Logo Kids Village Tanger.jpg.png" alt="Kids Village Logo" class="h-20 w-auto object-contain">
+                </a>
+                <p class="font-fredoka text-xl text-gray-800 mb-4">Kids Village Tanger</p>
+                <p class="text-gray-600 font-medium text-sm max-w-md mx-auto mb-6">
+                    L'endroit idéal où la créativité et le jeu des enfants se rencontrent dans un espace sécurisé.
+                </p>
+                <p class="text-gray-500 text-xs">
+                    &copy; 2026 Kids Village Tanger. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Script Logic directly embedded for speed and simplicity -->
+    <script>
+        // Google Apps Script Web App URL
+        const BOOKING_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxCtaYu0Uk81Z9nqEp37h3gZO_Vqpz5A6KQmq-HNSQbg5LbOyBFnpXOfnZFc6BDZOdJ/exec';
+        
+        let childCount = 1;
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileNavMenu = document.querySelector('.mobile-nav-menu');
+        if (mobileToggle && mobileNavMenu) {
+            mobileToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mobileNavMenu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (!mobileNavMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+                    mobileNavMenu.classList.remove('open');
+                }
+            });
+        }
+
+        // Ajouter un enfant supplémentaire (max 3)
+        function addChild() {
+            if (childCount >= 3) return;
+            childCount++;
+
+            const container = document.getElementById('childrenContainer');
+            const block = document.createElement('div');
+            block.className = 'child-block';
+            block.setAttribute('data-child', childCount);
+            block.innerHTML = `
+                <div class="child-label font-fredoka">
+                    <i class="fa-solid fa-child text-green-500"></i> Enfant #${childCount}
+                    <button type="button" onclick="removeChild(this)" 
+                        style="margin-left:auto;color:#ef4444;font-size:14px;background:none;border:none;cursor:pointer;">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <div class="book-grid">
+                    <div class="book-field">
+                        <label class="book-label">Prénom <span class="text-red-400">*</span></label>
+                        <input type="text" data-field="first_name" required placeholder="Prénom" class="book-input">
+                    </div>
+                    <div class="book-field">
+                        <label class="book-label">Nom <span class="text-red-400">*</span></label>
+                        <input type="text" data-field="last_name" required placeholder="Nom de famille" class="book-input">
+                    </div>
+                    <div class="book-field">
+                        <label class="book-label">Date de naissance</label>
+                        <input type="date" data-field="date_of_birth" class="book-input">
+                    </div>
+                    <div class="book-field">
+                        <label class="book-label">École</label>
+                        <input type="text" data-field="school_name" placeholder="Nom de l'école" class="book-input">
+                    </div>
+                    <div class="book-field col-span-full">
+                        <label class="book-label">Allergies / Notes médicales</label>
+                        <input type="text" data-field="allergies" placeholder="Aucune allergie connue" class="book-input">
+                    </div>
+                </div>
+            `;
+            container.appendChild(block);
+
+            if (childCount >= 3) {
+                document.getElementById('addChildBtn').style.display = 'none';
+            }
+        }
+
+        // Supprimer un enfant
+        function removeChild(btn) {
+            btn.closest('.child-block').remove();
+            childCount--;
+            document.getElementById('addChildBtn').style.display = 'flex';
+            // Renumber children
+            document.querySelectorAll('#childrenContainer .child-block').forEach((block, i) => {
+                block.setAttribute('data-child', i + 1);
+                block.querySelector('.child-label').innerHTML = `
+                    <i class="fa-solid fa-child text-green-500"></i> Enfant #${i + 1}
+                    ${i > 0 ? `<button type="button" onclick="removeChild(this)" 
+                        style="margin-left:auto;color:#ef4444;font-size:14px;background:none;border:none;cursor:pointer;">
+                        <i class="fa-solid fa-trash"></i></button>` : ''}
+                `;
+            });
+        }
+
+        // Collecter les données des enfants
+        function collectBookingChildren() {
+            const children = [];
+            document.querySelectorAll('#childrenContainer .child-block').forEach(block => {
+                const child = {};
+                block.querySelectorAll('[data-field]').forEach(input => {
+                    child[input.getAttribute('data-field')] = input.value.trim();
+                });
+                if (child.first_name || child.last_name) {
+                    children.push(child);
+                }
+            });
+            return children;
+        }
+
+        // Soumettre le formulaire → Google Sheets
+        async function handleBookingSubmit(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('bookSubmitBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Envoi en cours...';
+
+            // Collecter toutes les données
+            const data = {
+                timestamp: new Date().toLocaleString('fr-FR'),
+                father_name: document.getElementById('b_father_name').value.trim(),
+                mother_name: document.getElementById('b_mother_name').value.trim(),
+                phone: document.getElementById('b_phone').value.trim(),
+                emergency_phone: document.getElementById('b_emergency_phone').value.trim(),
+                email: document.getElementById('b_email').value.trim(),
+                cin: document.getElementById('b_cin').value.trim(),
+                address: document.getElementById('b_address').value.trim(),
+                father_job: document.getElementById('b_father_job').value.trim(),
+                father_work_place: document.getElementById('b_father_work_place').value.trim(),
+                mother_job: document.getElementById('b_mother_job').value.trim(),
+                mother_work_place: document.getElementById('b_mother_work_place').value.trim(),
+                source: 'Inscription en ligne',
+                children: collectBookingChildren()
+            };
+
+            try {
+                // Envoyer à Google Apps Script
+                await fetch(BOOKING_SHEET_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                // Afficher le message de succès
+                document.getElementById('bookingForm').style.display = 'none';
+                document.getElementById('bookingSuccess').classList.remove('hidden');
+
+                // Scroll to success message
+                document.getElementById('bookingSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } catch (err) {
+                alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Soumettre l\'inscription';
+            }
+        }
+
+        // Réinitialiser le formulaire
+        function resetBookingForm() {
+            document.getElementById('bookingForm').reset();
+            document.getElementById('bookingForm').style.display = 'block';
+            document.getElementById('bookingSuccess').classList.add('hidden');
+
+            const btn = document.getElementById('bookSubmitBtn');
+            btn.disabled = false;
+            btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Soumettre l\'inscription';
+
+            // Reset children to just one
+            const container = document.getElementById('childrenContainer');
+            const blocks = container.querySelectorAll('.child-block');
+            blocks.forEach((block, i) => { if (i > 0) block.remove(); });
+            childCount = 1;
+            document.getElementById('addChildBtn').style.display = 'flex';
+        }
+    </script>
+</body>
+
+</html>

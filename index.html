@@ -72,7 +72,7 @@
 
             <!-- CTA Button (Right) -->
             <div class="nav-actions">
-                <a href="#book" class="nav-cta desktop-only">Book a Visit</a>
+                <a href="book.html" class="nav-cta desktop-only">Book a Visit</a>
 
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-toggle mobile-only" aria-label="Toggle Menu">
@@ -88,69 +88,85 @@
             <a href="#gallery" class="mobile-link nav-yellow active">Gallery</a>
             <a href="#reviews" class="mobile-link nav-orange">Reviews</a>
             <a href="#contact" class="mobile-link nav-pink">Contact</a>
-            <a href="#book" class="mobile-cta">Book a Visit</a>
+            <a href="book.html" class="mobile-cta">Book a Visit</a>
         </nav>
     </header>
 
     <!-- ========== HERO SECTION ========== -->
-    <section id="home" class="hero relative bg-white overflow-hidden min-h-screen flex items-center">
-        <!-- Floating Elements & Blobs -->
-        <div class="floating-el el-1 text-4xl">🎈</div>
-        <div class="floating-el el-2 text-2xl">⭐</div>
-        <div class="floating-el el-3 text-4xl">🚗</div>
-        <div class="floating-el el-4 text-3xl">🎁</div>
-        <div class="floating-el el-5 text-2xl">⭐</div>
-        <div class="floating-el el-6 text-3xl">🧩</div>
-        <div class="floating-el el-7 text-4xl">🎉</div>
-
-        <!-- Decorative Background Blobs -->
-        <div class="absolute top-20 -left-10 w-48 h-48 bg-nav-blue opacity-20 rounded-full blur-3xl -z-10"></div>
-        <div class="absolute bottom-40 -right-20 w-64 h-64 bg-nav-pink opacity-20 rounded-full blur-3xl -z-10"></div>
-        <div class="absolute top-1/2 left-1/3 w-32 h-32 bg-nav-yellow opacity-10 rounded-full blur-2xl -z-10"></div>
-
-        <div
-            class="w-full max-w-6xl mx-auto px-6 pt-28 pb-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
-            <!-- Text Side -->
-            <div class="hero-content">
-                <h1 class="font-fredoka text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
-                    Kids Village Tanger .. Where<br>your kid's future begins ✨
-                </h1>
-                <p class="text-gray-600 text-lg mb-8 font-quicksand font-medium leading-relaxed">
-                    Discover a magical world of fun, learning, and adventure for<br>
-                    your little ones. Safe, engaging, and full of joy!
-                </p>
-                <div class="flex gap-4 flex-wrap">
-                    <a href="#birthday"
-                        class="btn-hero bg-orange-400 text-white font-fredoka font-semibold text-lg px-7 py-3 rounded-pill shadow-md hover:-translate-y-1 transition-transform inline-block">
-                        Plan a Birthday
-                    </a>
-                    <a href="#video"
-                        class="btn-hero bg-green-300 text-gray-800 font-fredoka font-semibold text-lg px-7 py-3 rounded-pill shadow-md hover:-translate-y-1 transition-transform inline-flex items-center gap-2">
-                        <i class="fa-solid fa-play text-sm"></i> Watch Video
-                    </a>
-                </div>
+    <section id="home" class="hero relative overflow-hidden min-h-screen flex items-center justify-center">
+        <!-- Hero Slider (Background) -->
+        <div class="hero-slider absolute inset-0 z-0 w-full h-full">
+            <!-- Slide 1 -->
+            <div class="hero-slide active absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
+                <img src="img/IMG_0885.JPG.jpeg" alt="Kids Village Airport" class="w-full h-full object-cover">
             </div>
-            <!-- Hero Image -->
-            <div class="hero-image-wrapper relative">
-                <div class="rounded-4xl overflow-hidden shadow-2xl border-4 border-white relative group"
-                    style="height:420px;">
-                    <!-- Clickable overlay to YouTube Channel -->
-                    <a href="https://www.youtube.com/@KidsVillageTanger" target="_blank"
-                        class="absolute inset-0 z-20 cursor-pointer" aria-label="Visit our YouTube Channel"></a>
-                    <iframe class="w-full h-full pointer-events-none" style="transform: scale(1.35);"
-                        src="https://www.youtube.com/embed/b-UeXmrpyWQ?autoplay=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=b-UeXmrpyWQ&playsinline=1"
-                        title="Kids Village Tanger Video" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
-                <!-- Decorative dots -->
-                <div class="absolute -bottom-3 -left-3 w-16 h-16 bg-yellow-300 rounded-full opacity-60 -z-10"></div>
-                <div class="absolute -top-3 -right-3 w-12 h-12 bg-pink-300 rounded-full opacity-60 -z-10"></div>
+            <!-- Slide 2 -->
+            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="img/IMG_0887.JPG.jpeg" alt="Airplane Slide" class="w-full h-full object-cover">
+            </div>
+            <!-- Slide 3 -->
+            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="img/IMG_0882.JPG.jpeg" alt="Ball Pit" class="w-full h-full object-cover">
+            </div>
+            <!-- Slide 4 -->
+            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="img/IMG_0837.JPG.jpeg" alt="Pretend Play" class="w-full h-full object-cover">
+            </div>
+            <!-- Slide 5 -->
+            <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="img/IMG_0841.JPG.jpeg" alt="Soccer Cage" class="w-full h-full object-cover">
+            </div>
+            <!-- Dark Overlay for Readability -->
+            <div class="absolute inset-0 bg-black/40 z-10"></div>
+        </div>
+
+        <!-- Floating Elements & Blobs (Moved to higher z-index) -->
+        <div class="floating-el el-1 text-4xl z-20">🎈</div>
+        <div class="floating-el el-2 text-2xl z-20">⭐</div>
+        <div class="floating-el el-3 text-4xl z-20">🚗</div>
+        <div class="floating-el el-4 text-3xl z-20">🎁</div>
+        <div class="floating-el el-5 text-2xl z-20">⭐</div>
+        <div class="floating-el el-6 text-3xl z-20">🧩</div>
+        <div class="floating-el el-7 text-4xl z-20">🎉</div>
+
+        <!-- Text Overlay -->
+        <div class="hero-content relative z-30 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
+            <h1 class="font-fredoka text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
+                Kids Village Tanger .. Where<br>your kid's future begins ✨
+            </h1>
+            <p class="text-white text-xl md:text-2xl mb-10 font-quicksand font-medium leading-relaxed drop-shadow-md max-w-2xl">
+                Discover a magical world of fun, learning, and adventure for
+                your little ones. Safe, engaging, and full of joy!
+            </p>
+            <div class="flex gap-4 flex-wrap justify-center">
+                <a href="book.html" class="btn-hero bg-orange-400 text-white font-fredoka font-semibold text-lg px-8 py-4 rounded-pill shadow-lg hover:-translate-y-1 transition-transform inline-block">
+                    Plan a Visit
+                </a>
+                <a href="#gallery" class="btn-hero bg-white text-gray-800 font-fredoka font-semibold text-lg px-8 py-4 rounded-pill shadow-lg hover:-translate-y-1 transition-transform inline-flex items-center gap-2">
+                    <i class="fa-solid fa-images text-sm"></i> View Gallery
+                </a>
             </div>
         </div>
 
+        <!-- Slider Controls -->
+        <button class="slider-arrow prev absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/30 hover:bg-white/80 text-white hover:text-gray-800 rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm transition-all z-40">
+            <i class="fa-solid fa-chevron-left text-xl"></i>
+        </button>
+        <button class="slider-arrow next absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/30 hover:bg-white/80 text-white hover:text-gray-800 rounded-full flex items-center justify-center shadow-lg backdrop-blur-sm transition-all z-40">
+            <i class="fa-solid fa-chevron-right text-xl"></i>
+        </button>
+
+        <!-- Slider Indicators -->
+        <div class="slider-indicators absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-3 z-40">
+            <span class="slider-dot active w-4 h-4 rounded-full bg-white cursor-pointer transition-all shadow-sm"></span>
+            <span class="slider-dot w-4 h-4 rounded-full bg-white/50 cursor-pointer transition-all shadow-sm"></span>
+            <span class="slider-dot w-4 h-4 rounded-full bg-white/50 cursor-pointer transition-all shadow-sm"></span>
+            <span class="slider-dot w-4 h-4 rounded-full bg-white/50 cursor-pointer transition-all shadow-sm"></span>
+            <span class="slider-dot w-4 h-4 rounded-full bg-white/50 cursor-pointer transition-all shadow-sm"></span>
+        </div>
+
         <!-- Wave Bottom: double-layered CSS-animated wave -->
-        <div class="wave-bottom">
+        <div class="wave-bottom z-40">
             <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                 <path class="wave-back" fill="#a6e1fa" fill-opacity="0.5"
                     d="M0,80 C180,40 360,120 540,100 C720,80 900,30 1080,60 C1260,90 1350,110 1440,95 L1440,160 L0,160 Z" />
@@ -165,15 +181,31 @@
         <div class="max-w-5xl mx-auto">
             <h2 class="font-fredoka text-4xl font-bold text-center text-gray-800 mb-12">Who we are</h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
-                <!-- Collage -->
-                <div class="about-collage relative flex-1" style="height:380px; min-width:360px;">
-                    <div class="collage-img img-1"><img src="about-1.png" alt="Kids playing on structure"></div>
-                    <div class="collage-img img-2"><img src="about-2.png" alt="Kids creative play"></div>
-                    <div class="collage-img img-3"><img src="about-3.png" alt="Kid in ball pit"></div>
-                    <div class="collage-img img-4"><img src="about-4.png" alt="Kids with educational toys"></div>
+                <!-- Animated Collage -->
+                <div class="about-collage-animated w-full md:w-1/2 relative shrink-0">
+                    <!-- Slot 1: Top Left -->
+                    <div class="collage-slot slot-1">
+                        <img src="img/IMG_0887.JPG.jpeg" alt="Kids playing" class="active">
+                        <img src="img/IMG_0837.JPG.jpeg" alt="Kids playing">
+                    </div>
+                    <!-- Slot 2: Top Right -->
+                    <div class="collage-slot slot-2">
+                        <img src="img/IMG_0886.JPG.jpeg" alt="Princess play" class="active">
+                        <img src="img/IMG_0841.JPG.jpeg" alt="Mini-foot">
+                    </div>
+                    <!-- Slot 3: Bottom Left -->
+                    <div class="collage-slot slot-3">
+                        <img src="img/IMG_0840.JPG.jpeg" alt="Climbing" class="active">
+                        <img src="img/IMG_0876.JPG.jpeg" alt="Painting">
+                    </div>
+                    <!-- Slot 4: Bottom Right -->
+                    <div class="collage-slot slot-4">
+                        <img src="img/IMG_0885.JPG.jpeg" alt="Front desk" class="active">
+                        <img src="img/IMG_0870.JPG.jpeg" alt="Veterinary clinic">
+                    </div>
                 </div>
                 <!-- Text -->
-                <div class="about-text flex-1">
+                <div class="about-text w-full md:w-1/2">
                     <p class="text-gray-600 text-lg leading-relaxed mb-8 font-quicksand font-medium">
                         Kids Village Tanger is a premier playground and daycare center. We believe in fostering
                         creativity, imagination, and physical development in a safe and nurturing environment. Our
@@ -191,7 +223,7 @@
 
     <!-- ========== PLAYGROUND BANNER ========== -->
     <section class="playground-banner w-full overflow-hidden" style="height:380px;">
-        <img src="entrance-banner.png" alt="Kids Village Entrance" class="w-full h-full object-cover">
+        <img src="img/IMG_0892.JPG.jpeg" alt="Kids Village Entrance" class="w-full h-full object-cover">
     </section>
 
     <!-- ========== MEDIA GALLERY ========== -->
@@ -199,58 +231,266 @@
         <h2 class="font-fredoka text-4xl font-bold text-gray-800 mb-8">Media Gallery</h2>
 
         <!-- Filter buttons -->
-        <div class="inline-flex bg-white rounded-pill p-1 shadow-md mb-10 gallery-filters">
-            <button class="filter-btn active font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all"
-                data-filter="all">All</button>
-            <button
-                class="filter-btn filter-birthdays font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all"
-                data-filter="birthdays">Birthdays</button>
-            <button
-                class="filter-btn filter-school font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all"
-                data-filter="school">School</button>
-            <button
-                class="filter-btn filter-holidays font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all"
-                data-filter="holidays">Holidays</button>
-            <button
-                class="filter-btn filter-animals font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all"
-                data-filter="animals">Animals</button>
+        <div class="inline-flex bg-white rounded-pill p-1 shadow-md mb-10 gallery-filters flex-wrap justify-center gap-2 max-w-full">
+            <button class="filter-btn active font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all" data-filter="all">All</button>
+            <button class="filter-btn filter-school font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all" data-filter="school">School</button>
+            <button class="filter-btn filter-doctor font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all" data-filter="doctor">Doctor</button>
+            <button class="filter-btn filter-sports font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all" data-filter="sports">Sports</button>
+            <button class="filter-btn filter-kitchen font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all" data-filter="kitchen">Kitchen</button>
+            <button class="filter-btn filter-kids font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all" data-filter="kids">Kids</button>
+            <button class="filter-btn filter-space font-fredoka font-semibold px-5 py-2 rounded-pill text-base transition-all" data-filter="space">Space</button>
         </div>
 
         <!-- Gallery Grid -->
-        <div class="gallery-grid max-w-4xl mx-auto">
-            <div class="gallery-item school"><img
-                    src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=500&q=80"
-                    alt="Boy playing with balls"></div>
-            <div class="gallery-item holidays main-clown"><img
-                    src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=600&q=80"
-                    alt="Clown"></div>
-            <div class="gallery-item birthdays"><img
-                    src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=500&q=80"
-                    alt="Kids birthday"></div>
-            <div class="gallery-item school"><img
-                    src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=500&q=80"
-                    alt="Kids in class"></div>
-            <div class="gallery-item school"><img
-                    src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=500&q=80"
-                    alt="Outdoor play"></div>
-            <div class="gallery-item birthdays"><img
-                    src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=500&q=80"
-                    alt="Birthday cake"></div>
-            <div class="gallery-item holidays"><img
-                    src="https://images.unsplash.com/photo-1545048702-79362596cdc9?auto=format&fit=crop&w=500&q=80"
-                    alt="Christmas kids"></div>
-            <div class="gallery-item animals"><img
-                    src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=500&q=80"
-                    alt="Wooden animals"></div>
-            <div class="gallery-item animals"><img
-                    src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?auto=format&fit=crop&w=500&q=80"
-                    alt="Toy elephant"></div>
-            <div class="gallery-item animals"><img
-                    src="https://images.unsplash.com/photo-1520627977056-c307aeb9a625?auto=format&fit=crop&w=500&q=80"
-                    alt="Rocking animal"></div>
-            <div class="gallery-item animals"><img
-                    src="https://images.unsplash.com/photo-1555448248-2571daf6344b?auto=format&fit=crop&w=500&q=80"
-                    alt="Plush toys"></div>
+        <div class="gallery-grid max-w-6xl mx-auto">
+            <!-- 1. School - IMG_0872 -->
+            <div class="gallery-item school relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0872.JPG.jpeg" alt="Entrée de la Crèche" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Éveil / School</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Classe d'Éveil 🏫</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">L'entrée chaleureuse de nos espaces d'apprentissage.</p>
+                </div>
+            </div>
+
+            <!-- ============ SCHOOL ============ -->
+            <!-- 1. School - IMG_0872 -->
+            <div class="gallery-item school relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0872.JPG.jpeg" alt="Accueil et Réception" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">School</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Classe d'Éveil 🏫</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">L'entrée chaleureuse de nos espaces d'apprentissage.</p>
+                </div>
+            </div>
+            <!-- 2. School - IMG_0873 -->
+            <div class="gallery-item school relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0873.JPG.jpeg" alt="Espace Apprentissage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">School</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Petits Génies 💡</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Un espace moderne pour la créativité et le développement.</p>
+                </div>
+            </div>
+            <!-- 3. School - IMG_0875 -->
+            <div class="gallery-item school relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0875.JPG.jpeg" alt="Jeux de Construction" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">School</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Jeux de Logique 🧩</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Des puzzles et jeux de construction en bois naturel.</p>
+                </div>
+            </div>
+            <!-- 4. School - IMG_0876 -->
+            <div class="gallery-item school relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0876.JPG.jpeg" alt="Atelier Créatif" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">School</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Atelier Art 🎨</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Dessin, peinture et activités manuelles amusantes.</p>
+                </div>
+            </div>
+
+            <!-- ============ DOCTOR ============ -->
+            <!-- 5. Doctor - IMG_0883 -->
+            <div class="gallery-item doctor relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0883.JPG.jpeg" alt="Cabinet Médical" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Doctor</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Cabinet Médical 🏥</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Soigne tes patients comme un vrai docteur.</p>
+                </div>
+            </div>
+            <!-- 6. Doctor - IMG_0870 -->
+            <div class="gallery-item doctor relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0870.JPG.jpeg" alt="Clinique Vétérinaire" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Doctor</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Clinique Vétérinaire 🐶</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Soigne les doudous et apprends la compassion.</p>
+                </div>
+            </div>
+            <!-- 7. Doctor - IMG_0888 -->
+            <div class="gallery-item doctor relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0888.JPG.jpeg" alt="Nurserie & Urgences" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Doctor</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Urgences & Poupées 🚑</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Apprends les premiers gestes de secours.</p>
+                </div>
+            </div>
+
+            <!-- ============ SPORTS ============ -->
+            <!-- 8. Sports - IMG_0841 -->
+            <div class="gallery-item sports relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0841.JPG.jpeg" alt="Espace Mini-Foot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Sports</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Mini Arena Foot ⚽</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Un terrain de foot synthétique pour s'affronter.</p>
+                </div>
+            </div>
+            <!-- 9. Sports - IMG_0857 -->
+            <div class="gallery-item sports relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0857.JPG.jpeg" alt="Espace Babyfoot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Sports</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Match de Babyfoot 🏆</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Des parties excitantes entre copains.</p>
+                </div>
+            </div>
+
+            <!-- ============ KITCHEN ============ -->
+            <!-- 10. Kitchen - IMG_0846 -->
+            <div class="gallery-item kitchen relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0846.JPG.jpeg" alt="Supermarché Kidz" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Kitchen</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Marché Kidz 🥕</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Remplis ton panier avec de bons légumes frais.</p>
+                </div>
+            </div>
+            <!-- 11. Kitchen - IMG_0847 -->
+            <div class="gallery-item kitchen relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0847.JPG.jpeg" alt="Caisses Enregistreuses" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Kitchen</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Caisses Enregistreuses 💳</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Scanne tes courses et paie en s'amusant.</p>
+                </div>
+            </div>
+            <!-- 12. Kitchen - IMG_0852 -->
+            <div class="gallery-item kitchen relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0852.JPG.jpeg" alt="Boulangerie & Chariots" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Kitchen</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Boulangerie Kidz 🥖</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Du bon pain chaud et des viennoiseries de jeu.</p>
+                </div>
+            </div>
+            <!-- 13. Kitchen - IMG_0866 -->
+            <div class="gallery-item kitchen relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0866.JPG.jpeg" alt="Cuisine & Coiffeuse" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Kitchen</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Petits Chefs 🍳</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Une cuisine de rêve pour cuisiner comme les grands.</p>
+                </div>
+            </div>
+
+            <!-- ============ KIDS ============ -->
+            <!-- 14. Kids - IMG_0881 -->
+            <div class="gallery-item kids relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0881.JPG.jpeg" alt="American Diner" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Kids</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">American Diner 🍔</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Un resto rétro chic pour des gouters magiques.</p>
+                </div>
+            </div>
+            <!-- 15. Kids - IMG_0839 -->
+            <div class="gallery-item kids relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0839.JPG.jpeg" alt="Salon de Déguisement" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Kids</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Cabine Magique 👑</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Un dressing de contes de fées pour se transformer.</p>
+                </div>
+            </div>
+            <!-- 16. Kids - IMG_0878 -->
+            <div class="gallery-item kids relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0878.JPG.jpeg" alt="La Scène Théâtre" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Kids</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Scène de Théâtre 🎭</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Où les petits artistes expriment leurs talents cachés.</p>
+                </div>
+            </div>
+            <!-- 17. Kids - IMG_0867 -->
+            <div class="gallery-item kids relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0867.JPG.jpeg" alt="Chambre de Poupée" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Kids</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Chambre Cosy 🛏️</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Une cabane douillette pour de jolies histoires.</p>
+                </div>
+            </div>
+            <!-- 18. Kids - IMG_0868 -->
+            <div class="gallery-item kids relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0868.JPG.jpeg" alt="La Nurserie Royale" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Kids</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Nurserie Royale 🍼</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Prends soin des bébés dans un décor magique.</p>
+                </div>
+            </div>
+            <!-- 19. Kids - IMG_0871 -->
+            <div class="gallery-item kids relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0871.JPG.jpeg" alt="Toilettage Animaux" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Kids</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Toilettage Poilu 🧼</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Prends soin des animaux en t'amusant.</p>
+                </div>
+            </div>
+
+            <!-- ============ SPACE ============ -->
+            <!-- 20. Space - IMG_0836 -->
+            <div class="gallery-item space relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0836.JPG.jpeg" alt="Glissade Avion" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Space</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Glissade Céleste ✈️</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Un grand toboggan sous forme d'avion.</p>
+                </div>
+            </div>
+            <!-- 21. Space - IMG_0855 -->
+            <div class="gallery-item space relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0855.JPG.jpeg" alt="Le Grand Château" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Space</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Château d'Aventure 🏰</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Un labyrinthe géant pour courir et s'amuser.</p>
+                </div>
+            </div>
+            <!-- 22. Space - IMG_0882 -->
+            <div class="gallery-item space relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0882.JPG.jpeg" alt="Piscine à Balles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Space</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Mer de Balles 🔵</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Des milliers de balles colorées et propres.</p>
+                </div>
+            </div>
+            <!-- 23. Space - IMG_0840 -->
+            <div class="gallery-item space relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0840.JPG.jpeg" alt="Donjon d'Escalade" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Space</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Donjon Magique 🧗</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Un mur d'escalade sécurisé pour tester sa force.</p>
+                </div>
+            </div>
+            <!-- 24. Space - IMG_0858 -->
+            <div class="gallery-item space relative overflow-hidden group cursor-pointer">
+                <img src="img/IMG_0858.JPG.jpeg" alt="Zone Gaming / Console" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                    <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Space</span>
+                    <h3 class="font-fredoka text-lg font-bold leading-tight">Espace Gaming 🎮</h3>
+                    <p class="font-quicksand text-xs font-medium opacity-90 mt-1">Le coin consoles pour les plus grands.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="gallery-pagination flex items-center justify-center gap-6 mt-10">
+            <button id="prev-page" class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform text-gray-800 disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <span id="page-indicator" class="font-fredoka font-bold text-gray-800 text-lg">Page 1</span>
+            <button id="next-page" class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:scale-110 transition-transform text-gray-800 disabled:opacity-50 disabled:hover:scale-100 disabled:cursor-not-allowed">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
     </section>
 
@@ -337,9 +577,17 @@
                     </div>
 
                     <div class="fun-info-body p-10 pt-16 flex flex-col gap-6">
+                        <div class="info-item flex items-start gap-4 text-white font-fredoka font-semibold text-lg">
+                            <i class="fa-solid fa-phone text-2xl mt-1"></i>
+                            <div class="flex flex-col">
+                                <span>05 20 82 31 77</span>
+                                <span>06 14 46 29 86</span>
+                                <span>07 07 44 55 72</span>
+                            </div>
+                        </div>
                         <div class="info-item flex items-center gap-4 text-white font-fredoka font-semibold text-lg">
-                            <i class="fa-solid fa-phone text-2xl"></i>
-                            <span>+212 6XX XXX XXX</span>
+                            <i class="fa-solid fa-envelope text-2xl"></i>
+                            <a href="mailto:kidsvillage2023@gmail.com" class="hover:text-yellow-200 transition-colors">kidsvillage2023@gmail.com</a>
                         </div>
                         <div class="info-item flex items-center gap-4 text-white font-fredoka font-semibold text-lg">
                             <i class="fa-solid fa-location-dot text-2xl"></i>
@@ -366,192 +614,7 @@
         </div>
     </section>
 
-    <!-- ========== BOOK / INSCRIPTION SECTION ========== -->
-    <!-- ══════════════════════════════════════════════════════════════════
-         AJOUTÉ: Formulaire d'inscription en ligne
-         Les données sont envoyées à Google Sheets via Apps Script
-         Même flux que github-pages/index.html mais intégré dans le site
-         Flow: Ce formulaire → Google Apps Script → Google Sheets → Laravel Import
-    ══════════════════════════════════════════════════════════════════ -->
-    <section id="book" class="book-section bg-gradient-to-b from-white via-blue-50 to-green-50 py-20 px-6 relative overflow-hidden">
-        <!-- Decorative elements -->
-        <div class="absolute top-10 left-10 text-6xl opacity-10 floating-el" style="animation-delay:0s">🎈</div>
-        <div class="absolute top-20 right-16 text-5xl opacity-10 floating-el" style="animation-delay:1s">⭐</div>
-        <div class="absolute bottom-20 left-20 text-5xl opacity-10 floating-el" style="animation-delay:2s">🧩</div>
-        <div class="absolute bottom-10 right-10 text-6xl opacity-10 floating-el" style="animation-delay:0.5s">🎉</div>
 
-        <div class="max-w-4xl mx-auto relative z-10">
-            <!-- Header -->
-            <div class="text-center mb-12">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-orange-400 rounded-3xl shadow-lg mb-6">
-                    <i class="fa-solid fa-child-reaching text-white text-3xl"></i>
-                </div>
-                <h2 class="font-fredoka text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                    Inscription Familiale 🎪
-                </h2>
-                <p class="font-quicksand text-gray-500 text-lg max-w-xl mx-auto">
-                    Inscrivez votre famille pour profiter de nos activités et événements spéciaux !
-                </p>
-            </div>
-
-            <!-- Registration Form -->
-            <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
-
-                <!-- Card 1: Personal Info -->
-                <div class="book-card mb-8">
-                    <div class="book-card-header">
-                        <div class="book-card-icon bg-blue-100 text-blue-600">
-                            <i class="fa-solid fa-user-tie"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Informations Personnelles</h3>
-                            <p class="font-quicksand text-gray-400 text-sm">Renseignez les informations des parents</p>
-                        </div>
-                    </div>
-                    <div class="book-card-body">
-                        <div class="book-grid">
-                            <div class="book-field">
-                                <label class="book-label">Nom complet du père <span class="text-red-400">*</span></label>
-                                <input type="text" id="b_father_name" required placeholder="Ex: Mohammed Alami" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">Nom complet de la mère</label>
-                                <input type="text" id="b_mother_name" placeholder="Ex: Fatima Alaoui" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">WhatsApp <span class="text-red-400">*</span></label>
-                                <input type="tel" id="b_phone" required placeholder="+212 6XX XXX XXX" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">Téléphone d'urgence</label>
-                                <input type="tel" id="b_emergency_phone" placeholder="Numéro alternatif" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">Email</label>
-                                <input type="email" id="b_email" placeholder="parent@exemple.com" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">CIN / Carte nationale</label>
-                                <input type="text" id="b_cin" placeholder="Ex: AB123456" class="book-input">
-                            </div>
-                            <div class="book-field col-span-full">
-                                <label class="book-label">Adresse</label>
-                                <input type="text" id="b_address" placeholder="Quartier, Ville..." class="book-input">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Professional Info -->
-                <div class="book-card mb-8">
-                    <div class="book-card-header">
-                        <div class="book-card-icon bg-purple-100 text-purple-600">
-                            <i class="fa-solid fa-briefcase"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Informations Professionnelles</h3>
-                            <p class="font-quicksand text-gray-400 text-sm">Optionnel — profession des parents</p>
-                        </div>
-                    </div>
-                    <div class="book-card-body">
-                        <div class="book-grid">
-                            <div class="book-field">
-                                <label class="book-label">Profession du père</label>
-                                <input type="text" id="b_father_job" placeholder="Ex: Ingénieur" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">Lieu de travail du père</label>
-                                <input type="text" id="b_father_work_place" placeholder="Nom de l'entreprise" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">Profession de la mère</label>
-                                <input type="text" id="b_mother_job" placeholder="Ex: Professeure" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">Lieu de travail de la mère</label>
-                                <input type="text" id="b_mother_work_place" placeholder="Nom de l'entreprise" class="book-input">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Children -->
-                <div class="book-card mb-8">
-                    <div class="book-card-header">
-                        <div class="book-card-icon bg-green-100 text-green-600">
-                            <i class="fa-solid fa-children"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Vos Enfants</h3>
-                            <p class="font-quicksand text-gray-400 text-sm">Ajoutez les informations de vos enfants</p>
-                        </div>
-                    </div>
-                    <div class="book-card-body">
-                        <div id="childrenContainer">
-                            <!-- Child 1 -->
-                            <div class="child-block" data-child="1">
-                                <div class="child-label font-fredoka">
-                                    <i class="fa-solid fa-child text-green-500"></i> Enfant #1
-                                </div>
-                                <div class="book-grid">
-                                    <div class="book-field">
-                                        <label class="book-label">Prénom <span class="text-red-400">*</span></label>
-                                        <input type="text" data-field="first_name" required placeholder="Prénom" class="book-input">
-                                    </div>
-                                    <div class="book-field">
-                                        <label class="book-label">Nom <span class="text-red-400">*</span></label>
-                                        <input type="text" data-field="last_name" required placeholder="Nom de famille" class="book-input">
-                                    </div>
-                                    <div class="book-field">
-                                        <label class="book-label">Date de naissance</label>
-                                        <input type="date" data-field="date_of_birth" class="book-input">
-                                    </div>
-                                    <div class="book-field">
-                                        <label class="book-label">École</label>
-                                        <input type="text" data-field="school_name" placeholder="Nom de l'école" class="book-input">
-                                    </div>
-                                    <div class="book-field col-span-full">
-                                        <label class="book-label">Allergies / Notes médicales</label>
-                                        <input type="text" data-field="allergies" placeholder="Aucune allergie connue" class="book-input">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Add child button -->
-                        <button type="button" onclick="addChild()" id="addChildBtn"
-                            class="mt-4 w-full py-3 rounded-2xl border-2 border-dashed border-green-300 text-green-600 font-fredoka font-bold text-base hover:bg-green-50 transition-colors flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-plus"></i> Ajouter un autre enfant
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" id="bookSubmitBtn"
-                    class="w-full py-4 bg-orange-400 hover:bg-orange-500 text-white font-fredoka font-bold text-xl rounded-3xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex items-center justify-center gap-3">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    Soumettre l'inscription
-                </button>
-            </form>
-
-            <!-- Success Message (hidden by default) -->
-            <div id="bookingSuccess" class="hidden">
-                <div class="text-center py-16">
-                    <div class="inline-flex items-center justify-center w-24 h-24 bg-green-100 rounded-full mb-6">
-                        <i class="fa-solid fa-circle-check text-green-500 text-5xl"></i>
-                    </div>
-                    <h3 class="font-fredoka text-3xl font-bold text-gray-800 mb-3">Merci pour votre inscription ! 🎉</h3>
-                    <p class="font-quicksand text-gray-500 text-lg mb-8">
-                        Votre demande a été enregistrée avec succès.<br>
-                        Notre équipe vous contactera bientôt.
-                    </p>
-                    <button onclick="resetBookingForm()"
-                        class="bg-blue-500 hover:bg-blue-600 text-white font-fredoka font-bold text-lg px-8 py-3 rounded-pill shadow-md hover:-translate-y-1 transition-all">
-                        <i class="fa-solid fa-rotate-left"></i> Nouvelle inscription
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="bg-sky-soft pt-20 pb-6 relative overflow-hidden">
@@ -679,44 +742,48 @@
         </div>
 
         <div class="max-w-4xl mx-auto flex flex-col items-center gap-6 pb-20 px-6 relative z-10">
-            <!-- Logo -->
-            <div class="footer-logo">
-                <img src="Logo Kids Village Tanger.jpg.png" alt="Kids Village Logo" class="h-24 w-auto mb-4">
-            </div>
+            
+            <!-- Frosted Glass Wrapper for readability over animals -->
+            <div class="bg-white/60 backdrop-blur-md rounded-3xl p-8 shadow-sm flex flex-col items-center gap-6 w-full max-w-lg text-center mt-12">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <img src="Logo Kids Village Tanger.jpg.png" alt="Kids Village Logo" class="h-24 w-auto mb-2 drop-shadow-md">
+                </div>
 
-            <!-- Social Icons -->
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://www.instagram.com/kidsvillagetanger/" target="_blank"
-                    class="h-10 px-4 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-lg font-quicksand font-bold tracking-wide"
-                    title="Instagram">
-                    <i class="fa-brands fa-instagram text-lg"></i>
-                    <span>kidsvillagetanger</span>
-                </a>
-                <a href="https://web.facebook.com/KidsVillage2023/?_rdc=1&_rdr#" target="_blank"
-                    class="h-10 px-4 bg-blue-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-lg font-quicksand font-bold tracking-wide"
-                    title="Facebook">
-                    <i class="fa-brands fa-facebook-f text-lg"></i>
-                    <span>KidsVillage2023</span>
-                </a>
-                <a href="https://www.youtube.com/@KidsVillageTanger" target="_blank"
-                    class="h-10 px-4 bg-red-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-lg font-quicksand font-bold tracking-wide"
-                    title="YouTube">
-                    <i class="fa-brands fa-youtube text-lg"></i>
-                    <span>KidsVillageTanger</span>
-                </a>
-            </div>
+                <!-- Social Icons -->
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="https://www.instagram.com/kidsvillagetanger/" target="_blank"
+                        class="h-10 px-4 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-md font-quicksand font-bold tracking-wide text-sm"
+                        title="Instagram">
+                        <i class="fa-brands fa-instagram text-base"></i>
+                        <span>kidsvillagetanger</span>
+                    </a>
+                    <a href="https://web.facebook.com/KidsVillage2023/?_rdc=1&_rdr#" target="_blank"
+                        class="h-10 px-4 bg-blue-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-md font-quicksand font-bold tracking-wide text-sm"
+                        title="Facebook">
+                        <i class="fa-brands fa-facebook-f text-base"></i>
+                        <span>KidsVillage2023</span>
+                    </a>
+                    <a href="https://www.youtube.com/@KidsVillageTanger" target="_blank"
+                        class="h-10 px-4 bg-red-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-md font-quicksand font-bold tracking-wide text-sm"
+                        title="YouTube">
+                        <i class="fa-brands fa-youtube text-base"></i>
+                        <span>KidsVillageTanger</span>
+                    </a>
+                </div>
 
-            <!-- Links -->
-            <div class="flex items-center gap-4 text-gray-700 font-fredoka font-medium">
-                <a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
-                <span class="text-gray-300">|</span>
-                <a href="reglement.html" class="hover:text-blue-600 transition-colors">Règlement Intérieur</a>
-            </div>
+                <!-- Links -->
+                <div class="flex items-center justify-center gap-4 text-gray-800 font-fredoka font-semibold flex-wrap">
+                    <a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="reglement.html" class="hover:text-blue-600 transition-colors">Règlement Intérieur</a>
+                </div>
 
-            <!-- Copyright -->
-            <p class="font-quicksand text-gray-500 text-sm font-medium">
-                &copy; 2024 Kids Village Tanger. All rights reserved.
-            </p>
+                <!-- Copyright -->
+                <p class="font-quicksand text-gray-700 text-sm font-bold">
+                    &copy; 2024 Kids Village Tanger. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
 

@@ -1,30 +1,155 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ─────────────────────────────────────────────
-    // 1. MEDIA GALLERY FILTERING
+    // 1. MEDIA GALLERY FILTERING & PAGINATION
     // ─────────────────────────────────────────────
     const filterBtns   = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    const prevPageBtn  = document.getElementById('prev-page');
+    const nextPageBtn  = document.getElementById('next-page');
+    const pageIndicator = document.getElementById('page-indicator');
+
+    const ITEMS_PER_PAGE = 6;
+    let currentPage = 1;
+    let currentFilter = 'all';
+    let filteredItems = [...galleryItems];
+
+    function renderGallery() {
+        // Filter the items
+        filteredItems = galleryItems.filter(item => {
+            return currentFilter === 'all' || item.classList.contains(currentFilter);
+        });
+
+        const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE) || 1;
+        
+        // Boundaries
+        if (currentPage > totalPages) currentPage = totalPages;
+        if (currentPage < 1) currentPage = 1;
+
+        // Update UI
+        if (pageIndicator) pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
+
+        // Disable/Enable buttons
+        if (prevPageBtn) prevPageBtn.disabled = currentPage === 1;
+        if (nextPageBtn) nextPageBtn.disabled = currentPage === totalPages;
+
+        const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+        const endIndex = startIndex + ITEMS_PER_PAGE;
+
+        // Hide all first
+        galleryItems.forEach(item => item.style.display = 'none');
+
+        // Show only paginated items
+        filteredItems.slice(startIndex, endIndex).forEach(item => {
+            item.style.display = 'block';
+            item.style.animation = 'fadeIn 0.45s ease forwards';
+        });
+    }
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active button
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            const filterValue = btn.getAttribute('data-filter');
-
-            galleryItems.forEach(item => {
-                const show = filterValue === 'all' || item.classList.contains(filterValue);
-                if (show) {
-                    item.style.display = 'block';
-                    item.style.animation = 'fadeIn 0.45s ease forwards';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
+            currentFilter = btn.getAttribute('data-filter');
+            currentPage = 1; // Reset to page 1
+            renderGallery();
         });
     });
+
+    if (prevPageBtn) {
+        prevPageBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderGallery();
+            }
+        });
+    }
+
+    if (nextPageBtn) {
+        nextPageBtn.addEventListener('click', () => {
+            const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE) || 1;
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderGallery();
+            }
+        });
+    }
+
+    // Initial render
+    renderGallery();
+
+    // ─────────────────────────────────────────────
+    // 1B. HERO CAROUSEL SLIDER (auto-play & manual controls)
+    // ─────────────────────────────────────────────
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroDots   = document.querySelectorAll('.slider-indicators .slider-dot');
+    const nextBtn    = document.querySelector('.slider-arrow.next');
+    const prevBtn    = document.querySelector('.slider-arrow.prev');
+    
+    let activeSlideIndex = 0;
+    let autoPlayInterval;
+
+    function showSlide(index) {
+        if (index >= heroSlides.length) {
+            activeSlideIndex = 0;
+        } else if (index < 0) {
+            activeSlideIndex = heroSlides.length - 1;
+        } else {
+            activeSlideIndex = index;
+        }
+
+        heroSlides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === activeSlideIndex);
+        });
+
+        heroDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === activeSlideIndex);
+            if (i === activeSlideIndex) {
+                dot.classList.add('bg-white');
+                dot.classList.remove('bg-white/50');
+            } else {
+                dot.classList.remove('bg-white');
+                dot.classList.add('bg-white/50');
+            }
+        });
+    }
+
+    function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayInterval = setInterval(() => {
+            showSlide(activeSlideIndex + 1);
+        }, 5000);
+    }
+
+    function stopAutoPlay() {
+        if (autoPlayInterval) clearInterval(autoPlayInterval);
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            showSlide(activeSlideIndex + 1);
+            startAutoPlay();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            showSlide(activeSlideIndex - 1);
+            startAutoPlay();
+        });
+    }
+
+    heroDots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            showSlide(i);
+            startAutoPlay();
+        });
+    });
+
+    if (heroSlides.length > 0) {
+        startAutoPlay();
+    }
 
     // ─────────────────────────────────────────────
     // 2. TESTIMONIALS SLIDER (arrow navigation)
@@ -185,165 +310,24 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(section);
     });
 
+    // ─────────────────────────────────────────────
+    // 5. ANIMATED COLLAGE
+    // ─────────────────────────────────────────────
+    const collageSlots = document.querySelectorAll('.collage-slot');
+    
+    collageSlots.forEach(slot => {
+        const imgs = slot.querySelectorAll('img');
+        if (imgs.length <= 1) return;
+        
+        let currentIdx = 0;
+        // Randomize the start interval slightly so they don't all change at the exact same millisecond
+        setTimeout(() => {
+            setInterval(() => {
+                imgs[currentIdx].classList.remove('active');
+                currentIdx = (currentIdx + 1) % imgs.length;
+                imgs[currentIdx].classList.add('active');
+            }, 4000); // changes every 4 seconds
+        }, Math.random() * 2000);
+    });
+
 });
-
-// ══════════════════════════════════════════════════════════════════
-// 5. BOOKING / INSCRIPTION FORM — Google Sheets Integration
-// ══════════════════════════════════════════════════════════════════
-// Ce code envoie les données du formulaire #book à Google Sheets
-// via Google Apps Script (même URL que github-pages/index.html)
-// Flow: Ce formulaire → Google Apps Script → Google Sheets → Laravel Import
-// ══════════════════════════════════════════════════════════════════
-
-// Google Apps Script Web App URL (même URL que le formulaire GitHub Pages)
-const BOOKING_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxCtaYu0Uk81Z9nqEp37h3gZO_Vqpz5A6KQmq-HNSQbg5LbOyBFnpXOfnZFc6BDZOdJ/exec';
-
-let childCount = 1;
-
-// Ajouter un enfant supplémentaire (max 3)
-function addChild() {
-    if (childCount >= 3) return;
-    childCount++;
-
-    const container = document.getElementById('childrenContainer');
-    const block = document.createElement('div');
-    block.className = 'child-block';
-    block.setAttribute('data-child', childCount);
-    block.innerHTML = `
-        <div class="child-label font-fredoka">
-            <i class="fa-solid fa-child text-green-500"></i> Enfant #${childCount}
-            <button type="button" onclick="removeChild(this)" 
-                style="margin-left:auto;color:#ef4444;font-size:14px;background:none;border:none;cursor:pointer;">
-                <i class="fa-solid fa-trash"></i>
-            </button>
-        </div>
-        <div class="book-grid">
-            <div class="book-field">
-                <label class="book-label">Prénom <span class="text-red-400">*</span></label>
-                <input type="text" data-field="first_name" required placeholder="Prénom" class="book-input">
-            </div>
-            <div class="book-field">
-                <label class="book-label">Nom <span class="text-red-400">*</span></label>
-                <input type="text" data-field="last_name" required placeholder="Nom de famille" class="book-input">
-            </div>
-            <div class="book-field">
-                <label class="book-label">Date de naissance</label>
-                <input type="date" data-field="date_of_birth" class="book-input">
-            </div>
-            <div class="book-field">
-                <label class="book-label">École</label>
-                <input type="text" data-field="school_name" placeholder="Nom de l'école" class="book-input">
-            </div>
-            <div class="book-field col-span-full">
-                <label class="book-label">Allergies / Notes médicales</label>
-                <input type="text" data-field="allergies" placeholder="Aucune allergie connue" class="book-input">
-            </div>
-        </div>
-    `;
-    container.appendChild(block);
-
-    if (childCount >= 3) {
-        document.getElementById('addChildBtn').style.display = 'none';
-    }
-}
-
-// Supprimer un enfant
-function removeChild(btn) {
-    btn.closest('.child-block').remove();
-    childCount--;
-    document.getElementById('addChildBtn').style.display = 'flex';
-    // Renumber children
-    document.querySelectorAll('#childrenContainer .child-block').forEach((block, i) => {
-        block.setAttribute('data-child', i + 1);
-        block.querySelector('.child-label').innerHTML = `
-            <i class="fa-solid fa-child text-green-500"></i> Enfant #${i + 1}
-            ${i > 0 ? `<button type="button" onclick="removeChild(this)" 
-                style="margin-left:auto;color:#ef4444;font-size:14px;background:none;border:none;cursor:pointer;">
-                <i class="fa-solid fa-trash"></i></button>` : ''}
-        `;
-    });
-}
-
-// Collecter les données des enfants
-function collectBookingChildren() {
-    const children = [];
-    document.querySelectorAll('#childrenContainer .child-block').forEach(block => {
-        const child = {};
-        block.querySelectorAll('[data-field]').forEach(input => {
-            child[input.getAttribute('data-field')] = input.value.trim();
-        });
-        if (child.first_name || child.last_name) {
-            children.push(child);
-        }
-    });
-    return children;
-}
-
-// Soumettre le formulaire → Google Sheets
-async function handleBookingSubmit(e) {
-    e.preventDefault();
-
-    const btn = document.getElementById('bookSubmitBtn');
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Envoi en cours...';
-
-    // Collecter toutes les données
-    const data = {
-        timestamp: new Date().toLocaleString('fr-FR'),
-        father_name: document.getElementById('b_father_name').value.trim(),
-        mother_name: document.getElementById('b_mother_name').value.trim(),
-        phone: document.getElementById('b_phone').value.trim(),
-        emergency_phone: document.getElementById('b_emergency_phone').value.trim(),
-        email: document.getElementById('b_email').value.trim(),
-        cin: document.getElementById('b_cin').value.trim(),
-        address: document.getElementById('b_address').value.trim(),
-        father_job: document.getElementById('b_father_job').value.trim(),
-        father_work_place: document.getElementById('b_father_work_place').value.trim(),
-        mother_job: document.getElementById('b_mother_job').value.trim(),
-        mother_work_place: document.getElementById('b_mother_work_place').value.trim(),
-        source: 'Inscription en ligne',
-        children: collectBookingChildren()
-    };
-
-    try {
-        // Envoyer à Google Apps Script (même URL que GitHub Pages)
-        await fetch(BOOKING_SHEET_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        });
-
-        // Afficher le message de succès
-        document.getElementById('bookingForm').style.display = 'none';
-        document.getElementById('bookingSuccess').classList.remove('hidden');
-
-        // Scroll to success message
-        document.getElementById('bookingSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } catch (err) {
-        alert('Erreur lors de l\'envoi. Veuillez réessayer.');
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Soumettre l\'inscription';
-    }
-}
-
-// Réinitialiser le formulaire
-function resetBookingForm() {
-    document.getElementById('bookingForm').reset();
-    document.getElementById('bookingForm').style.display = 'block';
-    document.getElementById('bookingSuccess').classList.add('hidden');
-
-    const btn = document.getElementById('bookSubmitBtn');
-    btn.disabled = false;
-    btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Soumettre l\'inscription';
-
-    // Reset children to just one
-    const container = document.getElementById('childrenContainer');
-    const blocks = container.querySelectorAll('.child-block');
-    blocks.forEach((block, i) => { if (i > 0) block.remove(); });
-    childCount = 1;
-    document.getElementById('addChildBtn').style.display = 'flex';
-
-    // Scroll back to form
-    document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
-}

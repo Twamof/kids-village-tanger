@@ -221,15 +221,7 @@ a {
 }
 
 /* Hero Content & Layout */
-.hero>.max-w-6xl {
-    display: grid;
-    grid-template-areas:
-        "heading"
-        "image"
-        "description"
-        "buttons";
-    gap: 15px;
-}
+/* We removed the CSS grid here to allow full-width background slider */
 
 /* Floating Emoji Elements */
 .floating-el {
@@ -289,39 +281,7 @@ a {
 }
 
 .hero-content {
-    display: contents;
-    /* Allow children to participate in parent grid */
-}
-
-.hero-content h1 {
-    grid-area: heading;
-    font-size: clamp(1.8rem, 8vw, 3rem);
-    margin-bottom: 0;
-}
-
-.hero-content p {
-    grid-area: description;
-    font-size: 1.1rem;
-    margin-bottom: 0;
-    padding: 0 10px;
-}
-
-.hero-content .flex {
-    grid-area: buttons;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.hero-image-wrapper {
-    grid-area: image;
-    position: relative;
-    z-index: 10;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.hero-image-wrapper>div {
-    height: 280px !important;
+    /* No longer display:contents, uses flexbox classes from HTML */
 }
 
 /* Wave Divider */
@@ -382,52 +342,64 @@ a {
 }
 
 
-/* ── WHO WE ARE ── */
-.about-collage {
+/* ── SCATTERED ANIMATED COLLAGE ── */
+.about-collage-animated {
     position: relative;
-    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
     min-width: 360px;
-    flex: 1;
 }
 
-/* ── WHO WE ARE ── */
-.about-collage {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.collage-img {
-    position: static;
+.collage-slot {
+    position: absolute;
+    width: 220px;
+    height: 220px;
     border-radius: 20px;
+    border: 6px solid #fff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     overflow: hidden;
-    border: 4px solid white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-    height: 150px;
+    transition: transform 0.4s ease, z-index 0.4s ease;
 }
 
-.collage-img img {
-    width: 100%;
-    height: 100%;
+.collage-slot:hover {
+    transform: scale(1.08) translateY(-10px) !important;
+    z-index: 10 !important;
+}
+
+.slot-1 { top: 10%; left: 0; transform: rotate(-8deg); z-index: 1; }
+.slot-2 { top: 5%; right: 0; transform: rotate(10deg); z-index: 2; width: 190px; height: 190px; }
+.slot-3 { bottom: 5%; left: 15%; transform: rotate(6deg); z-index: 3; width: 210px; height: 210px; }
+.slot-4 { bottom: 0; right: 10%; transform: rotate(-5deg); z-index: 4; }
+
+.collage-slot img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     object-fit: cover;
-    display: block;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
 }
 
-/* Reset transforms for mobile grid */
-.img-1,
-.img-2,
-.img-3,
-.img-4 {
-    width: auto;
-    height: 150px;
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    transform: none;
+.collage-slot img.active {
+    opacity: 1;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .about-collage-animated {
+        height: 340px;
+        min-width: unset;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto 2rem auto;
+    }
+    .collage-slot { width: 150px; height: 150px; border-width: 4px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+    .slot-1 { top: 10px; left: 0; }
+    .slot-2 { top: 30px; right: 0; width: 130px; height: 130px; }
+    .slot-3 { bottom: 30px; left: 5%; width: 140px; height: 140px; }
+    .slot-4 { bottom: 0; right: 5%; width: 150px; height: 150px; }
 }
 
 /* ── PLAYGROUND BANNER ── */
@@ -525,7 +497,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     /* 2 cols on mobile */
     gap: 12px;
-    grid-auto-rows: 160px;
+    grid-auto-rows: 220px;
     margin-bottom: 2rem;
 }
 
@@ -806,7 +778,7 @@ footer {
 @media (min-width: 601px) {
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 180px;
+        grid-auto-rows: 240px;
     }
 
     .main-clown {
@@ -976,7 +948,7 @@ footer {
 @media (min-width: 1025px) {
     .gallery-grid {
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 200px;
+        grid-auto-rows: 270px;
         max-width: 1100px;
         margin: 0 auto 3rem;
     }
@@ -1332,4 +1304,125 @@ footer {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
+}
+
+/* ── HERO CAROUSEL / SLIDER TRANSITIONS ── */
+.hero-slide {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: scale(1.03);
+}
+
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 20;
+}
+
+.slide-caption {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);
+}
+
+/* Float Animation delay helpers */
+.floating-el:nth-child(1) { animation-delay: 0s; }
+.floating-el:nth-child(2) { animation-delay: 0.5s; }
+.floating-el:nth-child(3) { animation-delay: 1s; }
+.floating-el:nth-child(4) { animation-delay: 1.5s; }
+.floating-el:nth-child(5) { animation-delay: 2s; }
+.floating-el:nth-child(6) { animation-delay: 2.5s; }
+.floating-el:nth-child(7) { animation-delay: 3s; }
+
+/* ── GALLERY ITEM HOVER OVERLAYS ── */
+.gallery-item {
+    position: relative;
+    border-radius: 24px !important;
+    border: 4px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.gallery-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    opacity: 1;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-badge {
+    transition: all 0.3s ease;
+}
+
+/* Hover effects per category on desktop */
+@media (hover: hover) {
+    .gallery-overlay h3,
+    .gallery-overlay p,
+    .gallery-overlay .gallery-badge {
+        transform: translateY(12px);
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .gallery-item:hover .gallery-overlay h3,
+    .gallery-item:hover .gallery-overlay p,
+    .gallery-item:hover .gallery-overlay .gallery-badge {
+        transform: translateY(0);
+    }
+
+    /* School (Pastel Yellow) */
+    .gallery-item.school:hover .gallery-overlay {
+        background: rgba(254, 240, 138, 0.96);
+        color: #1f2937 !important;
+    }
+    .gallery-item.school:hover .gallery-badge {
+        background-color: #1f2937 !important;
+        color: #fde047 !important;
+    }
+
+    /* Birthdays (Pastel Pink) */
+    .gallery-item.birthdays:hover .gallery-overlay {
+        background: rgba(255, 183, 213, 0.96);
+        color: #1f2937 !important;
+    }
+    .gallery-item.birthdays:hover .gallery-badge {
+        background-color: #1f2937 !important;
+        color: #ffb7d5 !important;
+    }
+
+    /* Holidays (Pastel Green) */
+    .gallery-item.holidays:hover .gallery-overlay {
+        background: rgba(167, 243, 208, 0.96);
+        color: #1f2937 !important;
+    }
+    .gallery-item.holidays:hover .gallery-badge {
+        background-color: #1f2937 !important;
+        color: #34d399 !important;
+    }
+
+    /* Animals (Pastel Blue) */
+    .gallery-item.animals:hover .gallery-overlay {
+        background: rgba(186, 230, 253, 0.96);
+        color: #1f2937 !important;
+    }
+    .gallery-item.animals:hover .gallery-badge {
+        background-color: #1f2937 !important;
+        color: #38bdf8 !important;
+    }
+}
+
+/* Touch fallback: set nice color badges */
+@media (hover: none) {
+    .gallery-item.school .gallery-badge {
+        background-color: #fde047;
+        color: #1f2937;
+    }
+    .gallery-item.birthdays .gallery-badge {
+        background-color: #ffb7d5;
+        color: #1f2937;
+    }
+    .gallery-item.holidays .gallery-badge {
+        background-color: #34d399;
+        color: #1f2937;
+    }
+    .gallery-item.animals .gallery-badge {
+        background-color: #38bdf8;
+        color: #1f2937;
+    }
 }
