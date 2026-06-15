@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentPage < 1) currentPage = 1;
 
         // Update UI
-        if (pageIndicator) pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
+        if (pageIndicator) pageIndicator.textContent = `Page ${currentPage} sur ${totalPages}`;
 
         // Disable/Enable buttons
         if (prevPageBtn) prevPageBtn.disabled = currentPage === 1;
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             name: "Jordan",
-            text: '"Great place. The nicest soft play I’ve seen in Tangier. The price is affordable and they have very kind staff."',
+            text: '"Super endroit. Le plus beau parc de jeux intérieur que j\'ai vu à Tanger. Le prix est abordable et le personnel est très aimable."',
             color: "#ffb57b"
         },
         {

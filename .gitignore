@@ -1,0 +1,15 @@
+# VS Code files
+.vscode/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Node dependencies (if any are installed)
+node_modules/
+package-lock.json
+
+# Development tools & temporary files (optional but good to ignore if left behind)
+generate_image_viewer.js
+view_images.html
+compress.php
