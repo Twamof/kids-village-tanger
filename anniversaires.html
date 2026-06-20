@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversaires — Kids Village Tanger</title>
+    <meta name="description"
+        content="Organisez une fête d'anniversaire magique et mémorable à Kids Village Tanger. Découvrez nos tarifs, formules d'anniversaire et nos photos de fête pour enfants.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        fredoka: ['Fredoka', 'sans-serif'],
+                        quicksand: ['Quicksand', 'sans-serif'],
+                    },
+                    colors: {
+                        'nav-blue': '#9ee0fc',
+                        'nav-green': '#9bf3d0',
+                        'nav-yellow': '#ffe97d',
+                        'nav-orange': '#ffb57b',
+                        'nav-pink': '#ffb7d5',
+                        'mint': '#a7f3d0',
+                        'sky-soft': '#a6e1fa',
+                    },
+                    borderRadius: {
+                        'pill': '9999px',
+                        '3xl': '1.5rem',
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-quicksand text-gray-800 bg-white overflow-x-hidden">
+
+    <!-- ========== HEADER / NAV ========== -->
+    <header class="kids-header">
+        <div class="kids-navbar">
+            <!-- Logo (Left) -->
+            <a href="index.html#home" class="nav-brand">
+                <img src="Logo Kids Village Tanger.jpg.png" alt="Kids Village Logo" class="h-40 w-auto">
+            </a>
+
+            <!-- Navigation Links (Center) -->
+            <nav class="nav-menu desktop-only">
+                <a href="index.html#home" class="nav-link nav-blue">Accueil</a>
+                <a href="index.html#about" class="nav-link nav-green">À propos</a>
+                <a href="index.html#activities" class="nav-link nav-yellow">Activités</a>
+                <a href="summer-camp.html" class="nav-link nav-orange">Summer camp</a>
+                <a href="anniversaires.html" class="nav-link nav-pink active">Anniversaires</a>
+                <a href="index.html#gallery" class="nav-link nav-blue">Galerie</a>
+                <a href="index.html#tarifs" class="nav-link nav-green">Tarifs</a>
+                <a href="index.html#reviews" class="nav-link nav-yellow">Avis</a>
+                <a href="index.html#contact" class="nav-link nav-orange">Contact</a>
+            </nav>
+
+            <!-- CTA Button (Right) -->
+            <div class="nav-actions">
+                <a href="book.html" class="nav-cta desktop-only">Réserver une visite</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle mobile-only" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <nav class="mobile-nav-menu">
+            <a href="index.html#home" class="mobile-link nav-blue">Accueil</a>
+            <a href="index.html#about" class="mobile-link nav-green">À propos</a>
+            <a href="index.html#activities" class="mobile-link nav-yellow">Activités</a>
+            <a href="summer-camp.html" class="mobile-link nav-orange">Summer camp</a>
+            <a href="anniversaires.html" class="mobile-link nav-pink active">Anniversaires</a>
+            <a href="index.html#gallery" class="mobile-link nav-blue">Galerie</a>
+            <a href="index.html#tarifs" class="mobile-link nav-green">Tarifs</a>
+            <a href="index.html#reviews" class="mobile-link nav-yellow">Avis</a>
+            <a href="index.html#contact" class="mobile-link nav-orange">Contact</a>
+            <a href="book.html" class="mobile-cta">Réserver une visite</a>
+        </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="relative bg-gradient-to-b from-pink-50 via-purple-50 to-sky-100 py-32 px-6 flex items-center justify-center min-h-[60vh] text-center overflow-hidden">
+        <!-- Floating Elements -->
+        <div class="floating-el el-1 text-4xl">🎈</div>
+        <div class="floating-el el-2 text-2xl">⭐</div>
+        <div class="floating-el el-3 text-4xl">🚗</div>
+        <div class="floating-el el-4 text-3xl">🎁</div>
+        <div class="floating-el el-5 text-2xl">⭐</div>
+        <div class="floating-el el-6 text-3xl">🧩</div>
+        <div class="floating-el el-7 text-4xl">🎉</div>
+
+        <div class="max-w-4xl mx-auto pt-12 relative z-10">
+            <!-- Badge -->
+            <span class="inline-block bg-pink-400 text-white font-fredoka font-bold text-sm px-6 py-2 rounded-full shadow-md mb-6 uppercase tracking-wider">
+                Fêtes Magiques 🎂
+            </span>
+            <h1 class="font-fredoka text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight mb-6 drop-shadow-sm">
+                Des Anniversaires de Rêve ! 🎉
+            </h1>
+            <p class="text-gray-600 text-lg md:text-2xl mb-10 font-quicksand font-medium leading-relaxed max-w-2xl mx-auto">
+                Offrez à votre enfant une fête magique et inoubliable ! Choisissez parmi nos formules clé en main comprenant jeux, gâteau personnalisé, animations sur mesure et buffet gourmand.
+            </p>
+            <div class="flex gap-4 flex-wrap justify-center">
+                <a href="book.html" class="bg-pink-400 hover:bg-pink-500 text-white font-fredoka font-semibold text-lg px-8 py-4 rounded-pill shadow-lg hover:scale-105 transition-transform inline-block">
+                    Réserver une formule
+                </a>
+                <a href="#formules" class="bg-white text-gray-800 font-fredoka font-semibold text-lg px-8 py-4 rounded-pill shadow-lg hover:scale-105 transition-transform inline-block">
+                    Découvrir les Tarifs
+                </a>
+            </div>
+        </div>
+
+        <!-- Wave Bottom divider -->
+        <div class="wave-bottom z-10">
+            <svg viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path class="wave-back" fill="#ffffff" fill-opacity="0.5"
+                    d="M0,80 C180,40 360,120 540,100 C720,80 900,30 1080,60 C1260,90 1350,110 1440,95 L1440,160 L0,160 Z" />
+                <path class="wave-front" fill="#ffffff" fill-opacity="1"
+                    d="M0,110 C240,80 420,140 660,115 C900,90 1080,55 1260,90 C1350,107 1400,120 1440,115 L1440,160 L0,160 Z" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== INTRO & TARIFS SECTION ========== -->
+    <section id="formules" class="bg-white py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Introduction Section -->
+            <div class="bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 md:p-12 shadow-sm border border-pink-100/50 mb-16">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-4xl">🎂</span>
+                    <h2 class="font-fredoka text-3xl md:text-4xl font-bold text-gray-800">
+                        Anniversaires Kids Village
+                    </h2>
+                </div>
+                <p class="font-quicksand font-bold text-[#ff6b9a] text-lg md:text-xl mb-6">
+                    Chez Kids Village, nous nous adaptons à vos envies et à votre budget.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-pink-200/40">
+                        <h3 class="font-fredoka font-bold text-xl text-gray-800 mb-3 flex items-center gap-2">
+                            <span class="text-2xl">🔑</span> Vous organisez vous-même ?
+                        </h3>
+                        <p class="text-gray-600 font-semibold leading-relaxed">
+                            Vous souhaitez organiser vous-même l'anniversaire de votre enfant ? Nous mettons à votre disposition nos salles d'anniversaire dans un cadre sécurisé et convivial.
+                        </p>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-pink-200/40">
+                        <h3 class="font-fredoka font-bold text-xl text-gray-800 mb-3 flex items-center gap-2">
+                            <span class="text-2xl">✨</span> Formule clé en main ?
+                        </h3>
+                        <p class="text-gray-600 font-semibold leading-relaxed">
+                            Vous préférez une formule clé en main ? Notre équipe peut prendre en charge tout ou partie de l'organisation : décoration, animation, mascottes, gâteau, buffet, maquillage, surprises et bien plus encore.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Features Badges Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                    <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-full shadow-sm border border-pink-100">
+                        <span class="text-2xl">🎈</span>
+                        <span class="font-quicksand font-bold text-gray-700 text-sm">Location de salle simple</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-full shadow-sm border border-pink-100">
+                        <span class="text-2xl">🎂</span>
+                        <span class="font-quicksand font-bold text-gray-700 text-sm">Formules anniversaires complètes</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-full shadow-sm border border-pink-100">
+                        <span class="text-2xl">🎭</span>
+                        <span class="font-quicksand font-bold text-gray-700 text-sm">Animations et mascottes</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-full shadow-sm border border-pink-100">
+                        <span class="text-2xl">🛝</span>
+                        <span class="font-quicksand font-bold text-gray-700 text-sm">Accès au parc de jeux</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-full shadow-sm border border-pink-100">
+                        <span class="text-2xl">🎨</span>
+                        <span class="font-quicksand font-bold text-gray-700 text-sm">Décoration personnalisée</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-white px-4 py-3 rounded-full shadow-sm border border-pink-100">
+                        <span class="text-2xl">🍰</span>
+                        <span class="font-quicksand font-bold text-gray-700 text-sm">Gâteaux et buffets sur demande</span>
+                    </div>
+                </div>
+
+                <p class="font-quicksand font-semibold text-gray-600 text-center border-t border-pink-100 pt-6">
+                    Que vous souhaitiez tout organiser vous-même ou nous confier l'ensemble de votre événement, Kids Village vous offre la liberté de choisir la formule qui vous convient le mieux.
+                </p>
+            </div>
+
+            <!-- Simple Hall Rental Section (New Table) -->
+            <div class="mb-20">
+                <div class="text-center mb-10">
+                    <span class="inline-block bg-teal-400 text-white font-fredoka font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider mb-3 shadow-sm">
+                        Location Simple 🎈
+                    </span>
+                    <h3 class="font-fredoka text-3xl md:text-4xl font-bold text-gray-800">
+                        Tarifs de Location de Salles d'Anniversaire
+                    </h3>
+                </div>
+
+                <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-lg border-2 border-teal-500/10 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-center border-collapse">
+                            <thead>
+                                <tr class="bg-teal-500 text-white">
+                                    <th class="py-4 px-6 font-fredoka font-bold text-lg border-r border-teal-600/30">Options</th>
+                                    <th class="py-4 px-6 font-fredoka font-bold text-lg">Prix</th>
+                                </tr>
+                            </thead>
+                            <tbody class="font-quicksand font-bold text-gray-700">
+                                <tr class="border-b border-teal-500/10 hover:bg-slate-50/50 transition-colors">
+                                    <td class="py-4 px-6 border-r border-teal-500/10">Grande salle (20 enfants + 5 Adultes) : 3h</td>
+                                    <td class="py-4 px-6 text-teal-600 font-fredoka text-lg">3200 Dhs</td>
+                                </tr>
+                                <tr class="border-b border-teal-500/10 hover:bg-slate-50/50 transition-colors">
+                                    <td class="py-4 px-6 border-r border-teal-500/10">Petite salle (10 enfants + 3 Adultes) : 3h</td>
+                                    <td class="py-4 px-6 text-teal-600 font-fredoka text-lg">2200 Dhs</td>
+                                </tr>
+                                <tr class="border-b border-teal-500/10 hover:bg-slate-50/50 transition-colors">
+                                    <td class="py-4 px-6 border-r border-teal-500/10">Adulte supplémentaire</td>
+                                    <td class="py-4 px-6 text-gray-600 font-fredoka">50 Dhs</td>
+                                </tr>
+                                <tr class="border-b border-teal-500/10 hover:bg-slate-50/50 transition-colors">
+                                    <td class="py-4 px-6 border-r border-teal-500/10">Enfant supplémentaire</td>
+                                    <td class="py-4 px-6 text-gray-600 font-fredoka">150 Dhs</td>
+                                </tr>
+                                <tr class="border-b border-teal-500/10 bg-[#e0f7fa]/60 hover:bg-[#b2ebf2]/60 transition-colors">
+                                    <td class="py-4 px-6 border-r border-teal-500/10 text-teal-800 font-semibold">Prix Grande salle du Mardi au Vendredi</td>
+                                    <td class="py-4 px-6 text-teal-700 font-fredoka text-lg">2800 Dhs</td>
+                                </tr>
+                                <tr class="border-b border-teal-500/10 bg-[#e0f7fa]/60 hover:bg-[#b2ebf2]/60 transition-colors">
+                                    <td class="py-4 px-6 border-r border-teal-500/10 text-teal-800 font-semibold">Prix Petite salle du Mardi au Vendredi</td>
+                                    <td class="py-4 px-6 text-teal-700 font-fredoka text-lg">1600 Dhs</td>
+                                </tr>
+                                <tr class="border-b border-teal-500/10 hover:bg-slate-50/50 transition-colors">
+                                    <td class="py-4 px-6 border-r border-teal-500/10">1 Heure Supplémentaire gde salle</td>
+                                    <td class="py-4 px-6 text-gray-600 font-fredoka">800 Dhs</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50/50 transition-colors">
+                                    <td class="py-4 px-6 border-r border-teal-500/10">1 Heure Supplémentaire ptte salle</td>
+                                    <td class="py-4 px-6 text-gray-600 font-fredoka">400 Dhs</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Contact Bar -->
+                    <div class="bg-teal-50 border-t-2 border-teal-500/10 p-6 text-center flex flex-col md:flex-row items-center justify-between gap-4">
+                        <p class="font-quicksand font-bold text-teal-950">
+                            Pour plus d'informations, merci de nous contacter sur le : <span class="text-teal-700 font-fredoka text-lg">0614462986</span>
+                        </p>
+                        <div class="flex gap-3">
+                            <a href="tel:0614462986" class="bg-teal-600 hover:bg-teal-700 text-white font-fredoka font-semibold px-6 py-2.5 rounded-full shadow-md transition-all hover:scale-105 flex items-center gap-2 text-sm">
+                                <i class="fa-solid fa-phone"></i> Appeler
+                            </a>
+                            <a href="https://wa.me/212614462986" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-fredoka font-semibold px-6 py-2.5 rounded-full shadow-md transition-all hover:scale-105 flex items-center gap-2 text-sm">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Complete Formulas Section -->
+            <div>
+                <div class="text-center mb-12">
+                    <span class="inline-block bg-pink-400 text-white font-fredoka font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider mb-3 shadow-sm">
+                        Formules Complètes 🎂
+                    </span>
+                    <h3 class="font-fredoka text-3xl md:text-4xl font-bold text-gray-800">
+                        Nos Formules d'Anniversaire Clé en Main
+                    </h3>
+                    <p class="font-quicksand text-gray-500 text-lg max-w-xl mx-auto mt-2">
+                        Des options clé en main avec gâteau, buffet, décoration et animations pour un anniversaire sans stress.
+                    </p>
+                </div>
+
+                <!-- Pricing Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                    <!-- Formule Basic -->
+                    <div class="p-8 rounded-3xl border-2 border-gray-100 bg-white hover:border-pink-300 transition-all shadow-sm flex flex-col text-center">
+                        <h3 class="font-fredoka font-bold text-2xl text-gray-800 mb-4">Formule Étoile</h3>
+                        <div class="text-4xl font-fredoka font-bold text-pink-500 mb-2">
+                            150 <span class="text-base font-semibold text-gray-500">MAD</span>
+                        </div>
+                        <span class="text-gray-400 text-xs font-bold mb-6 block">Par enfant (Min 10 invités)</span>
+                        <ul class="text-left font-quicksand font-semibold text-gray-500 text-sm space-y-3 mb-8 flex-grow">
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Accès aux aires de jeux pour 2h</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Espace d'anniversaire réservé</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Boissons à volonté</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Gâteau d'anniversaire classique</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Cartons d'invitation fournis</li>
+                        </ul>
+                        <a href="book.html" class="bg-pink-400 hover:bg-pink-500 text-white font-fredoka font-bold py-3 rounded-2xl block transition-colors">Réserver</a>
+                    </div>
+
+                    <!-- Formule Premium -->
+                    <div class="p-8 rounded-3xl border-2 border-pink-400 bg-white relative shadow-md flex flex-col text-center transform scale-105">
+                        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-pink-400 text-white font-fredoka font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider">Populaire</span>
+                        <h3 class="font-fredoka font-bold text-2xl text-gray-800 mb-4">Formule Magie</h3>
+                        <div class="text-4xl font-fredoka font-bold text-pink-500 mb-2">
+                            220 <span class="text-base font-semibold text-gray-500">MAD</span>
+                        </div>
+                        <span class="text-gray-400 text-xs font-bold mb-6 block">Par enfant (Min 12 invités)</span>
+                        <ul class="text-left font-quicksand font-semibold text-gray-500 text-sm space-y-3 mb-8 flex-grow">
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Accès aux aires de jeux pour 3h</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Décoration à thème standard</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Gâteau à thème personnalisé</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Buffet salé &amp; sucré + Boissons</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Animateur dédié (Jeux &amp; Danse)</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Séance maquillage enfants</li>
+                        </ul>
+                        <a href="book.html" class="bg-pink-400 hover:bg-pink-500 text-white font-fredoka font-bold py-3 rounded-2xl block transition-colors">Réserver</a>
+                    </div>
+
+                    <!-- Formule Royale / VIP -->
+                    <div class="p-8 rounded-3xl border-2 border-gray-100 bg-white hover:border-pink-300 transition-all shadow-sm flex flex-col text-center">
+                        <h3 class="font-fredoka font-bold text-2xl text-gray-800 mb-4">Formule Village Royale</h3>
+                        <div class="text-4xl font-fredoka font-bold text-pink-500 mb-2">
+                            320 <span class="text-base font-semibold text-gray-500">MAD</span>
+                        </div>
+                        <span class="text-gray-400 text-xs font-bold mb-6 block">Par enfant (Min 15 invités)</span>
+                        <ul class="text-left font-quicksand font-semibold text-gray-500 text-sm space-y-3 mb-8 flex-grow">
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Accès illimité aux aires de jeux</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Espace VIP privatisé et décoré</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Grand gâteau 3D Premium</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Buffet traiteur gourmand haut de gamme</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Mascotte géante au choix</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Pochette de cadeaux pour chaque enfant</li>
+                            <li><i class="fa-solid fa-circle-check text-green-500 mr-2"></i> Reportage photo souvenir professionnel</li>
+                        </ul>
+                        <a href="book.html" class="bg-pink-400 hover:bg-pink-500 text-white font-fredoka font-bold py-3 rounded-2xl block transition-colors">Réserver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== IMAGES & GALLERY ========== -->
+    <section class="bg-pink-50 py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="font-fredoka text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Instants de Fête en Photos 📸
+                </h2>
+                <p class="font-quicksand text-gray-500 text-lg max-w-xl mx-auto">
+                    Découvrez l'ambiance magique et festive de nos fêtes d'anniversaires précédentes.
+                </p>
+            </div>
+
+            <!-- Birthday Filters Container with Decorative Elements -->
+            <div class="relative max-w-3xl mx-auto mb-16 px-4">
+                <!-- Left Decorative Cartoon Balloon -->
+                <div class="absolute -left-12 -top-6 hidden lg:block text-5xl animate-bounce pointer-events-none select-none" style="animation-duration: 3s; z-index: 10;">
+                    🎈
+                </div>
+                <!-- Left Decorative Cartoon Cake -->
+                <div class="absolute -left-4 -bottom-6 hidden lg:block text-4xl animate-pulse pointer-events-none select-none" style="animation-duration: 2.5s; z-index: 10;">
+                    🍰
+                </div>
+                <!-- Right Decorative Cartoon Gift -->
+                <div class="absolute -right-12 -top-6 hidden lg:block text-5xl animate-bounce pointer-events-none select-none" style="animation-duration: 4s; z-index: 10;">
+                    🎁
+                </div>
+                <!-- Right Decorative Cartoon Party Hat -->
+                <div class="absolute -right-4 -bottom-6 hidden lg:block text-4xl animate-pulse pointer-events-none select-none" style="animation-duration: 3.5s; z-index: 10;">
+                    🎉
+                </div>
+
+                <!-- Main Filters Bar -->
+                <div class="birthday-filters-bar flex flex-wrap items-center justify-center gap-3 bg-white/80 backdrop-blur-md rounded-3xl p-3 shadow-md">
+                    <!-- Cute mini icons inside the bar -->
+                    <div class="items-center gap-1.5 px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-xs font-bold font-fredoka select-none md:flex hidden">
+                        <span>✨ Fêtes</span>
+                    </div>
+                    
+                    <button class="filter-btn birthday-filter-btn active" data-filter="all">Tous 🌟</button>
+                    <button class="filter-btn birthday-filter-btn" data-filter="theme-sport">Thème Sport ⚽</button>
+                    <button class="filter-btn birthday-filter-btn" data-filter="theme-filles">Thème Filles 👑</button>
+                    <button class="filter-btn birthday-filter-btn" data-filter="theme-autres">Autres Décors 🎈</button>
+
+                    <div class="items-center gap-1.5 px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold font-fredoka select-none md:flex hidden">
+                        <span>Fun 🎉</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photos Grid -->
+            <div class="gallery-grid">
+                <!-- Photo 1 -->
+                <div class="gallery-item theme-autres relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-15 at 14.35.50 (1).jpeg" alt="Décoration Ballons" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Décors</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Décoration Ballons 🎈</h3>
+                    </div>
+                </div>
+                <!-- Photo 2 -->
+                <div class="gallery-item theme-filles relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-15 at 14.35.50 (2).jpeg" alt="Fête Colorée" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Thème Filles</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Fête Colorée 🎉</h3>
+                    </div>
+                </div>
+                <!-- Photo 3 -->
+                <div class="gallery-item theme-sport relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-15 at 09.01.49.jpeg" alt="Atelier Maquillage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Thème Sport</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Atelier Maquillage 🎨</h3>
+                    </div>
+                </div>
+                <!-- Photo 4 -->
+                <div class="gallery-item theme-autres relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-15 at 09.01.49 (4).jpeg" alt="Moments de Rires" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Activités</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Moments de Rires 🛝</h3>
+                    </div>
+                </div>
+                <!-- Photo 5 -->
+                <div class="gallery-item theme-sport relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-15 at 09.01.49 (2).jpeg" alt="Activités Amusantes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Thème Sport</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Activités Amusantes 🎲</h3>
+                    </div>
+                </div>
+                <!-- Photo 6 -->
+                <div class="gallery-item theme-filles relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-15 at 09.01.49 (1).jpeg" alt="Jeux et Découvertes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Thème Filles</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Jeux et Découvertes 🧩</h3>
+                    </div>
+                </div>
+                <!-- Photo 7 -->
+                <div class="gallery-item theme-autres relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-15 at 09.01.48.jpeg" alt="Jeux de Groupe" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Activités</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Jeux de Groupe 🏃</h3>
+                    </div>
+                </div>
+                <!-- Photo 8 -->
+                <div class="gallery-item theme-autres relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/IMG_4498.JPG.jpeg" alt="Ambiance Anniversaire" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Décors</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Ambiance Anniversaire ✨</h3>
+                    </div>
+                </div>
+                <!-- Photo 9 -->
+                <div class="gallery-item theme-autres relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/IMG_4495.JPG.jpeg" alt="Décorations de Rêve" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Décors</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Décorations de Rêve 🌟</h3>
+                    </div>
+                </div>
+                <!-- Photo 10 -->
+                <div class="gallery-item theme-filles relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-15 at 14.35.49.jpeg" alt="Table Festive" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Thème Filles</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Table Festive 🎂</h3>
+                    </div>
+                </div>
+                <!-- Photo 11 -->
+                <div class="gallery-item theme-filles relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-17 at 23.46.00 (2).jpeg" alt="Jeux d'Équipe" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Thème Filles</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Jeux d'Équipe 🤹</h3>
+                    </div>
+                </div>
+                <!-- Photo 12 -->
+                <div class="gallery-item theme-filles relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-17 at 23.46.00.jpeg" alt="Animations Rigolotes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Thème Filles</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Animations Rigolotes 🎭</h3>
+                    </div>
+                </div>
+                <!-- Photo 13 -->
+                <div class="gallery-item theme-sport relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-17 at 23.46.00 (8).jpeg" alt="Goûter d'Anniversaire" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Thème Sport</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Goûter d'Anniversaire 🍰</h3>
+                    </div>
+                </div>
+                <!-- Photo 14 -->
+                <div class="gallery-item theme-filles relative overflow-hidden group cursor-pointer">
+                    <img src="img/pictures of children/WhatsApp Image 2026-06-17 at 23.46.01 (1).jpeg" alt="Copains et Rires" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy">
+                    <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-5 text-white transition-all duration-300">
+                        <span class="gallery-badge font-fredoka font-bold text-xs bg-white/30 text-white px-3 py-1 rounded-full w-max mb-2">Thème Filles</span>
+                        <h3 class="font-fredoka text-lg font-bold leading-tight">Copains et Rires 💕</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-sky-soft pt-20 pb-6 relative overflow-hidden">
+        <!-- Top Wave Divider -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-16">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    fill="#ffffff"></path>
+            </svg>
+        </div>
+        <!-- Distributed Animal Scenery -->
+        <div class="footer-decorations absolute bottom-0 left-0 w-full h-full pointer-events-none z-0">
+            <!-- Stretched Rolling Hills Background -->
+            <div class="decor-hills">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M0,120 L1200,120 L1200,60 C1100,40 1000,80 900,60 C800,40 700,70 600,50 C500,30 400,60 300,40 C200,20 100,50 0,30 Z"
+                        fill="#86efac" />
+                </svg>
+            </div>
+
+            <!-- Group 1: Elephant (Left) -->
+            <div class="footer-decor-group" style="left: 5%;">
+                <svg viewBox="0 0 100 100">
+                    <g transform="translate(50, 70)">
+                        <g class="anim-sway">
+                            <ellipse cx="0" cy="0" rx="40" ry="30" fill="#94a3b8" />
+                            <circle cx="30" cy="-5" r="22" fill="#94a3b8" />
+                            <g class="anim-ear">
+                                <ellipse cx="15" cy="-10" rx="12" ry="18" fill="#64748b" />
+                            </g>
+                            <path d="M45,0 Q65,0 65,15" fill="none" stroke="#94a3b8" stroke-width="10"
+                                stroke-linecap="round" />
+                            <circle cx="38" cy="-8" r="2.5" fill="#333" class="eye-blink" />
+                            <rect x="-25" y="25" width="10" height="20" fill="#475569" rx="2" />
+                            <rect x="5" y="25" width="10" height="20" fill="#475569" rx="2" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Group 2: House & Blocks (Center-Left) -->
+            <div class="footer-decor-group" style="left: 20%;">
+                <svg viewBox="0 0 120 120">
+                    <g transform="translate(60, 60)">
+                        <rect x="0" y="40" width="40" height="50" fill="#fecaca" rx="4" />
+                        <path d="M-5,40 L45,40 L20,10 Z" fill="#a855f7" />
+                        <rect x="12" y="65" width="16" height="25" fill="#ffffff" rx="2" />
+                        <!-- Blocks -->
+                        <g transform="translate(-45, 60)">
+                            <rect x="0" y="0" width="25" height="25" fill="#fbbf24" rx="4" />
+                            <text x="6" y="18" font-family="Fredoka" font-weight="bold" font-size="14"
+                                fill="#ffffff">A</text>
+                            <rect x="28" y="-5" width="25" height="25" fill="#60a5fa" rx="4" />
+                            <text x="34" y="13" font-family="Fredoka" font-weight="bold" font-size="14"
+                                fill="#ffffff">1</text>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Group 3: Birds (Middle) -->
+            <div class="footer-decor-group" style="left: 45%; height: 200px;"></div>
+
+            <!-- Group 4: Giraffe (Center-Right) -->
+            <div class="footer-decor-group" style="right: 25%;">
+                <svg viewBox="0 0 100 150">
+                    <g transform="translate(50, 40)">
+                        <g class="anim-neck">
+                            <ellipse cx="0" cy="80" rx="35" ry="22" fill="#fbbf24" />
+                            <path d="M20,70 L40,-10" stroke="#fbbf24" stroke-width="14" stroke-linecap="round" />
+                            <g transform="translate(45, -15)">
+                                <ellipse cx="0" cy="0" rx="18" ry="12" fill="#fbbf24" />
+                                <circle cx="8" cy="-3" r="2.5" fill="#333" class="eye-blink" />
+                                <rect x="-5" y="-15" width="4" height="8" fill="#fbbf24" />
+                                <rect x="5" y="-15" width="4" height="8" fill="#fbbf24" />
+                            </g>
+                            <circle cx="-10" cy="75" r="5" fill="#d97706" opacity="0.6" />
+                            <circle cx="10" cy="85" r="4" fill="#d97706" opacity="0.6" />
+                            <rect x="-15" y="100" width="6" height="35" fill="#d97706" />
+                            <rect x="10" y="100" width="6" height="35" fill="#d97706" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Group 5: Hippo (Far Right) -->
+            <div class="footer-decor-group" style="right: 14%;">
+                <svg viewBox="0 0 100 150">
+                    <g transform="translate(50, 100)">
+                        <g class="anim-sway">
+                            <ellipse cx="0" cy="0" rx="40" ry="25" fill="#94a3b8" />
+                            <circle cx="30" cy="-5" r="20" fill="#94a3b8" />
+                            <circle cx="35" cy="-8" r="2.5" fill="#333" class="eye-blink" />
+                            <rect x="-20" y="20" width="10" height="15" fill="#475569" rx="2" />
+                            <rect x="5" y="20" width="10" height="15" fill="#475569" rx="2" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Group 6: Llama (Far Right) -->
+            <div class="footer-decor-group" style="right: 3%;">
+                <svg viewBox="0 0 100 150">
+                    <g transform="translate(50, 90)">
+                        <g class="anim-sway">
+                            <ellipse cx="0" cy="20" rx="20" ry="30" fill="#b45309" />
+                            <path d="M12,0 Q20,-35 20,-45" fill="none" stroke="#b45309" stroke-width="10"
+                                stroke-linecap="round" />
+                            <g transform="translate(20, -55)">
+                                <circle cx="0" cy="0" r="12" fill="#b45309" />
+                                <circle cx="4" cy="-2" r="2" fill="#ffffff" />
+                            </g>
+                            <rect x="-12" y="45" width="6" height="20" fill="#78350f" rx="2" />
+                            <rect x="6" y="45" width="6" height="20" fill="#78350f" rx="2" />
+                            <path d="M-18,15 Q-30,10 -25,20" fill="none" stroke="#b45309" stroke-width="5"
+                                stroke-linecap="round" class="anim-tail" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto flex flex-col items-center gap-6 pb-20 px-6 relative z-10">
+            <!-- Frosted Glass Wrapper -->
+            <div class="bg-white/60 backdrop-blur-md rounded-3xl p-8 shadow-sm flex flex-col items-center gap-6 w-full max-w-lg text-center mt-12">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <img src="Logo Kids Village Tanger.jpg.png" alt="Kids Village Logo" class="h-24 w-auto mb-2 drop-shadow-md">
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="https://www.instagram.com/kidsvillagetanger/" target="_blank"
+                        class="h-10 px-4 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-md font-quicksand font-bold tracking-wide text-sm"
+                        title="Instagram">
+                        <i class="fa-brands fa-instagram text-base"></i>
+                        <span>kidsvillagetanger</span>
+                    </a>
+                    <a href="https://web.facebook.com/KidsVillage2023/?_rdc=1&_rdr#" target="_blank"
+                        class="h-10 px-4 bg-blue-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-md font-quicksand font-bold tracking-wide text-sm"
+                        title="Facebook">
+                        <i class="fa-brands fa-facebook-f text-base"></i>
+                        <span>KidsVillage2023</span>
+                    </a>
+                    <a href="https://www.youtube.com/@KidsVillageTanger" target="_blank"
+                        class="h-10 px-4 bg-red-600 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 transition-transform shadow-md font-quicksand font-bold tracking-wide text-sm"
+                        title="YouTube">
+                        <i class="fa-brands fa-youtube text-base"></i>
+                        <span>KidsVillageTanger</span>
+                    </a>
+                </div>
+
+                <!-- Links -->
+                <div class="flex items-center justify-center gap-4 text-gray-800 font-fredoka font-semibold flex-wrap">
+                    <a href="#" class="hover:text-blue-600 transition-colors">Politique de confidentialité</a>
+                    <span class="text-gray-400 hidden sm:inline">|</span>
+                    <a href="reglement.html" class="hover:text-blue-600 transition-colors">Règlement Intérieur</a>
+                </div>
+
+                <!-- Copyright -->
+                <p class="font-quicksand text-gray-700 text-sm font-bold">
+                    &copy; 2026 Kids Village Tanger. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

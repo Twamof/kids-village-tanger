@@ -63,9 +63,13 @@
             <nav class="nav-menu desktop-only">
                 <a href="index.html#home" class="nav-link nav-blue">Accueil</a>
                 <a href="index.html#about" class="nav-link nav-green">À propos</a>
-                <a href="index.html#gallery" class="nav-link nav-yellow">Galerie</a>
-                <a href="index.html#reviews" class="nav-link nav-orange">Avis</a>
-                <a href="index.html#contact" class="nav-link nav-pink">Contact</a>
+                <a href="index.html#activities" class="nav-link nav-yellow">Activités</a>
+                <a href="summer-camp.html" class="nav-link nav-orange">Summer camp</a>
+                <a href="anniversaires.html" class="nav-link nav-pink">Anniversaires</a>
+                <a href="index.html#gallery" class="nav-link nav-blue">Galerie</a>
+                <a href="index.html#tarifs" class="nav-link nav-green">Tarifs</a>
+                <a href="index.html#reviews" class="nav-link nav-yellow">Avis</a>
+                <a href="index.html#contact" class="nav-link nav-orange">Contact</a>
             </nav>
 
             <!-- CTA Button (Right) -->
@@ -83,9 +87,13 @@
         <nav class="mobile-nav-menu">
             <a href="index.html#home" class="mobile-link nav-blue">Accueil</a>
             <a href="index.html#about" class="mobile-link nav-green">À propos</a>
-            <a href="index.html#gallery" class="mobile-link nav-yellow">Galerie</a>
-            <a href="index.html#reviews" class="mobile-link nav-orange">Avis</a>
-            <a href="index.html#contact" class="mobile-link nav-pink">Contact</a>
+            <a href="index.html#activities" class="mobile-link nav-yellow">Activités</a>
+            <a href="summer-camp.html" class="mobile-link nav-orange">Summer camp</a>
+            <a href="anniversaires.html" class="mobile-link nav-pink">Anniversaires</a>
+            <a href="index.html#gallery" class="mobile-link nav-blue">Galerie</a>
+            <a href="index.html#tarifs" class="mobile-link nav-green">Tarifs</a>
+            <a href="index.html#reviews" class="mobile-link nav-yellow">Avis</a>
+            <a href="index.html#contact" class="mobile-link nav-orange">Contact</a>
             <a href="#" class="mobile-cta">Inscription</a>
         </nav>
     </header>
@@ -123,79 +131,97 @@
             <!-- Registration Form -->
             <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
 
-                <!-- Card 1: Personal Info -->
-                <div class="book-card mb-8">
-                    <div class="book-card-header">
-                        <div class="book-card-icon bg-blue-100 text-blue-600">
-                            <i class="fa-solid fa-user-tie"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Informations Personnelles</h3>
-                            <p class="font-quicksand text-gray-400 text-sm">Renseignez les informations des parents</p>
-                        </div>
-                    </div>
-                    <div class="book-card-body">
-                        <div class="book-grid">
-                            <div class="book-field">
-                                <label class="book-label">Nom complet du père <span class="text-red-400">*</span></label>
-                                <input type="text" id="b_father_name" required placeholder="Ex: Mohammed Alami" class="book-input">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    <!-- Card 1: Personal Info -->
+                    <div class="book-card">
+                        <div class="book-card-header">
+                            <div class="book-card-icon bg-blue-100 text-blue-600">
+                                <i class="fa-solid fa-user-tie"></i>
                             </div>
-                            <div class="book-field">
-                                <label class="book-label">Nom complet de la mère</label>
-                                <input type="text" id="b_mother_name" placeholder="Ex: Fatima Alaoui" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">WhatsApp <span class="text-red-400">*</span></label>
-                                <input type="tel" id="b_phone" required placeholder="+212 6XX XXX XXX" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">Téléphone d'urgence</label>
-                                <input type="tel" id="b_emergency_phone" placeholder="Numéro alternatif" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">Email</label>
-                                <input type="email" id="b_email" placeholder="parent@exemple.com" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">CIN / Carte nationale</label>
-                                <input type="text" id="b_cin" placeholder="Ex: AB123456" class="book-input">
-                            </div>
-                            <div class="book-field col-span-full">
-                                <label class="book-label">Adresse</label>
-                                <input type="text" id="b_address" placeholder="Quartier, Ville..." class="book-input">
+                            <div>
+                                <h3 class="font-fredoka text-xl font-bold text-gray-800">Informations Personnelles</h3>
+                                <p class="font-quicksand text-gray-400 text-sm">Enregistrement des responsables</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <div class="book-card-body">
+                            <div class="book-grid">
+                                <div class="book-field col-span-full">
+                                    <label class="book-label">Nom complet (Père) <span class="text-red-400">*</span></label>
+                                    <input type="text" id="b_father_name" required placeholder="Ex: Mohammed Alami" class="book-input">
+                                </div>
+                                <div class="book-field col-span-full">
+                                    <label class="book-label">Nom complet (Mère)</label>
+                                    <input type="text" id="b_mother_name" placeholder="Ex: Fatima Alaoui" class="book-input">
+                                </div>
+                                
+                                <!-- Divider line -->
+                                <div class="col-span-full h-1 w-12 bg-blue-500 rounded my-1"></div>
 
-                <!-- Card 2: Professional Info -->
-                <div class="book-card mb-8">
-                    <div class="book-card-header">
-                        <div class="book-card-icon bg-purple-100 text-purple-600">
-                            <i class="fa-solid fa-briefcase"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-fredoka text-xl font-bold text-gray-800">Informations Professionnelles</h3>
-                            <p class="font-quicksand text-gray-400 text-sm">Optionnel — profession des parents</p>
+                                <div class="book-field">
+                                    <label class="book-label">Numéro WhatsApp <span class="text-red-400">*</span></label>
+                                    <input type="tel" id="b_phone" required placeholder="+212 6..." class="book-input">
+                                </div>
+                                <div class="book-field">
+                                    <label class="book-label">Tél. Urgence (2)</label>
+                                    <input type="tel" id="b_emergency_phone" placeholder="Numéro alternatif" class="book-input">
+                                </div>
+                                <div class="book-field col-span-full">
+                                    <label class="book-label">Email de contact</label>
+                                    <input type="email" id="b_email" placeholder="parent@exemple.com" class="book-input">
+                                </div>
+                                <div class="book-field col-span-full">
+                                    <label class="book-label">Numéro CIN / CNI</label>
+                                    <input type="text" id="b_cin" placeholder="Ex: AB123456" class="book-input">
+                                </div>
+                                <div class="book-field col-span-full">
+                                    <label class="book-label">Adresse de résidence</label>
+                                    <input type="text" id="b_address" placeholder="Quartier, Ville..." class="book-input">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="book-card-body">
-                        <div class="book-grid">
-                            <div class="book-field">
-                                <label class="book-label">Profession du père</label>
-                                <input type="text" id="b_father_job" placeholder="Ex: Ingénieur" class="book-input">
+
+                    <!-- Card 2: Professional Info -->
+                    <div class="book-card">
+                        <div class="book-card-header">
+                            <div class="book-card-icon bg-purple-100 text-purple-600">
+                                <i class="fa-solid fa-briefcase"></i>
                             </div>
-                            <div class="book-field">
-                                <label class="book-label">Lieu de travail du père</label>
-                                <input type="text" id="b_father_work_place" placeholder="Nom de l'entreprise" class="book-input">
+                            <div>
+                                <h3 class="font-fredoka text-xl font-bold text-gray-800">Informations Professionnelles</h3>
+                                <p class="font-quicksand text-gray-400 text-sm">Poste & travail des parents</p>
                             </div>
-                            <div class="book-field">
-                                <label class="book-label">Profession de la mère</label>
-                                <input type="text" id="b_mother_job" placeholder="Ex: Professeure" class="book-input">
-                            </div>
-                            <div class="book-field">
-                                <label class="book-label">Lieu de travail de la mère</label>
-                                <input type="text" id="b_mother_work_place" placeholder="Nom de l'entreprise" class="book-input">
+                        </div>
+                        <div class="book-card-body">
+                            <div class="book-grid">
+                                <!-- Father Job Info -->
+                                <div class="col-span-full text-emerald-600 font-fredoka font-bold text-sm uppercase flex items-center gap-2 mt-2">
+                                    <i class="fa-solid fa-user-doctor"></i> Poste & Travail (Père)
+                                </div>
+                                <div class="book-field col-span-full">
+                                    <label class="book-label">Profession / Métier</label>
+                                    <input type="text" id="b_father_job" placeholder="Ex: Ingénieur, Commerçant..." class="book-input">
+                                </div>
+                                <div class="book-field col-span-full">
+                                    <label class="book-label">Lieu de travail</label>
+                                    <input type="text" id="b_father_work_place" placeholder="Nom de l'entreprise ou zone" class="book-input">
+                                </div>
+
+                                <!-- Divider line -->
+                                <div class="col-span-full h-1 w-12 bg-blue-500 rounded my-2"></div>
+
+                                <!-- Mother Job Info -->
+                                <div class="col-span-full text-pink-500 font-fredoka font-bold text-sm uppercase flex items-center gap-2 mt-2">
+                                    <i class="fa-solid fa-user-tie"></i> Poste & Travail (Mère)
+                                </div>
+                                <div class="book-field col-span-full">
+                                    <label class="book-label">Profession / Métier</label>
+                                    <input type="text" id="b_mother_job" placeholder="Ex: Professeure, Médecin..." class="book-input">
+                                </div>
+                                <div class="book-field col-span-full">
+                                    <label class="book-label">Lieu de travail</label>
+                                    <input type="text" id="b_mother_work_place" placeholder="Nom de l'entreprise ou zone" class="book-input">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -215,30 +241,155 @@
                     <div class="book-card-body">
                         <div id="childrenContainer">
                             <!-- Child 1 -->
-                            <div class="child-block" data-child="1">
-                                <div class="child-label font-fredoka">
-                                    <i class="fa-solid fa-child text-green-500"></i> Enfant #1
+                            <div class="child-block border-2 border-dashed border-gray-200 rounded-3xl p-6 bg-slate-50/20 mb-8" data-child="1">
+                                <div class="flex items-center gap-3 mb-6">
+                                    <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold font-fredoka">
+                                        1
+                                    </div>
+                                    <span class="font-fredoka text-xl font-bold text-gray-800">Profil de l'Enfant</span>
                                 </div>
-                                <div class="book-grid">
-                                    <div class="book-field">
-                                        <label class="book-label">Prénom <span class="text-red-400">*</span></label>
-                                        <input type="text" data-field="first_name" required placeholder="Prénom" class="book-input">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                    <!-- Left Column: Informations Personnelles -->
+                                    <div class="bg-white border border-gray-100 rounded-2xl shadow-sm p-6">
+                                        <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-4">
+                                            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center text-lg">
+                                                <i class="fa-solid fa-child"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-fredoka text-base font-bold text-gray-800">Informations Personnelles</h4>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div class="book-field col-span-2 sm:col-span-1">
+                                                <label class="book-label">Prénom <span class="text-red-400">*</span></label>
+                                                <input type="text" data-field="first_name" required placeholder="Ex: Lucas" class="book-input">
+                                            </div>
+                                            <div class="book-field col-span-2 sm:col-span-1">
+                                                <label class="book-label">Nom <span class="text-red-400">*</span></label>
+                                                <input type="text" data-field="last_name" required placeholder="Ex: Dubois" class="book-input">
+                                            </div>
+                                            
+                                            <div class="col-span-full">
+                                                <label class="book-label">Genre / Sexe <span class="text-red-400">*</span></label>
+                                                <div class="grid grid-cols-2 gap-4 mt-2">
+                                                    <button type="button" onclick="selectGender(this, 'Garçon')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-blue-400 hover:bg-blue-50/30 transition-all gap-2 text-gray-600 font-bold">
+                                                        <i class="fa-solid fa-mars text-blue-500 text-lg"></i>
+                                                        <span>Garçon</span>
+                                                    </button>
+                                                    <button type="button" onclick="selectGender(this, 'Fille')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-pink-400 hover:bg-pink-50/30 transition-all gap-2 text-gray-600 font-bold">
+                                                        <i class="fa-solid fa-venus text-pink-500 text-lg"></i>
+                                                        <span>Fille</span>
+                                                    </button>
+                                                </div>
+                                                <input type="hidden" data-field="gender" required value="">
+                                            </div>
+                                            
+                                            <div class="book-field col-span-2 sm:col-span-1">
+                                                <label class="book-label">Date de naissance</label>
+                                                <input type="date" data-field="date_of_birth" class="book-input">
+                                            </div>
+                                            <div class="book-field col-span-2 sm:col-span-1">
+                                                <label class="book-label">École</label>
+                                                <input type="text" data-field="school_name" placeholder="Nom de l'établissement" class="book-input">
+                                            </div>
+                                            
+                                            <div class="book-field col-span-2 sm:col-span-1">
+                                                <label class="book-label">Classe</label>
+                                                <input type="text" data-field="grade_level" placeholder="Ex: Maternelle, Primaire..." class="book-input">
+                                            </div>
+                                            <div class="book-field col-span-2 sm:col-span-1">
+                                                <label class="book-label">Groupe Sanguin</label>
+                                                <select data-field="blood_group" class="book-input">
+                                                    <option value="Inconnu">Inconnu</option>
+                                                    <option value="A+">A+</option>
+                                                    <option value="A-">A-</option>
+                                                    <option value="B+">B+</option>
+                                                    <option value="B-">B-</option>
+                                                    <option value="AB+">AB+</option>
+                                                    <option value="AB-">AB-</option>
+                                                    <option value="O+">O+</option>
+                                                    <option value="O-">O-</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <!-- Contact d'Urgence (Secondaire) -->
+                                            <div class="col-span-full bg-blue-50/30 border border-blue-100 rounded-2xl p-4 mt-2">
+                                                <div class="text-blue-600 font-bold text-sm mb-3 flex items-center gap-2">
+                                                    <i class="fa-solid fa-phone"></i> Contact d'Urgence (Secondaire)
+                                                </div>
+                                                <div class="grid grid-cols-2 gap-4">
+                                                    <div class="book-field col-span-2 sm:col-span-1">
+                                                        <label class="book-label">Nom complet</label>
+                                                        <input type="text" data-field="emergency_contact_name" placeholder="Ex: Oncle, Tante..." class="book-input">
+                                                    </div>
+                                                    <div class="book-field col-span-2 sm:col-span-1">
+                                                        <label class="book-label">Téléphone</label>
+                                                        <input type="tel" data-field="emergency_contact_phone" placeholder="06XXXXXXXX" class="book-input">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Photo consent checkbox -->
+                                            <div class="col-span-full mt-2">
+                                                <label class="flex items-center gap-3 cursor-pointer">
+                                                    <input type="checkbox" data-field="photo_consent" class="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                                    <span class="text-sm text-gray-600 font-medium">Consentement photo accordé</span>
+                                                </label>
+                                            </div>
+                                         </div>
                                     </div>
-                                    <div class="book-field">
-                                        <label class="book-label">Nom <span class="text-red-400">*</span></label>
-                                        <input type="text" data-field="last_name" required placeholder="Nom de famille" class="book-input">
-                                    </div>
-                                    <div class="book-field">
-                                        <label class="book-label">Date de naissance</label>
-                                        <input type="date" data-field="date_of_birth" class="book-input">
-                                    </div>
-                                    <div class="book-field">
-                                        <label class="book-label">École</label>
-                                        <input type="text" data-field="school_name" placeholder="Nom de l'école" class="book-input">
-                                    </div>
-                                    <div class="book-field col-span-full">
-                                        <label class="book-label">Allergies / Notes médicales</label>
-                                        <input type="text" data-field="allergies" placeholder="Aucune allergie connue" class="book-input">
+                                    
+                                    <!-- Right Column: Dossier Médical -->
+                                    <div class="bg-white border border-gray-100 rounded-2xl shadow-sm p-6">
+                                        <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-4">
+                                            <div class="w-10 h-10 rounded-xl bg-red-50 text-red-500 flex items-center justify-center text-lg">
+                                                <i class="fa-solid fa-notes-medical"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="font-fredoka text-base font-bold text-gray-800">Dossier Médical</h4>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div class="book-field col-span-full">
+                                                <label class="book-label">Besoins Spécifiques</label>
+                                                <select data-field="special_needs" class="book-input">
+                                                    <option value="Non">Non</option>
+                                                    <option value="Oui">Oui</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <div class="book-field col-span-full">
+                                                <label class="book-label">Allergie</label>
+                                                <textarea data-field="allergies" placeholder="Détaillez allergies ici..." class="book-input h-20 resize-none"></textarea>
+                                            </div>
+                                            
+                                            <div class="book-field col-span-full">
+                                                <label class="book-label">Maladie connue</label>
+                                                <textarea data-field="known_illness" placeholder="Détaillez maladies connues..." class="book-input h-20 resize-none"></textarea>
+                                            </div>
+                                            
+                                            <div class="book-field col-span-full">
+                                                <label class="book-label">Maladie chronique</label>
+                                                <textarea data-field="chronic_illness" placeholder="Détaillez maladies chroniques..." class="book-input h-20 resize-none"></textarea>
+                                            </div>
+                                            
+                                            <div class="book-field col-span-full">
+                                                <label class="book-label">Médicaments</label>
+                                                <textarea data-field="medications" placeholder="Détaillez médicaments..." class="book-input h-20 resize-none"></textarea>
+                                            </div>
+                                            
+                                            <div class="book-field col-span-full">
+                                                <label class="book-label">Heure de prise</label>
+                                                <input type="text" data-field="medication_hours" placeholder="Ex: 8h00, 14h00..." class="book-input">
+                                            </div>
+                                            
+                                            <div class="book-field col-span-full">
+                                                <label class="book-label">Observations</label>
+                                                <textarea data-field="observations" placeholder="Remarques additionnelles..." class="book-input h-24 resize-none"></textarea>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -246,8 +397,9 @@
                         <!-- Add child button -->
                         <button type="button" onclick="addChild()" id="addChildBtn"
                             class="mt-4 w-full py-3 rounded-2xl border-2 border-dashed border-green-300 text-green-600 font-fredoka font-bold text-base hover:bg-green-50 transition-colors flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-plus"></i> Ajouter un autre enfant
+                            <i class="fa-solid fa-plus"></i> Ajouter un Frère / une Soeur
                         </button>
+                        <p class="text-center text-xs text-gray-400 mt-2">Copie automatiquement le nom de famille, l'école et le contact d'urgence.</p>
                     </div>
                 </div>
 
@@ -328,43 +480,203 @@
             });
         }
 
+        // Custom Sexe / Gender selection
+        function selectGender(btn, val) {
+            const parent = btn.closest('.col-span-full');
+            const buttons = parent.querySelectorAll('.gender-btn');
+            buttons.forEach(b => {
+                b.classList.remove('border-blue-500', 'bg-blue-50', 'text-blue-700', 'border-pink-500', 'bg-pink-50', 'text-pink-700');
+                b.classList.add('border-gray-100', 'text-gray-600');
+            });
+            
+            btn.classList.remove('border-gray-100', 'text-gray-600');
+            if (val === 'Garçon') {
+                btn.classList.add('border-blue-500', 'bg-blue-50', 'text-blue-700');
+            } else {
+                btn.classList.add('border-pink-500', 'bg-pink-50', 'text-pink-700');
+            }
+            
+            const hiddenInput = parent.querySelector('input[type="hidden"]');
+            hiddenInput.value = val;
+        }
+
+
+
         // Ajouter un enfant supplémentaire (max 3)
         function addChild() {
             if (childCount >= 3) return;
             childCount++;
 
+            // Retreive common values from child #1 to copy
+            let copyLastName = '';
+            let copySchool = '';
+            let copyEmergencyName = '';
+            let copyEmergencyPhone = '';
+
+            const firstChild = document.querySelector('#childrenContainer .child-block[data-child="1"]');
+            if (firstChild) {
+                copyLastName = firstChild.querySelector('[data-field="last_name"]').value.trim();
+                copySchool = firstChild.querySelector('[data-field="school_name"]').value.trim();
+                copyEmergencyName = firstChild.querySelector('[data-field="emergency_contact_name"]').value.trim();
+                copyEmergencyPhone = firstChild.querySelector('[data-field="emergency_contact_phone"]').value.trim();
+            }
+
             const container = document.getElementById('childrenContainer');
             const block = document.createElement('div');
-            block.className = 'child-block';
+            block.className = 'child-block border-2 border-dashed border-gray-200 rounded-3xl p-6 bg-slate-50/20 mb-8';
             block.setAttribute('data-child', childCount);
             block.innerHTML = `
-                <div class="child-label font-fredoka">
-                    <i class="fa-solid fa-child text-green-500"></i> Enfant #${childCount}
-                    <button type="button" onclick="removeChild(this)" 
-                        style="margin-left:auto;color:#ef4444;font-size:14px;background:none;border:none;cursor:pointer;">
-                        <i class="fa-solid fa-trash"></i>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold font-fredoka animate-pulse">
+                        ${childCount}
+                    </div>
+                    <span class="font-fredoka text-xl font-bold text-gray-800">Profil de l'Enfant</span>
+                    <button type="button" onclick="removeChild(this)" class="remove-child-btn ml-auto text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-xl text-sm font-bold transition-colors">
+                        <i class="fa-solid fa-trash mr-1"></i> Supprimer
                     </button>
                 </div>
-                <div class="book-grid">
-                    <div class="book-field">
-                        <label class="book-label">Prénom <span class="text-red-400">*</span></label>
-                        <input type="text" data-field="first_name" required placeholder="Prénom" class="book-input">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Left Column: Informations Personnelles -->
+                    <div class="bg-white border border-gray-100 rounded-2xl shadow-sm p-6">
+                        <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-500 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-child"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-fredoka text-base font-bold text-gray-800">Informations Personnelles</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="book-field col-span-2 sm:col-span-1">
+                                <label class="book-label">Prénom <span class="text-red-400">*</span></label>
+                                <input type="text" data-field="first_name" required placeholder="Ex: Lucas" class="book-input">
+                            </div>
+                            <div class="book-field col-span-2 sm:col-span-1">
+                                <label class="book-label">Nom <span class="text-red-400">*</span></label>
+                                <input type="text" data-field="last_name" required value="${copyLastName}" placeholder="Ex: Dubois" class="book-input">
+                            </div>
+                            
+                            <div class="col-span-full">
+                                <label class="book-label">Genre / Sexe <span class="text-red-400">*</span></label>
+                                <div class="grid grid-cols-2 gap-4 mt-2">
+                                    <button type="button" onclick="selectGender(this, 'Garçon')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-blue-400 hover:bg-blue-50/30 transition-all gap-2 text-gray-600 font-bold">
+                                        <i class="fa-solid fa-mars text-blue-500 text-lg"></i>
+                                        <span>Garçon</span>
+                                    </button>
+                                    <button type="button" onclick="selectGender(this, 'Fille')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-pink-400 hover:bg-pink-50/30 transition-all gap-2 text-gray-600 font-bold">
+                                        <i class="fa-solid fa-venus text-pink-500 text-lg"></i>
+                                        <span>Fille</span>
+                                    </button>
+                                </div>
+                                <input type="hidden" data-field="gender" required value="">
+                            </div>
+                            
+                            <div class="book-field col-span-2 sm:col-span-1">
+                                <label class="book-label">Date de naissance</label>
+                                <input type="date" data-field="date_of_birth" class="book-input">
+                            </div>
+                            <div class="book-field col-span-2 sm:col-span-1">
+                                <label class="book-label">École</label>
+                                <input type="text" data-field="school_name" value="${copySchool}" placeholder="Nom de l'établissement" class="book-input">
+                            </div>
+                            
+                            <div class="book-field col-span-2 sm:col-span-1">
+                                <label class="book-label">Classe</label>
+                                <input type="text" data-field="grade_level" placeholder="Ex: Maternelle, Primaire..." class="book-input">
+                            </div>
+                            <div class="book-field col-span-2 sm:col-span-1">
+                                <label class="book-label">Groupe Sanguin</label>
+                                <select data-field="blood_group" class="book-input">
+                                    <option value="Inconnu">Inconnu</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Contact d'Urgence (Secondaire) -->
+                            <div class="col-span-full bg-blue-50/30 border border-blue-100 rounded-2xl p-4 mt-2">
+                                <div class="text-blue-600 font-bold text-sm mb-3 flex items-center gap-2">
+                                    <i class="fa-solid fa-phone"></i> Contact d'Urgence (Secondaire)
+                                </div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="book-field col-span-2 sm:col-span-1">
+                                        <label class="book-label">Nom complet</label>
+                                        <input type="text" data-field="emergency_contact_name" value="${copyEmergencyName}" placeholder="Ex: Oncle, Tante..." class="book-input">
+                                    </div>
+                                    <div class="book-field col-span-2 sm:col-span-1">
+                                        <label class="book-label">Téléphone</label>
+                                        <input type="tel" data-field="emergency_contact_phone" value="${copyEmergencyPhone}" placeholder="06XXXXXXXX" class="book-input">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Photo consent checkbox -->
+                            <div class="col-span-full mt-4">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" data-field="photo_consent" class="w-5 h-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                    <span class="text-sm text-gray-600 font-medium">Consentement photo accordé</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="book-field">
-                        <label class="book-label">Nom <span class="text-red-400">*</span></label>
-                        <input type="text" data-field="last_name" required placeholder="Nom de famille" class="book-input">
-                    </div>
-                    <div class="book-field">
-                        <label class="book-label">Date de naissance</label>
-                        <input type="date" data-field="date_of_birth" class="book-input">
-                    </div>
-                    <div class="book-field">
-                        <label class="book-label">École</label>
-                        <input type="text" data-field="school_name" placeholder="Nom de l'école" class="book-input">
-                    </div>
-                    <div class="book-field col-span-full">
-                        <label class="book-label">Allergies / Notes médicales</label>
-                        <input type="text" data-field="allergies" placeholder="Aucune allergie connue" class="book-input">
+                    
+                    <!-- Right Column: Dossier Médical -->
+                    <div class="bg-white border border-gray-100 rounded-2xl shadow-sm p-6">
+                        <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-red-50 text-red-500 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-notes-medical"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-fredoka text-base font-bold text-gray-800">Dossier Médical</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="book-field col-span-full">
+                                <label class="book-label">Besoins Spécifiques</label>
+                                <select data-field="special_needs" class="book-input">
+                                    <option value="Non">Non</option>
+                                    <option value="Oui">Oui</option>
+                                </select>
+                            </div>
+                            
+                            <div class="book-field col-span-full">
+                                <label class="book-label">Allergie</label>
+                                <textarea data-field="allergies" placeholder="Détaillez allergies ici..." class="book-input h-20 resize-none"></textarea>
+                            </div>
+                            
+                            <div class="book-field col-span-full">
+                                <label class="book-label">Maladie connue</label>
+                                <textarea data-field="known_illness" placeholder="Détaillez maladies connues..." class="book-input h-20 resize-none"></textarea>
+                            </div>
+                            
+                            <div class="book-field col-span-full">
+                                <label class="book-label">Maladie chronique</label>
+                                <textarea data-field="chronic_illness" placeholder="Détaillez maladies chroniques..." class="book-input h-20 resize-none"></textarea>
+                            </div>
+                            
+                            <div class="book-field col-span-full">
+                                <label class="book-label">Médicaments</label>
+                                <textarea data-field="medications" placeholder="Détaillez médicaments..." class="book-input h-20 resize-none"></textarea>
+                            </div>
+                            
+                            <div class="book-field col-span-full">
+                                <label class="book-label">Heure de prise</label>
+                                <input type="text" data-field="medication_hours" placeholder="Ex: 8h00, 14h00..." class="book-input">
+                            </div>
+                            
+                            <div class="book-field col-span-full">
+                                <label class="book-label">Observations</label>
+                                <textarea data-field="observations" placeholder="Remarques additionnelles..." class="book-input h-24 resize-none"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
             `;
@@ -383,12 +695,7 @@
             // Renumber children
             document.querySelectorAll('#childrenContainer .child-block').forEach((block, i) => {
                 block.setAttribute('data-child', i + 1);
-                block.querySelector('.child-label').innerHTML = `
-                    <i class="fa-solid fa-child text-green-500"></i> Enfant #${i + 1}
-                    ${i > 0 ? `<button type="button" onclick="removeChild(this)" 
-                        style="margin-left:auto;color:#ef4444;font-size:14px;background:none;border:none;cursor:pointer;">
-                        <i class="fa-solid fa-trash"></i></button>` : ''}
-                `;
+                block.querySelector('.w-8.h-8.rounded-full').textContent = i + 1;
             });
         }
 
@@ -398,8 +705,13 @@
             document.querySelectorAll('#childrenContainer .child-block').forEach(block => {
                 const child = {};
                 block.querySelectorAll('[data-field]').forEach(input => {
-                    child[input.getAttribute('data-field')] = input.value.trim();
+                    if (input.type === 'checkbox') {
+                        child[input.getAttribute('data-field')] = input.checked;
+                    } else {
+                        child[input.getAttribute('data-field')] = input.value.trim();
+                    }
                 });
+
                 if (child.first_name || child.last_name) {
                     children.push(child);
                 }
@@ -410,6 +722,17 @@
         // Soumettre le formulaire → Google Sheets
         async function handleBookingSubmit(e) {
             e.preventDefault();
+
+            // Validate that gender is selected for all children
+            let allGendersSelected = true;
+            document.querySelectorAll('#childrenContainer .child-block').forEach((block, idx) => {
+                const gender = block.querySelector('input[data-field="gender"]').value;
+                if (!gender) {
+                    allGendersSelected = false;
+                    alert(`Veuillez sélectionner le genre/sexe pour l'Enfant #${idx + 1}`);
+                }
+            });
+            if (!allGendersSelected) return;
 
             const btn = document.getElementById('bookSubmitBtn');
             btn.disabled = true;
@@ -471,6 +794,16 @@
             blocks.forEach((block, i) => { if (i > 0) block.remove(); });
             childCount = 1;
             document.getElementById('addChildBtn').style.display = 'flex';
+            
+            // Reset gender buttons styling for Child 1
+            const firstChild = container.querySelector('.child-block');
+            if (firstChild) {
+                firstChild.querySelector('input[data-field="gender"]').value = '';
+                firstChild.querySelectorAll('.gender-btn').forEach(b => {
+                    b.classList.remove('border-blue-500', 'bg-blue-50', 'text-blue-700', 'border-pink-500', 'bg-pink-50', 'text-pink-700');
+                    b.classList.add('border-gray-100', 'text-gray-600');
+                });
+            }
         }
     </script>
 </body>
