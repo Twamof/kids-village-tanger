@@ -9,16 +9,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextPageBtn  = document.getElementById('next-page');
     const pageIndicator = document.getElementById('page-indicator');
 
-    const ITEMS_PER_PAGE = 6;
+    const ITEMS_PER_PAGE = 8;
     let currentPage = 1;
     let currentFilter = 'all';
     let filteredItems = [...galleryItems];
 
     function renderGallery() {
-        // Filter the items
+        // Filter the items first based on currentFilter
         filteredItems = galleryItems.filter(item => {
             return currentFilter === 'all' || item.classList.contains(currentFilter);
         });
+
+        // Check if pagination controls exist
+        const hasPagination = prevPageBtn || nextPageBtn || pageIndicator;
+        
+        if (!hasPagination) {
+            galleryItems.forEach(item => {
+                if (currentFilter === 'all' || item.classList.contains(currentFilter)) {
+                    item.style.display = 'block';
+                    item.style.animation = 'fadeIn 0.45s ease forwards';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            return;
+        }
 
         const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE) || 1;
         
@@ -194,8 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     let currentSlide = 0;
-    const slidesPerView = window.innerWidth > 768 ? 2 : 1;
-    const totalSlides = Math.ceil(allTestimonials.length / slidesPerView);
+    let slidesPerView = window.innerWidth > 768 ? 2 : 1;
+    let totalSlides = Math.ceil(allTestimonials.length / slidesPerView);
 
     function updateBubbles() {
         const startIndex = currentSlide * slidesPerView;
@@ -240,11 +255,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initial setup
     function setupSlider() {
-        const slidesPerView = window.innerWidth > 768 ? 2 : 1;
-        const totalSlidesNeeded = Math.ceil(allTestimonials.length / slidesPerView);
+        slidesPerView = window.innerWidth > 768 ? 2 : 1;
+        totalSlides = Math.ceil(allTestimonials.length / slidesPerView);
         
         dots.forEach((dot, i) => {
-            if (i < totalSlidesNeeded) {
+            if (i < totalSlides) {
                 dot.style.display = 'block';
                 dot.onclick = () => goToSlide(i);
             } else {

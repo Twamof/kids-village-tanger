@@ -136,3 +136,41 @@ function doPost(e) {
                          .setMimeType(ContentService.MimeType.JSON);
   }
 }
+
+// ═══════════════════════════════════════════════════════════════
+// doGet — Handle GET requests
+// ═══════════════════════════════════════════════════════════════
+// ?action=clearImported  → Delete all data rows (keep header)
+// (no action)            → Health check / status
+// ═══════════════════════════════════════════════════════════════
+function doGet(e) {
+  var action = (e && e.parameter && e.parameter.action) || '';
+  
+  if (action === 'clearImported') {
+    try {
+      var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+      var sheet = spreadsheet.getSheetByName("الورقة1") || spreadsheet.getActiveSheet();
+      var lastRow = sheet.getLastRow();
+      
+      if (lastRow > 1) {
+        sheet.deleteRows(2, lastRow - 1);
+        return ContentService.createTextOutput(JSON.stringify({
+          "result": "success", "action": "clearImported", "deleted_rows": lastRow - 1
+        })).setMimeType(ContentService.MimeType.JSON);
+      }
+      
+      return ContentService.createTextOutput(JSON.stringify({
+        "result": "success", "action": "clearImported", "deleted_rows": 0
+      })).setMimeType(ContentService.MimeType.JSON);
+      
+    } catch (error) {
+      return ContentService.createTextOutput(JSON.stringify({
+        "result": "error", "action": "clearImported", "error": error.toString()
+      })).setMimeType(ContentService.MimeType.JSON);
+    }
+  }
+  
+  return ContentService.createTextOutput(JSON.stringify({
+    status: 'ok', message: 'Kids Village Registration API is running!'
+  })).setMimeType(ContentService.MimeType.JSON);
+}

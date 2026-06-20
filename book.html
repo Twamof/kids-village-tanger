@@ -273,11 +273,11 @@
                                             <div class="col-span-full">
                                                 <label class="book-label">Genre / Sexe <span class="text-red-400">*</span></label>
                                                 <div class="grid grid-cols-2 gap-4 mt-2">
-                                                    <button type="button" onclick="selectGender(this, 'Garçon')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-blue-400 hover:bg-blue-50/30 transition-all gap-2 text-gray-600 font-bold">
+                                                    <button type="button" onclick="selectGender(this, 'boy')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-blue-400 hover:bg-blue-50/30 transition-all gap-2 text-gray-600 font-bold">
                                                         <i class="fa-solid fa-mars text-blue-500 text-lg"></i>
                                                         <span>Garçon</span>
                                                     </button>
-                                                    <button type="button" onclick="selectGender(this, 'Fille')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-pink-400 hover:bg-pink-50/30 transition-all gap-2 text-gray-600 font-bold">
+                                                    <button type="button" onclick="selectGender(this, 'girl')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-pink-400 hover:bg-pink-50/30 transition-all gap-2 text-gray-600 font-bold">
                                                         <i class="fa-solid fa-venus text-pink-500 text-lg"></i>
                                                         <span>Fille</span>
                                                     </button>
@@ -490,7 +490,7 @@
             });
             
             btn.classList.remove('border-gray-100', 'text-gray-600');
-            if (val === 'Garçon') {
+            if (val === 'boy') {
                 btn.classList.add('border-blue-500', 'bg-blue-50', 'text-blue-700');
             } else {
                 btn.classList.add('border-pink-500', 'bg-pink-50', 'text-pink-700');
@@ -560,11 +560,11 @@
                             <div class="col-span-full">
                                 <label class="book-label">Genre / Sexe <span class="text-red-400">*</span></label>
                                 <div class="grid grid-cols-2 gap-4 mt-2">
-                                    <button type="button" onclick="selectGender(this, 'Garçon')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-blue-400 hover:bg-blue-50/30 transition-all gap-2 text-gray-600 font-bold">
+                                    <button type="button" onclick="selectGender(this, 'boy')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-blue-400 hover:bg-blue-50/30 transition-all gap-2 text-gray-600 font-bold">
                                         <i class="fa-solid fa-mars text-blue-500 text-lg"></i>
                                         <span>Garçon</span>
                                     </button>
-                                    <button type="button" onclick="selectGender(this, 'Fille')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-pink-400 hover:bg-pink-50/30 transition-all gap-2 text-gray-600 font-bold">
+                                    <button type="button" onclick="selectGender(this, 'girl')" class="gender-btn flex items-center justify-center py-3.5 border-2 border-gray-100 rounded-xl hover:border-pink-400 hover:bg-pink-50/30 transition-all gap-2 text-gray-600 font-bold">
                                         <i class="fa-solid fa-venus text-pink-500 text-lg"></i>
                                         <span>Fille</span>
                                     </button>
