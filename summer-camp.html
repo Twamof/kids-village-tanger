@@ -50,16 +50,26 @@
         .activity-item-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .activity-item-card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+
         .activity-item-card:hover .icon-bounce {
             animation: bounce-loop 1.2s ease-in-out infinite;
         }
+
         @keyframes bounce-loop {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
         }
     </style>
 </head>
@@ -124,35 +134,45 @@
         <div class="floating-el el-6 text-3xl">🧩</div>
         <div class="floating-el el-7 text-4xl">🎉</div>
 
-        <div class="max-w-5xl mx-auto bg-white rounded-[2.5rem] shadow-xl p-6 md:p-12 border border-slate-100 relative z-10 mt-10">
-            
+        <div
+            class="max-w-5xl mx-auto bg-white rounded-[2.5rem] shadow-xl p-6 md:p-12 border border-slate-100 relative z-10 mt-10">
+
             <!-- Sketchy Header Elements -->
             <div class="relative pb-6 mb-10 text-center md:text-left">
                 <!-- Cloud SVG -->
                 <div class="absolute -top-12 left-4 opacity-80 pointer-events-none hidden md:block">
                     <svg width="70" height="50" viewBox="0 0 100 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20,40 C10,40 10,25 22,25 C20,15 35,8 45,18 C55,8 70,12 70,22 C82,22 85,32 80,40 C90,40 90,55 78,55 C78,58 22,58 20,40 Z" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    </svg>
-                </div>
-                
-                <!-- Stars SVG -->
-                <div class="absolute top-2 right-4 flex gap-2 pointer-events-none">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-12 animate-pulse">
-                        <path d="M12 2L15 9H22L17 14L19 21L12 17L5 21L7 14L2 9H9L12 2Z" stroke="#0ea5e9" stroke-width="2" stroke-linejoin="round" fill="none"/>
-                    </svg>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="-rotate-12 opacity-70">
-                        <path d="M12 2L15 9H22L17 14L19 21L12 17L5 21L7 14L2 9H9L12 2Z" stroke="#0ea5e9" stroke-width="2" stroke-linejoin="round" fill="none"/>
+                        <path
+                            d="M20,40 C10,40 10,25 22,25 C20,15 35,8 45,18 C55,8 70,12 70,22 C82,22 85,32 80,40 C90,40 90,55 78,55 C78,58 22,58 20,40 Z"
+                            stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                            fill="none" />
                     </svg>
                 </div>
 
-                <h1 class="font-fredoka text-[#0ea5e9] text-3xl md:text-5xl font-extrabold uppercase tracking-wide mt-6">
+                <!-- Stars SVG -->
+                <div class="absolute top-2 right-4 flex gap-2 pointer-events-none">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="rotate-12 animate-pulse">
+                        <path d="M12 2L15 9H22L17 14L19 21L12 17L5 21L7 14L2 9H9L12 2Z" stroke="#0ea5e9"
+                            stroke-width="2" stroke-linejoin="round" fill="none" />
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="-rotate-12 opacity-70">
+                        <path d="M12 2L15 9H22L17 14L19 21L12 17L5 21L7 14L2 9H9L12 2Z" stroke="#0ea5e9"
+                            stroke-width="2" stroke-linejoin="round" fill="none" />
+                    </svg>
+                </div>
+
+                <h1
+                    class="font-fredoka text-[#0ea5e9] text-3xl md:text-5xl font-extrabold uppercase tracking-wide mt-6">
                     Camps Vacances
                 </h1>
-                
+
                 <!-- Curved Line -->
                 <div class="w-full mt-2">
                     <svg viewBox="0 0 400 20" class="w-full h-4 overflow-visible">
-                        <path d="M5,10 Q200,18 395,10" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+                        <path d="M5,10 Q200,18 395,10" fill="none" stroke="#38bdf8" stroke-width="3"
+                            stroke-linecap="round" />
                     </svg>
                 </div>
             </div>
@@ -160,102 +180,154 @@
             <!-- Description Text -->
             <div class="space-y-8 font-quicksand text-gray-700 text-base md:text-lg font-medium leading-relaxed">
                 <p class="text-center md:text-left text-lg md:text-xl font-semibold text-gray-600">
-                    Pendant les vacances scolaires, Kids Village accueille les enfants pour un été riche en découvertes, en amusement et en épanouissement !
+                    Pendant les vacances scolaires, Kids Village accueille les enfants pour un été riche en découvertes,
+                    en amusement et en épanouissement !
                 </p>
                 <p class="text-center md:text-left">
-                    Nos petits aventuriers profiteront chaque jour d'un programme varié mêlant jeux, créativité, sport et découverte du monde professionnel à travers nos ateliers immersifs :
+                    Nos petits aventuriers profiteront chaque jour d'un programme varié mêlant jeux, créativité, sport
+                    et découverte du monde professionnel à travers nos ateliers immersifs :
                 </p>
 
                 <!-- SECTION 1: ROLEPLAY UNIVERSES (Métiers) -->
                 <div>
-                    <h2 class="font-fredoka text-2xl text-gray-800 font-bold mb-6 flex items-center gap-3 justify-center md:justify-start">
-                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-sky-100 text-sky-600"><i class="fa-solid fa-briefcase"></i></span>
+                    <h2
+                        class="font-fredoka text-2xl text-gray-800 font-bold mb-6 flex items-center gap-3 justify-center md:justify-start">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-sky-100 text-sky-600"><i
+                                class="fa-solid fa-briefcase"></i></span>
                         Les Univers Professionnels Immersifs
                     </h2>
 
                     <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
                         <!-- Hôpital -->
-                        <div class="activity-item-card bg-rose-50/70 border border-rose-100 rounded-3xl p-6 flex items-start gap-4">
-                            <div class="icon-bounce w-16 h-16 bg-rose-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
-                                <svg class="w-10 h-10 text-rose-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3.89 19 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                                    <path d="M12 7V17M7 12H17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                        <div
+                            class="activity-item-card bg-rose-50/70 border border-rose-100 rounded-3xl p-6 flex items-start gap-4">
+                            <div
+                                class="icon-bounce w-16 h-16 bg-rose-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-10 h-10 text-rose-500" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3.89 19 3Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                                    <path d="M12 7V17M7 12H17" stroke="currentColor" stroke-width="2.5"
+                                        stroke-linecap="round" />
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-fredoka font-bold text-gray-800 text-lg mb-1">Hôpital 🏥</h4>
-                                <p class="text-gray-500 text-sm font-semibold">Médecin ou infirmier pour soigner les doudous et comprendre la santé.</p>
+                                <p class="text-gray-500 text-sm font-semibold">Médecin ou infirmier pour soigner les
+                                    doudous, accueillir les patients et découvrir les métiers de la santé en s'amusant.
+                                </p>
                             </div>
                         </div>
 
                         <!-- École -->
-                        <div class="activity-item-card bg-emerald-50/70 border border-emerald-100 rounded-3xl p-6 flex items-start gap-4">
-                            <div class="icon-bounce w-16 h-16 bg-emerald-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
-                                <svg class="w-10 h-10 text-emerald-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 19V5C4 3.9 4.9 3 6 3H18C19.1 3 20 3.9 20 5V19M4 19H20M4 19C4 20.1 4.9 21 6 21H18C19.1 21 20 20.1 20 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M9 7H15M9 11H15M9 15H13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <div
+                            class="activity-item-card bg-emerald-50/70 border border-emerald-100 rounded-3xl p-6 flex items-start gap-4">
+                            <div
+                                class="icon-bounce w-16 h-16 bg-emerald-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-10 h-10 text-emerald-600" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4 19V5C4 3.9 4.9 3 6 3H18C19.1 3 20 3.9 20 5V19M4 19H20M4 19C4 20.1 4.9 21 6 21H18C19.1 21 20 20.1 20 19"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M9 7H15M9 11H15M9 15H13" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-fredoka font-bold text-gray-800 text-lg mb-1">École 🏫</h4>
-                                <p class="text-gray-500 text-sm font-semibold">Le rôle du maître ou de la maîtresse pour partager ses connaissances.</p>
+                                <p class="text-gray-500 text-sm font-semibold">Devenir enseignant ou élève, écrire au
+                                    tableau, apprendre et partager ses connaissances dans une véritable salle de classe.
+                                </p>
                             </div>
                         </div>
 
-                        <!-- Police -->
-                        <div class="activity-item-card bg-blue-50/70 border border-blue-100 rounded-3xl p-6 flex items-start gap-4">
-                            <div class="icon-bounce w-16 h-16 bg-blue-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
-                                <svg class="w-10 h-10 text-blue-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M12 8L13.5 11.5L17 12L14.5 14.5L15 18L12 16L9 18L9.5 14.5L7 12L10.5 11.5L12 8Z" fill="currentColor"/>
+                        <!-- Pet World -->
+                        <div
+                            class="activity-item-card bg-blue-50/70 border border-blue-100 rounded-3xl p-6 flex items-start gap-4">
+                            <div
+                                class="icon-bounce w-16 h-16 bg-blue-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-10 h-10 text-blue-500" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M12 8L13.5 11.5L17 12L14.5 14.5L15 18L12 16L9 18L9.5 14.5L7 12L10.5 11.5L12 8Z"
+                                        fill="currentColor" />
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="font-fredoka font-bold text-gray-800 text-lg mb-1">Poste de Police 👮</h4>
-                                <p class="text-gray-500 text-sm font-semibold">Protéger les citoyens et résoudre des enquêtes amusantes.</p>
+                                <h4 class="font-fredoka font-bold text-gray-800 text-lg mb-1">Pet World 🐾</h4>
+                                <p class="text-gray-500 text-sm font-semibold">Prendre soin des animaux, les nourrir,
+                                    les laver et découvrir l'univers vétérinaire tout en développant douceur et
+                                    responsabilité.</p>
                             </div>
                         </div>
 
                         <!-- Pompiers -->
-                        <div class="activity-item-card bg-orange-50/70 border border-orange-100 rounded-3xl p-6 flex items-start gap-4">
-                            <div class="icon-bounce w-16 h-16 bg-orange-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
-                                <svg class="w-10 h-10 text-orange-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C7 2 5 7 5 10C5 12 6 15 8 17C10 19 12 22 12 22C12 22 14 19 16 17C18 15 19 12 19 10C19 7 17 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                        <div
+                            class="activity-item-card bg-orange-50/70 border border-orange-100 rounded-3xl p-6 flex items-start gap-4">
+                            <div
+                                class="icon-bounce w-16 h-16 bg-orange-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-10 h-10 text-orange-500" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2C7 2 5 7 5 10C5 12 6 15 8 17C10 19 12 22 12 22C12 22 14 19 16 17C18 15 19 12 19 10C19 7 17 2 12 2Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" />
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-fredoka font-bold text-gray-800 text-lg mb-1">Pompiers 🚒</h4>
-                                <p class="text-gray-500 text-sm font-semibold">Intervenir en héros face aux faux incendies et travailler en équipe.</p>
+                                <p class="text-gray-500 text-sm font-semibold">Intervenir en héros face aux incendies,
+                                    relever des missions de sauvetage et apprendre à travailler en équipe.</p>
                             </div>
                         </div>
 
                         <!-- Théâtre -->
-                        <div class="activity-item-card bg-purple-50/70 border border-purple-100 rounded-3xl p-6 flex items-start gap-4">
-                            <div class="icon-bounce w-16 h-16 bg-purple-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
-                                <svg class="w-10 h-10 text-purple-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 10C2 10 5 4 12 4C19 4 22 10 22 10C22 10 19 16 12 16C5 16 2 10 2 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M12 19V22M9 22H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <div
+                            class="activity-item-card bg-purple-50/70 border border-purple-100 rounded-3xl p-6 flex items-start gap-4">
+                            <div
+                                class="icon-bounce w-16 h-16 bg-purple-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-10 h-10 text-purple-500" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 10C2 10 5 4 12 4C19 4 22 10 22 10C22 10 19 16 12 16C5 16 2 10 2 10Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" />
+                                    <path d="M12 19V22M9 22H15" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
                                 </svg>
                             </div>
                             <div>
                                 <h4 class="font-fredoka font-bold text-gray-800 text-lg mb-1">Théâtre 🎭</h4>
-                                <p class="text-gray-500 text-sm font-semibold">S'habiller et jouer un spectacle sur une scène de vraie vedette.</p>
+                                <p class="text-gray-500 text-sm font-semibold">S'habiller, chanter, danser et monter sur
+                                    scène pour devenir la star du spectacle.</p>
                             </div>
                         </div>
 
-                        <!-- Maison & Poste -->
-                        <div class="activity-item-card bg-amber-50/70 border border-amber-100 rounded-3xl p-6 flex items-start gap-4">
-                            <div class="icon-bounce w-16 h-16 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
-                                <svg class="w-10 h-10 text-amber-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                                    <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <!-- Maison & Supermarket -->
+                        <div
+                            class="activity-item-card bg-amber-50/70 border border-amber-100 rounded-3xl p-6 flex items-start gap-4">
+                            <div
+                                class="icon-bounce w-16 h-16 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                                <svg class="w-10 h-10 text-amber-600" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                                    <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2"
+                                        stroke-linejoin="round" />
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="font-fredoka font-bold text-gray-800 text-lg mb-1">Maison &amp; Poste 📮</h4>
-                                <p class="text-gray-500 text-sm font-semibold">Prendre soin du foyer ou distribuer des lettres et colis.</p>
+                                <h4 class="font-fredoka font-bold text-gray-800 text-lg mb-1">Maison &amp; Supermarket
+                                    🛒</h4>
+                                <p class="text-gray-500 text-sm font-semibold">Faire les courses, cuisiner, prendre soin
+                                    du foyer et reproduire les gestes du quotidien en toute autonomie.</p>
                             </div>
                         </div>
                     </div>
@@ -263,69 +335,275 @@
 
                 <!-- SECTION 2: THE PROGRAM (Activités) -->
                 <div class="pt-6">
-                    <h2 class="font-fredoka text-2xl text-gray-800 font-bold mb-6 flex items-center gap-3 justify-center md:justify-start">
-                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-yellow-100 text-yellow-600"><i class="fa-solid fa-star"></i></span>
+                    <h2
+                        class="font-fredoka text-2xl text-gray-800 font-bold mb-6 flex items-center gap-3 justify-center md:justify-start">
+                        <span
+                            class="flex items-center justify-center w-10 h-10 rounded-full bg-yellow-100 text-yellow-600"><i
+                                class="fa-solid fa-star"></i></span>
                         Au Programme de nos Journées
                     </h2>
 
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                         <!-- Sports & Aventure -->
-                        <div class="activity-item-card bg-[#f0fdf4] border border-green-100 rounded-3xl p-6 flex flex-col items-center text-center">
-                            <div class="icon-bounce w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4 text-green-600">
-                                <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M12 2C12 2 15 7 12 12C9 17 12 22 12 22" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M2 12C2 12 7 9 12 12C17 15 22 12 22 12" stroke="currentColor" stroke-width="2"/>
+                        <div
+                            class="activity-item-card bg-[#f0fdf4] border border-green-100 rounded-3xl p-6 flex flex-col items-center text-center">
+                            <div
+                                class="icon-bounce w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4 text-green-600">
+                                <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                    <path d="M12 2C12 2 15 7 12 12C9 17 12 22 12 22" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M2 12C2 12 7 9 12 12C17 15 22 12 22 12" stroke="currentColor"
+                                        stroke-width="2" />
                                 </svg>
                             </div>
-                            <h4 class="font-fredoka font-bold text-gray-800 text-xl mb-3">Sports &amp; Défis</h4>
-                            <ul class="text-gray-500 text-sm font-semibold space-y-2 text-left w-full list-disc list-inside flex-grow">
-                                <li>⚽ Football &amp; tournois sportifs</li>
+                            <h4 class="font-fredoka font-bold text-gray-800 text-xl mb-3">Sports &amp; Défis ⚽</h4>
+                            <ul
+                                class="text-gray-500 text-sm font-semibold space-y-2 text-left w-full list-disc list-inside flex-grow">
+                                <li>⚽ Football et tournois sportifs</li>
                                 <li>🏃 Courses et parcours d'obstacles</li>
-                                <li>🗺️ Chasses au trésor d'aventure</li>
+                                <li>🗺️ Chasses au trésor et défis d'aventure</li>
                             </ul>
                         </div>
 
                         <!-- Art & Spectacle -->
-                        <div class="activity-item-card bg-pink-50/50 border border-pink-100 rounded-3xl p-6 flex flex-col items-center text-center">
-                            <div class="icon-bounce w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mb-4 text-pink-500">
-                                <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 14.7255 3.09032 17.1962 4.85857 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"/>
-                                    <circle cx="11.5" cy="7.5" r="1.5" fill="currentColor"/>
-                                    <circle cx="16.5" cy="9.5" r="1.5" fill="currentColor"/>
-                                    <circle cx="15.5" cy="14.5" r="1.5" fill="currentColor"/>
+                        <div
+                            class="activity-item-card bg-pink-50/50 border border-pink-100 rounded-3xl p-6 flex flex-col items-center text-center">
+                            <div
+                                class="icon-bounce w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mb-4 text-pink-500">
+                                <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 14.7255 3.09032 17.1962 4.85857 19"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <circle cx="7.5" cy="10.5" r="1.5" fill="currentColor" />
+                                    <circle cx="11.5" cy="7.5" r="1.5" fill="currentColor" />
+                                    <circle cx="16.5" cy="9.5" r="1.5" fill="currentColor" />
+                                    <circle cx="15.5" cy="14.5" r="1.5" fill="currentColor" />
                                 </svg>
                             </div>
-                            <h4 class="font-fredoka font-bold text-gray-800 text-xl mb-3">Arts &amp; Spectacles</h4>
-                            <ul class="text-gray-500 text-sm font-semibold space-y-2 text-left w-full list-disc list-inside flex-grow">
-                                <li>🎨 Coloriage, peinture &amp; DIY</li>
-                                <li>♟️ Jeux de société &amp; en équipe</li>
-                                <li>🎭 Spectacles &amp; animations fun</li>
+                            <h4 class="font-fredoka font-bold text-gray-800 text-xl mb-3">Arts &amp; Spectacles 🎨</h4>
+                            <ul
+                                class="text-gray-500 text-sm font-semibold space-y-2 text-left w-full list-disc list-inside flex-grow">
+                                <li>🎨 Coloriage et peinture</li>
+                                <li>🎲 Jeux de société et jeux en équipe</li>
+                                <li>🎭 Spectacles, danse et animations</li>
                             </ul>
                         </div>
 
                         <!-- Langues & Valeurs -->
-                        <div class="activity-item-card bg-yellow-50/60 border border-yellow-100 rounded-3xl p-6 flex flex-col items-center text-center col-span-2 md:col-span-1">
-                            <div class="icon-bounce w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-4 text-yellow-600">
-                                <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.837 17 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M6 2H20V18H6C5.20435 18 4.44129 18.3161 3.87868 18.8787C3.31607 19.4413 3 20.2044 3 21C3 21.2652 3.10536 21.5196 3.29289 21.7071C3.48043 21.8946 3.73478 22 4 22H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <div
+                            class="activity-item-card bg-yellow-50/60 border border-yellow-100 rounded-3xl p-6 flex flex-col items-center text-center col-span-2 md:col-span-1">
+                            <div
+                                class="icon-bounce w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-4 text-yellow-600">
+                                <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.837 17 6.5 17H20"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M6 2H20V18H6C5.20435 18 4.44129 18.3161 3.87868 18.8787C3.31607 19.4413 3 20.2044 3 21C3 21.2652 3.10536 21.5196 3.29289 21.7071C3.48043 21.8946 3.73478 22 4 22H20"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                             </div>
-                            <h4 class="font-fredoka font-bold text-gray-800 text-xl mb-3">Apprentissages</h4>
-                            <ul class="text-gray-500 text-sm font-semibold space-y-2 text-left w-full list-disc list-inside flex-grow">
-                                <li>📖 Arabe &amp; Coran chaque matin</li>
+                            <h4 class="font-fredoka font-bold text-gray-800 text-xl mb-3">Apprentissages 📚</h4>
+                            <ul
+                                class="text-gray-500 text-sm font-semibold space-y-2 text-left w-full list-disc list-inside flex-grow">
+                                <li>📖 Atelier d'arabe chaque matin</li>
                                 <li>🇬🇧 Atelier d'anglais ludique</li>
-                                <li>🤝 Autonomie, esprit d'équipe</li>
+                                <li>🤝 Autonomie, créativité et esprit d'équipe</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <p class="text-center font-bold text-[#0ea5e9] text-base md:text-lg my-4">
-                    Le tout dans un environnement sécurisé, convivial et 100 % fun, où les enfants apprennent, jouent et créent de magnifiques souvenirs d'été.
+                    Le tout dans un environnement sécurisé, convivial et 100 % fun, où les enfants apprennent, jouent et
+                    créent de magnifiques souvenirs d'été.
                 </p>
+
+                <!-- New Scout Gallery Carousel -->
+                <div id="scout-carousel-section" class="mt-20 pt-12 border-t-2 border-dashed border-sky-100 relative">
+                    <!-- Animated Decorations -->
+                    <div class="absolute -top-12 left-4 md:left-20 text-6xl animate-bounce" style="animation-duration: 3s;">🏕️</div>
+                    <div class="absolute -top-8 right-4 md:right-20 text-5xl animate-pulse" style="animation-duration: 2.5s;">🔥</div>
+                    <div class="absolute top-10 left-1/2 -translate-x-1/2 -z-10 opacity-10">
+                        <svg viewBox="0 0 120 120" class="w-48 h-48 animate-spin" style="animation-duration: 20s;">
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#fbbf24" stroke-width="4" stroke-dasharray="10 10"/>
+                        </svg>
+                    </div>
+
+                    <div class="text-center mb-10">
+                        <h2 class="font-fredoka font-bold text-3xl md:text-5xl text-orange-500 mb-4 tracking-wide flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-camera-retro text-yellow-400"></i>
+                            Album du Camp
+                            <i class="fa-solid fa-map-location-dot text-yellow-400"></i>
+                        </h2>
+                        <p class="font-quicksand text-lg text-gray-500 font-medium">Glissez pour découvrir nos plus beaux souvenirs de camp !</p>
+                    </div>
+
+                    <div class="relative w-full max-w-6xl mx-auto px-4 md:px-12 group">
+                        <!-- Navigation Arrows -->
+                        <button onclick="prevGalleryPage()" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white text-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg border border-orange-100 flex items-center justify-center text-xl md:text-2xl hover:bg-orange-500 hover:text-white transition-all z-20 focus:outline-none -ml-2 md:-ml-6 group-hover:scale-110">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button onclick="nextGalleryPage()" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white text-orange-500 w-10 h-10 md:w-14 md:h-14 rounded-full shadow-lg border border-orange-100 flex items-center justify-center text-xl md:text-2xl hover:bg-orange-500 hover:text-white transition-all z-20 focus:outline-none -mr-2 md:-mr-6 group-hover:scale-110">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+
+                        <!-- Carousel Wrapper -->
+                        <div class="overflow-hidden rounded-[2rem] py-6 px-2">
+                            <div id="gallery-carousel-inner" class="flex transition-transform duration-700 ease-in-out">
+                                
+                                <!-- PAGE 1 (8 Images) -->
+                                <div class="w-full flex-shrink-0">
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-amber-200 rotate-1 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative">
+                                            <div class="absolute -top-3 -right-3 text-2xl">📌</div>
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.16.18.jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-sky-200 -rotate-2 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-4">
+                                            <div class="absolute -top-3 -left-2 text-2xl">🌟</div>
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.17.22 (1).jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-emerald-200 rotate-2 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative">
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.17.22 (2).jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-rose-200 -rotate-1 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-2 md:mt-6">
+                                            <div class="absolute -top-3 -right-2 text-2xl">✨</div>
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.17.22.jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-purple-200 -rotate-2 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-4 md:mt-0">
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.17.23 (1).jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-yellow-300 rotate-2 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-0 md:-mt-4">
+                                            <div class="absolute -bottom-3 -right-2 text-2xl">🧭</div>
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.17.23 (2).jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-orange-300 rotate-1 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-2 md:mt-2">
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.17.23 (3).jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-sky-300 -rotate-1 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-5 md:-mt-2">
+                                            <div class="absolute -bottom-3 -left-2 text-2xl">🌲</div>
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.17.23.jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- PAGE 2 (8 Images) -->
+                                <div class="w-full flex-shrink-0">
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-rose-200 rotate-2 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative">
+                                            <div class="absolute -top-3 -right-3 text-2xl">📌</div>
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.18.58.jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-emerald-200 -rotate-1 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-4">
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.23.50.jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-sky-200 rotate-1 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative">
+                                            <div class="absolute -top-3 -left-2 text-2xl">🌟</div>
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.23.51 (1).jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-amber-200 -rotate-2 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-2 md:mt-6">
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.23.51 (2).jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-purple-200 rotate-1 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-4 md:mt-0">
+                                            <div class="absolute -bottom-3 -left-2 text-2xl">🧭</div>
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.23.51 (3).jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-rose-300 -rotate-2 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-0 md:-mt-4">
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.23.51 (4).jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-emerald-300 rotate-2 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-2 md:mt-2">
+                                            <div class="absolute -top-3 -right-2 text-2xl">✨</div>
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.23.51 (5).jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-orange-200 -rotate-1 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative mt-5 md:-mt-2">
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.23.51.jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- PAGE 3 (1 Image + 3 Cartoon/Animations) -->
+                                <div class="w-full flex-shrink-0">
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                                        <div class="bg-white p-2 md:p-3 rounded-2xl shadow-md border-2 border-dashed border-sky-300 rotate-2 hover:rotate-0 hover:scale-105 hover:shadow-xl transition-all duration-300 relative">
+                                            <div class="absolute -top-3 -left-3 text-2xl">📌</div>
+                                            <div class="overflow-hidden rounded-xl aspect-[4/3] md:aspect-square w-full">
+                                                <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.23.52.jpeg" class="w-full h-full object-cover" loading="lazy">
+                                            </div>
+                                        </div>
+
+                                        <!-- Item 2 (Animated SVG) -->
+                                        <div class="bg-orange-50/50 p-2 md:p-3 rounded-2xl shadow-inner border-2 border-dotted border-orange-200 flex flex-col items-center justify-center aspect-[4/3] md:aspect-square mt-4">
+                                            <svg viewBox="0 0 100 100" class="w-16 h-16 md:w-20 md:h-20 mb-2 animate-bounce" style="animation-duration: 2s;">
+                                                <path d="M50 10 Q60 40 80 50 Q60 60 50 90 Q40 60 20 50 Q40 40 50 10" fill="#f97316"/>
+                                                <path d="M50 30 Q55 50 70 55 Q55 60 50 80 Q45 60 30 55 Q45 50 50 30" fill="#fef08a"/>
+                                            </svg>
+                                            <p class="font-fredoka text-orange-500 font-bold text-center">Feu de camp 🔥</p>
+                                        </div>
+
+                                        <!-- Item 3 (Animated SVG) -->
+                                        <div class="bg-emerald-50/50 p-2 md:p-3 rounded-2xl shadow-inner border-2 border-dotted border-emerald-200 flex flex-col items-center justify-center aspect-[4/3] md:aspect-square mt-0 md:-mt-2">
+                                            <svg viewBox="0 0 100 100" class="w-16 h-16 md:w-20 md:h-20 mb-2 animate-spin" style="animation-duration: 15s;">
+                                                <circle cx="50" cy="50" r="45" fill="#d1fae5" stroke="#10b981" stroke-width="4"/>
+                                                <circle cx="50" cy="50" r="35" fill="none" stroke="#34d399" stroke-width="2" stroke-dasharray="5 5"/>
+                                                <polygon points="50,15 60,50 50,85 40,50" fill="#ef4444"/>
+                                                <polygon points="50,85 40,50 50,50" fill="#b91c1c"/>
+                                                <circle cx="50" cy="50" r="4" fill="#1f2937"/>
+                                            </svg>
+                                            <p class="font-fredoka text-emerald-600 font-bold text-center">Aventure 🧭</p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dots Pagination -->
+                        <div class="flex justify-center items-center gap-3 mt-6 mb-4">
+                            <button onclick="goToGalleryPage(0)" class="gallery-dot w-8 h-3 rounded-full bg-orange-500 transition-all duration-300"></button>
+                            <button onclick="goToGalleryPage(1)" class="gallery-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-orange-300 transition-all duration-300"></button>
+                            <button onclick="goToGalleryPage(2)" class="gallery-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-orange-300 transition-all duration-300"></button>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Final Callout Banner -->
                 <div class="bg-gradient-to-r from-yellow-300 via-amber-400 to-orange-400 rounded-3xl p-6 text-center text-white font-fredoka font-bold text-lg md:text-2xl shadow-md my-8 leading-relaxed">
@@ -333,28 +611,70 @@
                 </div>
             </div>
 
-            <!-- Scout Kid Illustration at the Bottom -->
-            <div class="flex flex-col items-center justify-center mt-12 pt-8 border-t-2 border-dashed border-sky-100 relative">
-                <!-- Using local absolute path for direct loading, relative fallback in script or via standard asset if copied -->
-                <img src="../../.gemini/antigravity-ide/brain/b1675090-8494-45f3-beb4-c048857fc2b2/summer_camp_illustration_1781789433791.png" alt="Summer Camp Kids Illustration" class="w-full max-w-xs h-auto hover:scale-105 transition-transform duration-300" onerror="this.style.display='none'; document.getElementById('scout-fallback').classList.remove('hidden');">
-                
-                <!-- Fallback elegant vector SVG if the image path is not accessible directly -->
-                <div id="scout-fallback" class="hidden text-center py-6">
-                    <svg viewBox="0 0 120 120" class="w-24 h-24 mx-auto mb-4 text-sky-400">
-                        <circle cx="60" cy="60" r="50" fill="#bae6fd" />
-                        <path d="M40 75 Q60 55 80 75" stroke="#0284c7" stroke-width="6" stroke-linecap="round" fill="none"/>
-                        <circle cx="45" cy="50" r="5" fill="#0284c7" />
-                        <circle cx="75" cy="50" r="5" fill="#0284c7" />
-                    </svg>
-                    <p class="font-fredoka font-bold text-gray-700 text-lg">Summer Camp ⛺</p>
-                </div>
-            </div>
+            <!-- Gallery Carousel Script -->
+            <script>
+                let currentGallerySlide = 0;
+                const totalGallerySlides = 3;
+                let galleryAutoPlayInterval;
+
+                function updateGalleryPosition() {
+                    const inner = document.getElementById('gallery-carousel-inner');
+                    if(inner) {
+                        inner.style.transform = `translateX(-${currentGallerySlide * 100}%)`;
+                        
+                        // Update dots
+                        document.querySelectorAll('.gallery-dot').forEach((dot, index) => {
+                            if(index === currentGallerySlide) {
+                                dot.className = 'gallery-dot w-8 h-3 rounded-full bg-orange-500 transition-all duration-300';
+                            } else {
+                                dot.className = 'gallery-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-orange-300 transition-all duration-300';
+                            }
+                        });
+                    }
+                }
+
+                function nextGalleryPage() {
+                    currentGallerySlide = (currentGallerySlide + 1) % totalGallerySlides;
+                    updateGalleryPosition();
+                    resetGalleryAutoPlay();
+                }
+
+                function prevGalleryPage() {
+                    currentGallerySlide = (currentGallerySlide - 1 + totalGallerySlides) % totalGallerySlides;
+                    updateGalleryPosition();
+                    resetGalleryAutoPlay();
+                }
+
+                function goToGalleryPage(index) {
+                    currentGallerySlide = index;
+                    updateGalleryPosition();
+                    resetGalleryAutoPlay();
+                }
+
+                function startGalleryAutoPlay() {
+                    galleryAutoPlayInterval = setInterval(() => {
+                        currentGallerySlide = (currentGallerySlide + 1) % totalGallerySlides;
+                        updateGalleryPosition();
+                    }, 5000);
+                }
+
+                function resetGalleryAutoPlay() {
+                    clearInterval(galleryAutoPlayInterval);
+                    startGalleryAutoPlay();
+                }
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    startGalleryAutoPlay();
+                });
+            </script>
 
         </div>
     </main>
 
     <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
-    <a href="https://wa.me/212614462986" target="_blank" class="fixed bottom-6 right-6 w-16 h-16 bg-[#25d366] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all z-50 animate-bounce" title="Discutez sur WhatsApp">
+    <a href="https://wa.me/212614462986" target="_blank"
+        class="fixed bottom-6 right-6 w-16 h-16 bg-[#25d366] text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-all z-50 animate-bounce"
+        title="Discutez sur WhatsApp">
         <i class="fa-brands fa-whatsapp text-4xl"></i>
     </a>
 
@@ -483,10 +803,12 @@
 
         <div class="max-w-4xl mx-auto flex flex-col items-center gap-6 pb-20 px-6 relative z-10">
             <!-- Frosted Glass Wrapper -->
-            <div class="bg-white/60 backdrop-blur-md rounded-3xl p-8 shadow-sm flex flex-col items-center gap-6 w-full max-w-lg text-center mt-12">
+            <div
+                class="bg-white/60 backdrop-blur-md rounded-3xl p-8 shadow-sm flex flex-col items-center gap-6 w-full max-w-lg text-center mt-12">
                 <!-- Logo -->
                 <div class="footer-logo">
-                    <img src="Logo Kids Village Tanger.jpg.png" alt="Kids Village Logo" class="h-24 w-auto mb-2 drop-shadow-md">
+                    <img src="Logo Kids Village Tanger.jpg.png" alt="Kids Village Logo"
+                        class="h-24 w-auto mb-2 drop-shadow-md">
                 </div>
 
                 <!-- Social Icons -->
