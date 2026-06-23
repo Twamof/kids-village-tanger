@@ -912,6 +912,12 @@ a {
     color: #9f1239 !important;
 }
 
+.filter-btn.active[data-filter="divers"] {
+    background: linear-gradient(135deg, #f3e8ff 0%, #c084fc 100%) !important;
+    border-color: #a855f7 !important;
+    color: #6b21a8 !important;
+}
+
 .filter-btn.active[data-filter="mecanicien"] {
     background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%) !important;
     border-color: #64748b !important;

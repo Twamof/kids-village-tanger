@@ -73,12 +73,18 @@ foreach ($iterator as $fileInfo) {
 
         imagecopyresampled($dstImg, $srcImg, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
 
-        // Save back
+        // Save back original format (compressed)
         $success = false;
         if ($ext === 'png') {
             $success = imagepng($dstImg, $filePath, 6); // compression 0-9
         } else {
             $success = imagejpeg($dstImg, $filePath, 75); // quality 0-100
+        }
+
+        // Save WebP version next to it for modern browsers
+        if ($success) {
+            $webpPath = preg_replace('/\.(jpe?g|png)$/i', '.webp', $filePath);
+            @imagewebp($dstImg, $webpPath, 75);
         }
 
         imagedestroy($srcImg);
