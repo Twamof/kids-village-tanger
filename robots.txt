@@ -1,0 +1,5 @@
+# Robots.txt for Kids Village Tanger
+User-agent: *
+Allow: /
+
+Sitemap: https://www.kidsvillage.ma/sitemap.xml
