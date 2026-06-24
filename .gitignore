@@ -12,3 +12,14 @@ package-lock.json
 # Development tools & temporary files (optional but good to ignore if left behind)
 generate_image_viewer.js
 view_images.html
+
+# Python Virtual Environment
+.venv/
+__pycache__/
+
+# Compression and cleanup scripts
+compress.py
+compress.php
+update_html.py
+finalize.py
+Code.gs
