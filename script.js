@@ -345,4 +345,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, Math.random() * 2000);
     });
 
+    // ─────────────────────────────────────────────
+    // 6. DYNAMIC COPYRIGHT YEAR
+    // ─────────────────────────────────────────────
+    const currentYearEl = document.getElementById('current-year');
+    if (currentYearEl) {
+        currentYearEl.textContent = new Date().getFullYear();
+    }
+
 });

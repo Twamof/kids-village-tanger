@@ -1106,8 +1106,8 @@ footer {
 }
 
 .footer-logo img {
-    height: 100px;
-    transform: scale(2);
+    height: 160px;
+    margin: 0 auto 10px;
 }
 
 .footer-decorations {
