@@ -716,19 +716,9 @@ a {
 }
 
 /* ── PLAYGROUND BANNER ── */
-.playground-banner {
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-}
-
-.playground-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    /* On mobile, we use standard scroll, parallax (fixed) is problematic on iOS */
-    background-attachment: scroll;
+.playground-banner-section {
+    position: relative;
+    background-color: #f8fafc;
 }
 
 /* ── GALLERY FILTERS ── */
@@ -1414,15 +1404,6 @@ footer {
 
     .about-text {
         flex: 1;
-    }
-
-    .playground-banner {
-        height: 550px;
-    }
-
-    .playground-banner img {
-        background-attachment: fixed;
-        /* Parallax works better here */
     }
 
     .contact-container {
@@ -2161,4 +2142,13 @@ footer {
         font-size: 0.72rem !important;
         line-height: 1.35 !important;
     }
+}
+
+/* Vertex Digital link hover effect */
+.vertex-link {
+    transition: all 0.3s ease-in-out;
+}
+.vertex-link:hover {
+    color: #38bdf8 !important; /* Sky Blue */
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.7), 0 0 15px rgba(56, 189, 248, 0.4);
 }

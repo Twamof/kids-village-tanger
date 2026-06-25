@@ -182,7 +182,7 @@
             <!-- Slide 0 -->
             <div class="hero-slide active absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
                 <img src="img/IMG_0885.JPG.webp" alt="Spectacle de théâtre des enfants"
-                    class="w-full h-full object-cover"> 
+                    class="w-full h-full object-cover">
             </div>
             <!-- Slide 1 -->
             <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
@@ -284,7 +284,7 @@
     <!-- ========== WHO WE ARE ========== -->
     <section id="about" class="pb-20 px-6 relative"
         style="padding-top: 40px; background: linear-gradient(180deg, #ffffff 0%, #fff1f6 100%);" lang="fr">
-        <div class="max-w-5xl mx-auto">
+        <div class="max-w-7xl mx-auto">
             <div class="relative flex flex-col items-center justify-center mb-16 max-w-2xl mx-auto">
                 <h2
                     class="font-fredoka text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#0ea5e9] tracking-wide relative z-10 px-2 py-1">
@@ -298,9 +298,58 @@
                     </svg>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row items-center gap-16">
-                <!-- Animated Collage -->
-                <div class="about-collage-animated w-full md:w-[48%] relative shrink-0">
+
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                <!-- Left Image (New) -->
+                <div class="w-full lg:w-[42%] relative shrink-0 order-1">
+                    <div class="relative group mx-auto max-w-[360px] lg:max-w-full">
+                        <!-- Decorative background blob/shape -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-sky-300 to-pink-300 rounded-[2rem] -z-10 translate-x-4 translate-y-4 opacity-60 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500">
+                        </div>
+                        <!-- Main Image -->
+                        <img src="img/WhatsApp Image 2026-06-24 at 11.08.53.webp" alt="Kids Village Tanger ambiance"
+                            class="rounded-[2rem] shadow-xl w-full h-auto object-cover border-4 border-white transform group-hover:-translate-y-2 transition-transform duration-500"
+                            loading="lazy">
+                        <!-- Floating element -->
+                        <div class="absolute -top-6 -left-6 bg-white p-3 rounded-full shadow-lg animate-bounce"
+                            style="animation-duration: 3s;">
+                            <span class="text-3xl">✨</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text (Middle) -->
+                <div
+                    class="about-text w-full lg:w-[58%] order-2 flex flex-col justify-center text-center lg:text-left px-2 lg:px-6">
+                    <p class="text-slate-800 text-lg md:text-xl leading-relaxed mb-6 font-quicksand font-semibold antialiased text-justify"
+                        style="line-height: 1.85; text-justify: inter-word;">
+                        Bienvenue à <strong class="text-sky-500 font-bold">Kids Village Tanger</strong>, un univers ludique et éducatif spécialement conçu pour éveiller l'imagination, la créativité et la curiosité des enfants dans un cadre sûr, chaleureux et convivial.
+                    </p>
+                    <p class="text-slate-800 text-lg md:text-xl leading-relaxed mb-6 font-quicksand font-semibold antialiased text-justify"
+                        style="line-height: 1.85; text-justify: inter-word;">
+                        À travers une multitude d'espaces thématiques, de jeux de rôle, d'activités créatives et sportives, les enfants découvrent, expérimentent et apprennent tout en s'amusant. Ils peuvent explorer différents métiers, faire leurs courses au supermarché, jouer au médecin, au pompier, au policier, s'occuper des animaux dans notre espace Pet World, ou encore laisser libre cours à leur imagination dans nos ateliers artistiques.
+                    </p>
+                    <p class="text-slate-800 text-lg md:text-xl leading-relaxed mb-6 font-quicksand font-semibold antialiased text-justify"
+                        style="line-height: 1.85; text-justify: inter-word;">
+                        Kids Village propose également des activités variées telles que les jeux libres, les défis sportifs, les ateliers d'arts plastiques, les jeux de société, les chasses au trésor et bien d'autres animations adaptées à chaque tranche d'âge.
+                    </p>
+                    <p class="text-slate-800 text-lg md:text-xl leading-relaxed mb-8 font-quicksand font-bold antialiased text-center"
+                        style="line-height: 1.85;">
+                        Chez Kids Village, chaque visite est une nouvelle aventure !
+                    </p>
+                    <div class="text-center lg:text-left">
+                        <a href="#activities"
+                            class="inline-block bg-pink-300 text-gray-800 font-fredoka font-semibold text-lg px-8 py-3 rounded-pill shadow-md hover:-translate-y-1 transition-transform">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animated Collage (Bottom) -->
+            <div class="mt-20 w-full flex justify-center">
+                <div class="about-collage-animated w-full max-w-[550px] relative shrink-0">
                     <!-- Slot 1: Top Left -->
                     <div class="collage-slot slot-1">
                         <img src="img/IMG_0887.JPG.webp" alt="Kids Village Area" class="active" loading="lazy">
@@ -335,21 +384,6 @@
                             loading="lazy">
                     </div>
                 </div>
-                <!-- Text -->
-                <div class="about-text w-full md:w-[48%]">
-                    <p class="text-slate-800 text-lg md:text-xl leading-relaxed mb-8 font-quicksand font-semibold antialiased text-justify"
-                        style="text-align: justify; text-justify: inter-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; line-height: 1.85;">
-                        Bienvenue à <strong class="text-sky-500 font-bold">Kids Village Tanger</strong>, un univers
-                        unique conçu pour stimuler l'imagination et la curiosité des enfants. À travers des jeux de
-                        rôle, des petits ateliers, des activités sportives, des ateliers d'arts créatifs et des
-                        installations adaptées aux enfants, ces derniers explorent, apprennent et trouvent leur propre
-                        rythme dans un environnement sûr, chaleureux et confortable.
-                    </p>
-                    <a href="#learn-more"
-                        class="inline-block bg-pink-300 text-gray-800 font-fredoka font-semibold text-lg px-8 py-3 rounded-pill shadow-md hover:-translate-y-1 transition-transform">
-                        En savoir plus
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -375,7 +409,9 @@
                     <div class="activity-card-body">
                         <h3 class="font-fredoka text-xl font-bold text-gray-800 mb-3">🏥 Hôpital</h3>
                         <p class="font-quicksand text-gray-600 text-sm leading-relaxed">
-                            À Kids Village, les enfants découvrent l'univers de l'hôpital en jouant. Ils accueillent les patients, réalisent des consultations, utilisent différents instruments médicaux et explorent les métiers de la santé à travers des jeux de rôle amusants et adaptés à leur âge.
+                            À Kids Village, les enfants découvrent l'univers de l'hôpital en jouant. Ils accueillent les
+                            patients, réalisent des consultations, utilisent différents instruments médicaux et
+                            explorent les métiers de la santé à travers des jeux de rôle amusants et adaptés à leur âge.
                         </p>
                     </div>
                 </div>
@@ -392,7 +428,9 @@
                     <div class="activity-card-body">
                         <h3 class="font-fredoka text-xl font-bold text-gray-800 mb-3">🐾 Pet World</h3>
                         <p class="font-quicksand text-gray-600 text-sm leading-relaxed">
-                            À Kids Village, l'espace Pet World permet aux enfants de découvrir le monde animal en prenant soin de leurs petits compagnons. Nourrir, laver, consulter ou câliner les animaux développe douceur, responsabilité et empathie tout en s'amusant.
+                            À Kids Village, l'espace Pet World permet aux enfants de découvrir le monde animal en
+                            prenant soin de leurs petits compagnons. Nourrir, laver, consulter ou câliner les animaux
+                            développe douceur, responsabilité et empathie tout en s'amusant.
                         </p>
                     </div>
                 </div>
@@ -409,7 +447,9 @@
                     <div class="activity-card-body">
                         <h3 class="font-fredoka text-xl font-bold text-gray-800 mb-3">🛒 Supermarket</h3>
                         <p class="font-quicksand text-gray-600 text-sm leading-relaxed">
-                            À Kids Village, les enfants font leurs courses comme les grands. Ils choisissent les produits dans les rayons, remplissent leur panier puis passent à la caisse pour vivre une expérience ludique favorisant autonomie, imagination et interactions sociales.
+                            À Kids Village, les enfants font leurs courses comme les grands. Ils choisissent les
+                            produits dans les rayons, remplissent leur panier puis passent à la caisse pour vivre une
+                            expérience ludique favorisant autonomie, imagination et interactions sociales.
                         </p>
                     </div>
                 </div>
@@ -427,7 +467,9 @@
                     <div class="activity-card-body">
                         <h3 class="font-fredoka text-xl font-bold text-gray-800 mb-3">🔬 Éveil & Sciences</h3>
                         <p class="font-quicksand text-gray-600 text-sm leading-relaxed">
-                            À Kids Village, les ateliers d'éveil et de sciences invitent les enfants à expérimenter, observer et découvrir. Grâce à des expériences simples et des activités créatives, ils développent leur curiosité, leur esprit d'observation et le plaisir d'apprendre.
+                            À Kids Village, les ateliers d'éveil et de sciences invitent les enfants à expérimenter,
+                            observer et découvrir. Grâce à des expériences simples et des activités créatives, ils
+                            développent leur curiosité, leur esprit d'observation et le plaisir d'apprendre.
                         </p>
                     </div>
                 </div>
@@ -444,7 +486,10 @@
                     <div class="activity-card-body">
                         <h3 class="font-fredoka text-xl font-bold text-gray-800 mb-3">🍔 Restaurant</h3>
                         <p class="font-quicksand text-gray-600 text-sm leading-relaxed">
-                            À Kids Village, l'espace Restaurant permet aux enfants de préparer, servir et partager de délicieux repas dans une ambiance ludique. Grâce aux jeux d'imitation, ils découvrent l'univers de la restauration, développent leur créativité et apprennent à coopérer tout en s'amusant.
+                            À Kids Village, l'espace Restaurant permet aux enfants de préparer, servir et partager de
+                            délicieux repas dans une ambiance ludique. Grâce aux jeux d'imitation, ils découvrent
+                            l'univers de la restauration, développent leur créativité et apprennent à coopérer tout en
+                            s'amusant.
                         </p>
                     </div>
                 </div>
@@ -461,7 +506,9 @@
                     <div class="activity-card-body">
                         <h3 class="font-fredoka text-xl font-bold text-gray-800 mb-3">🎭 Scène de Théâtre</h3>
                         <p class="font-quicksand text-gray-600 text-sm leading-relaxed">
-                            À Kids Village, la scène de théâtre permet aux enfants de devenir chanteurs, danseurs, magiciens, pirates ou princesses. Ils expriment leurs talents, gagnent en confiance et vivent des moments inoubliables à travers des spectacles pleins d'imagination.
+                            À Kids Village, la scène de théâtre permet aux enfants de devenir chanteurs, danseurs,
+                            magiciens, pirates ou princesses. Ils expriment leurs talents, gagnent en confiance et
+                            vivent des moments inoubliables à travers des spectacles pleins d'imagination.
                         </p>
                     </div>
                 </div>
@@ -478,7 +525,9 @@
                     <div class="activity-card-body">
                         <h3 class="font-fredoka text-xl font-bold text-gray-800 mb-3">🎂 Fêtes & Anniversaires</h3>
                         <p class="font-quicksand text-gray-600 text-sm leading-relaxed">
-                            À Kids Village, chaque anniversaire devient un moment magique. Salle privatisée, animations, jeux et formules personnalisées permettent aux familles de choisir la formule qui leur convient pour créer des souvenirs inoubliables avec leurs enfants et leurs invités.
+                            À Kids Village, chaque anniversaire devient un moment magique. Salle privatisée, animations,
+                            jeux et formules personnalisées permettent aux familles de choisir la formule qui leur
+                            convient pour créer des souvenirs inoubliables avec leurs enfants et leurs invités.
                         </p>
                     </div>
                 </div>
@@ -495,7 +544,10 @@
                     <div class="activity-card-body">
                         <h3 class="font-fredoka text-xl font-bold text-gray-800 mb-3">✈️ Avion</h3>
                         <p class="font-quicksand text-gray-600 text-sm leading-relaxed">
-                            À Kids Village, l'espace Avion permet aux enfants de découvrir l'univers de l'aviation à travers des jeux de rôle captivants. Du cockpit à l'espace passagers, en passant par les issues de secours sous forme de toboggans, les enfants embarquent pour une aventure ludique riche en découvertes et en imagination.
+                            À Kids Village, l'espace Avion permet aux enfants de découvrir l'univers de l'aviation à
+                            travers des jeux de rôle captivants. Du cockpit à l'espace passagers, en passant par les
+                            issues de secours sous forme de toboggans, les enfants embarquent pour une aventure ludique
+                            riche en découvertes et en imagination.
                         </p>
                     </div>
                 </div>
@@ -504,8 +556,29 @@
     </section>
 
     <!-- ========== PLAYGROUND BANNER ========== -->
-    <section class="playground-banner w-full overflow-hidden">
-        <img src="img/pictures of children/IMG_0892.JPG.webp" alt="Kids Village Entrance" class="w-full h-full object-cover" loading="lazy">
+    <section class="playground-banner-section w-full py-12 px-4 md:px-10 overflow-hidden relative">
+        <div class="playground-banner-container relative w-full max-w-6xl mx-auto overflow-hidden rounded-3xl shadow-2xl border-8 border-white bg-white">
+            <!-- Left Pastel Block Column to cover ugly wall -->
+            <div class="absolute left-0 top-0 bottom-0 w-[8%] md:w-[10%] z-20 flex flex-col border-r-4 border-white shadow-md">
+                <div class="flex-1 bg-[#ffb7d5]"></div>
+                <div class="flex-1 bg-[#ffe97d]"></div>
+                <div class="flex-1 bg-[#9bf3d0]"></div>
+                <div class="flex-1 bg-[#9ee0fc]"></div>
+                <div class="flex-1 bg-[#ffb57b]"></div>
+            </div>
+
+            <!-- Right Pastel Block Column to cover ugly wall -->
+            <div class="absolute right-0 top-0 bottom-0 w-[8%] md:w-[10%] z-20 flex flex-col border-l-4 border-white shadow-md">
+                <div class="flex-1 bg-[#ffb57b]"></div>
+                <div class="flex-1 bg-[#9ee0fc]"></div>
+                <div class="flex-1 bg-[#9bf3d0]"></div>
+                <div class="flex-1 bg-[#ffe97d]"></div>
+                <div class="flex-1 bg-[#ffb7d5]"></div>
+            </div>
+
+            <img src="img/WhatsApp Image 2026-06-24 at 14.00.27.webp" alt="Kids Village Entrance"
+                class="w-full h-auto block" loading="lazy">
+        </div>
     </section>
 
     <!-- ========== MEDIA GALLERY ========== -->
@@ -1704,7 +1777,7 @@
                                 Vendredi : 14h00 - 21h00<br>
                                 Sam-Dim : 11h00 - 21h00<br>
                                 Vacances scolaires & jours fériés : 11h00 - 21h00<br>
-                                Juillet & Août : 09h00 - 23h00 (7j/7)
+                                Juillet & Août : <br> 09h00 - 23h00 (7j/7)
                             </span>
                         </div>
                     </div>
@@ -1895,7 +1968,7 @@
                 <p class="font-quicksand text-gray-700 text-sm font-bold">
                     &copy; <span id="current-year"></span> Kids Village Tanger. Tous droits réservés.
                     <a href="politique-confidentialite.html">Politique de confidentialité</a>
-                    <a href="https://vertex-digital-digital.vercel.app/">Vertex Digital</a>
+                    <a href="https://vertex-digital-digital.vercel.app/" class="vertex-link">Vertex Digital</a>
                 </p>
             </div>
         </div>
