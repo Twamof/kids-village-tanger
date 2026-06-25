@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const allTestimonials = [
         {
             name: "Sarah Sarah",
-            text: '"Excellente rapport qualité/prix. 50 dhs l\'entrée pour une heure. L\'endroit est propre et le personnel est très sympathique."',
+            text: '"Excellente rapport qualité/prix. 50 MAD l\'entrée pour une heure. L\'endroit est propre et le personnel est très sympathique."',
             color: "#ffb7d5"
         },
         {
