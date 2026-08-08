@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ITEMS_PER_PAGE = 8;
     let currentPage = 1;
     let currentFilter = 'all';
-    let filteredItems = [...galleryItems];
+    let filteredItems = [...galleryItems]; 
 
     function renderGallery() {
         // Filter the items first based on currentFilter
@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     collageSlots.forEach(slot => {
         const imgs = slot.querySelectorAll('img');
-        if (imgs.length <= 1) return;
+        if (imgs.length <= 1) return;  
         
         let currentIdx = 0;
         // Randomize the start interval slightly so they don't all change at the exact same millisecond
@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentIdx = (currentIdx + 1) % imgs.length;
                 imgs[currentIdx].classList.add('active');
             }, 4000); // changes every 4 seconds
-        }, Math.random() * 2000);
+        }, Math.random() * 2000);  
     });
 
     // ─────────────────────────────────────────────
@@ -353,4 +353,32 @@ document.addEventListener('DOMContentLoaded', () => {
         currentYearEl.textContent = new Date().getFullYear();
     }
 
-});
+    // ─────────────────────────────────────────────
+    // 7. REGLEMENT CARDS — READ MORE / VOIR PLUS
+    // ─────────────────────────────────────────────
+    const regToggleBtns = document.querySelectorAll('.reg-toggle-btn');
+    regToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const card = btn.closest('.reg-card');
+            const moreContent = card ? card.querySelector('.reg-more-content') : null;
+            const btnSpan = btn.querySelector('span');
+            const icon = btn.querySelector('i');
+
+            if (moreContent) {
+                const isCurrentlyHidden = moreContent.style.display === 'none' || getComputedStyle(moreContent).display === 'none';
+                if (isCurrentlyHidden) {
+                    moreContent.style.display = 'block';
+                    moreContent.classList.remove('hidden');
+                    if (btnSpan) btnSpan.textContent = 'Voir moins';
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                } else {
+                    moreContent.style.display = 'none';
+                    moreContent.classList.add('hidden');
+                    if (btnSpan) btnSpan.textContent = 'Voir plus';
+                    if (icon) icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+    });
+
+}); 

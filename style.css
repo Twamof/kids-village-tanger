@@ -1615,6 +1615,35 @@ footer {
     font-weight: bold;
 }
 
+.reg-more-content {
+    transition: all 0.3s ease-in-out;
+}
+
+.reg-more-content.hidden {
+    display: none !important;
+}
+
+.reg-toggle-btn {
+    background: transparent;
+    border: none;
+    padding: 6px 0 0 0;
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.reg-toggle-btn i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
 .reg-highlight {
     background-color: #fef9c3;
     padding: 2px 5px;
