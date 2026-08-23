@@ -98,8 +98,31 @@
             </nav>
 
             <!-- CTA Button (Right) -->
-            <div class="nav-actions">
+            <div class="nav-actions flex items-center gap-2 sm:gap-3">
                 <a href="book.html" class="nav-cta desktop-only">Réserver une visite</a>
+
+                <!-- Language Switcher -->
+                <div class="relative inline-block text-left lang-switcher-container">
+                    <button type="button" id="langDropdownBtn" class="flex items-center gap-1.5 bg-white/90 hover:bg-white text-gray-700 font-fredoka font-semibold px-3 py-2 rounded-full border border-pink-200/60 shadow-xs text-sm transition-all focus:outline-none cursor-pointer" aria-expanded="false">
+                        <i class="fa-solid fa-globe text-pink-500 text-base"></i>
+                        <span id="currentLangLabel">FR</span>
+                        <i class="fa-solid fa-chevron-down text-[10px] text-gray-400"></i>
+                    </button>
+                    <div id="langDropdownMenu" class="hidden absolute right-0 mt-2 w-36 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-pink-100 py-1.5 z-50 transition-all duration-200">
+                        <button type="button" onclick="setAppLanguage('fr')" class="w-full text-left px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-pink-50 hover:text-pink-600 flex items-center justify-between transition-colors cursor-pointer">
+                            <span>🇫🇷 Français</span>
+                            <i class="fa-solid fa-check text-pink-500 text-xs lang-check lang-check-fr"></i>
+                        </button>
+                        <button type="button" onclick="setAppLanguage('ar')" class="w-full text-left px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-pink-50 hover:text-pink-600 flex items-center justify-between transition-colors cursor-pointer">
+                            <span>🇲🇦 العربية</span>
+                            <i class="fa-solid fa-check text-pink-500 text-xs lang-check lang-check-ar hidden"></i>
+                        </button>
+                        <button type="button" onclick="setAppLanguage('en')" class="w-full text-left px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-pink-50 hover:text-pink-600 flex items-center justify-between transition-colors cursor-pointer">
+                            <span>🇬🇧 English</span>
+                            <i class="fa-solid fa-check text-pink-500 text-xs lang-check lang-check-en hidden"></i>
+                        </button>
+                    </div>
+                </div>
 
                 <!-- Mobile Menu Toggle -->
                 <button class="mobile-toggle mobile-only" aria-label="Toggle Menu">
@@ -110,6 +133,13 @@
 
         <!-- Mobile Navigation Menu (Hidden by default) -->
         <nav class="mobile-nav-menu">
+            <!-- Mobile Language Selector -->
+            <div class="mobile-lang-bar flex items-center justify-center gap-2 py-3 px-4 bg-pink-50/70 rounded-2xl my-3 mx-4 border border-pink-100/60 shadow-xs">
+                <span class="text-xs font-bold text-gray-600 flex items-center gap-1"><i class="fa-solid fa-globe text-pink-500"></i> Langue:</span>
+                <button type="button" onclick="setAppLanguage('fr')" class="mobile-lang-btn lang-btn-fr px-3 py-1 rounded-full text-xs font-bold bg-pink-500 text-white shadow-xs cursor-pointer">🇫🇷 FR</button>
+                <button type="button" onclick="setAppLanguage('ar')" class="mobile-lang-btn lang-btn-ar px-3 py-1 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 cursor-pointer">🇲🇦 AR</button>
+                <button type="button" onclick="setAppLanguage('en')" class="mobile-lang-btn lang-btn-en px-3 py-1 rounded-full text-xs font-bold bg-white text-gray-700 border border-gray-200 cursor-pointer">🇬🇧 EN</button>
+            </div>
             <a href="index.html#home" class="mobile-link nav-blue">Accueil</a>
             <a href="index.html#about" class="mobile-link nav-green">À propos</a>
             <a href="index.html#activities" class="mobile-link nav-yellow">Activités</a>
@@ -846,6 +876,18 @@
         </div>
     </footer>
 
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr',
+                includedLanguages: 'ar,en,fr',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
 </body>
 

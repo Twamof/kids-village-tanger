@@ -36,6 +36,35 @@ a {
     --text-color: #333333;
 }
 
+/* ── GOOGLE TRANSLATE OVERRIDES ── */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+div.goog-te-toast-modal,
+.goog-te-spinner-pos {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+    position: static !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+    font-size: 0 !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
 /* Responsive Helper Utilities */
 .desktop-only {
     display: none !important;
