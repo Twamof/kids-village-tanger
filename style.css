@@ -65,6 +65,82 @@ body {
     box-shadow: none !important;
 }
 
+/* ── LANGUAGE SWITCHER GLASSMORPHIC STYLING ── */
+.lang-switcher-container {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1.5px solid rgba(255, 183, 213, 0.6) !important;
+    color: #2d3748 !important;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.lang-dropdown-btn:hover {
+    background: rgba(255, 255, 255, 0.95) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 107, 154, 0.25);
+    border-color: rgba(255, 107, 154, 0.8) !important;
+}
+
+.lang-dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    width: 125px;
+    background: rgba(255, 255, 255, 0.45) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.7) !important;
+    border-radius: 18px;
+    padding: 5px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(255, 183, 213, 0.15);
+    z-index: 9999;
+    transition: all 0.2s ease;
+}
+
+.lang-option-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 10px;
+    border: none;
+    background: transparent;
+    color: #2d3748;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 0.82rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lang-option-btn:hover {
+    background: linear-gradient(135deg, #ff6b9a, #ff4785) !important;
+    color: #ffffff !important;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(255, 71, 133, 0.35);
+}
+
+.lang-option-btn:hover .lang-check {
+    color: #ffffff !important;
+}
+
 /* Responsive Helper Utilities */
 .desktop-only {
     display: none !important;
