@@ -37,18 +37,28 @@ a {
 }
 
 /* ── GOOGLE TRANSLATE OVERRIDES ── */
-.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
 .goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
 #goog-gt-tt,
 .goog-te-balloon-frame,
 div.goog-te-toast-modal,
-.goog-te-spinner-pos {
+.goog-te-spinner-pos,
+.goog-tooltip,
+.goog-tooltip:hover,
+#goog-gt-vt {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
 }
 
 body {
     top: 0px !important;
     position: static !important;
+    margin-top: 0px !important;
 }
 
 .goog-te-gadget {

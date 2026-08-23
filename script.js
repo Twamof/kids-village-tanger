@@ -473,3 +473,28 @@ window.setAppLanguage = function(lang) {
         window.location.reload();
     }
 };
+
+// ─────────────────────────────────────────────
+// PERMANENTLY REMOVE GOOGLE TRANSLATE BANNER FRAME & BODY OFFSET
+// ─────────────────────────────────────────────
+const removeGoogleTranslateBar = () => {
+    document.body.style.top = '0px';
+    document.body.style.position = 'static';
+    document.body.style.marginTop = '0px';
+
+    const frames = document.querySelectorAll('.goog-te-banner-frame, iframe.goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame');
+    frames.forEach(frame => {
+        if (frame && frame.parentNode) {
+            frame.parentNode.removeChild(frame);
+        }
+    });
+};
+
+if (document.body) {
+    const observer = new MutationObserver(removeGoogleTranslateBar);
+    observer.observe(document.body, { attributes: true, attributeFilter: ['style'] });
+}
+
+window.addEventListener('load', removeGoogleTranslateBar);
+window.addEventListener('DOMContentLoaded', removeGoogleTranslateBar);
+setInterval(removeGoogleTranslateBar, 300);
