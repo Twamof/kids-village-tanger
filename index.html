@@ -594,8 +594,9 @@
                 <!-- Card 9: Espace PlayStation -->
                 <div class="activity-card border-purple-300" style="--card-hover-bg: #f5f3ff;">
                     <div class="activity-img-wrapper">
-                        <img src="img/pictures of children/WhatsApp Image 2026-06-21 at 22.00.08.webp"
-                            alt="Espace PlayStation" loading="lazy">
+                        <img src="img/pictures of children/play.webp"
+                            alt="Espace PlayStation" loading="lazy"
+                            style="object-fit: cover; object-position: center; transform: scale(1.35);">
                         <div class="activity-icon-badge bg-purple-500">
                             <i class="fa-solid fa-gamepad"></i>
                         </div>
@@ -2018,7 +2019,7 @@
                         Infos pratiques
                     </div>
 
-                    <div class="fun-info-body p-10 pt-16 flex flex-col gap-6">
+                    <div class="fun-info-body p-6 sm:p-8 pt-16 flex flex-col gap-5">
                         <div class="info-item flex items-start gap-4 text-white font-fredoka font-semibold text-lg">
                             <i class="fa-solid fa-phone text-2xl mt-1"></i>
                             <div class="flex flex-col">
@@ -2038,14 +2039,18 @@
                         </div>
                         <div class="info-item flex items-start gap-4 text-white font-fredoka font-semibold text-lg">
                             <i class="fa-regular fa-clock text-2xl mt-1"></i>
-                            <span class="leading-relaxed">
-                                Lundi : Fermé (sauf vacances scolaires, été et jours fériés)<br>
-                                Mar-Jeu : 14h00 - 20h00<br>
-                                Vendredi : 14h00 - 21h00<br>
-                                Sam-Dim : 11h00 - 21h00<br>
-                                Vacances scolaires & jours fériés : 11h00 - 21h00<br>
-                                Juillet & Août : <br> 09h00 - 23h00 (7j/7)
-                            </span>
+                            <div class="flex flex-col gap-1 w-full">
+                                <span class="font-bold mb-1">Horaires d'ouverture :</span>
+                                <div class="leading-relaxed text-sm sm:text-base flex flex-col gap-1 font-semibold">
+                                    <span class="whitespace-nowrap">Lundi - Vendredi : 14h00 - 21h00</span>
+                                    <span class="whitespace-nowrap">Sam - Dim : 11h00 - 21h00</span>
+                                    <span>Vacances scolaires & jours fériés :<br class="sm:hidden"> 11h00 - 21h00</span>
+                                    <span class="whitespace-nowrap">Juillet & Août : 09h00 - 23h00 (7j/7)</span>
+                                </div>
+                                <p class="font-quicksand text-xs opacity-90 leading-snug mt-2 font-normal">
+                                    (Sauf travaux, circonstances exceptionnelles ou Aïd Kebir. Ouverture possible en dehors de ces horaires sur réservation pour les sorties scolaires, les groupes et les événements d’entreprise.)
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
