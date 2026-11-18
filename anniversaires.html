@@ -277,107 +277,252 @@
                 </p>
             </div>
 
-            <!-- Simple Hall Rental Section (New Table) -->
-            <div class="mb-20">
-                <div class="text-center mb-10">
-                    <span
-                        class="inline-block bg-teal-400 text-white font-fredoka font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider mb-3 shadow-sm">
-                        Location Simple 🎈
+            <!-- Tarifs & Offre Section -->
+            <div class="mb-20" id="Tarifs">
+
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <span class="inline-block bg-pink-400 text-white font-fredoka font-bold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider mb-3 shadow-sm">
+                        Notre Offre 🎁
                     </span>
-                    <h3 id="Tarifs" class="font-fredoka text-3xl md:text-4xl font-bold text-gray-800">
-                        Tarifs
+                    <h3 class="font-fredoka text-3xl md:text-4xl font-bold text-gray-800">
+                        Tarifs & Formule Anniversaire
                     </h3>
                 </div>
 
-                <div
-                    class="max-w-4xl mx-auto bg-white rounded-3xl shadow-lg border-2 border-teal-500/10 overflow-hidden">
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-center border-collapse">
-                            <thead>
-                                <tr class="bg-teal-500 text-white">
-                                    <th class="py-4 px-2 sm:px-6 font-fredoka font-bold text-base sm:text-lg border-r border-teal-600/30">
-                                        Options</th>
-                                    <th class="py-4 px-2 sm:px-6 font-fredoka font-bold text-base sm:text-lg">Prix</th>
-                                </tr>
-                            </thead>
-                            <tbody class="font-quicksand font-bold text-gray-700">
-                                <!-- Tarifs d'Anniversaires Mis à Jour :
-                                     - Grande salle (maximum 20 enfants + 5 adultes) - 4h : 4000 MAD
-                                     - Petite salle (maximum 10 enfants + 3 adultes) - 4h : 2800 MAD
-                                     - Grande salle du Mardi au Vendredi (Hors vacances) : 3200 MAD
-                                     - Petite salle du Mardi au Vendredi (Hors vacances) : 2200 MAD
-                                -->
-                                <tr class="border-b border-teal-500/10 hover:bg-slate-50/50 transition-colors">
-                                    <td class="py-4 px-2 sm:px-6 border-r border-teal-500/10 text-sm sm:text-base">
-                                        <span class="block font-bold">Formule Basique – Grande salle (maximum 20 enfants + 5
-                                            adultes) – 4h</span>
-                                        <span class="block text-xs font-normal text-gray-400 mt-1">(Accès parc inclus –
-                                            hors décoration et buffet)</span>
-                                    </td>
-                                    <td class="py-4 px-2 sm:px-6 text-teal-600 font-fredoka text-base sm:text-lg whitespace-nowrap">4000 MAD</td>
-                                </tr>
-                                <tr class="border-b border-teal-500/10 hover:bg-slate-50/50 transition-colors">
-                                    <td class="py-4 px-2 sm:px-6 border-r border-teal-500/10 text-sm sm:text-base">
-                                        <span class="block font-bold">Formule Basique – Petite salle (maximum 10 enfants + 3
-                                            adultes) – 4h</span>
-                                        <span class="block text-xs font-normal text-gray-400 mt-1">(Accès parc inclus –
-                                            hors décoration et buffet)</span>
-                                    </td>
-                                    <td class="py-4 px-2 sm:px-6 text-teal-600 font-fredoka text-base sm:text-lg whitespace-nowrap">2800 MAD</td>
-                                </tr>
-                                <tr class="border-b border-teal-500/10 hover:bg-slate-50/50 transition-colors">
-                                    <td class="py-4 px-2 sm:px-6 border-r border-teal-500/10 text-sm sm:text-base">Adulte supplémentaire</td>
-                                    <td class="py-4 px-2 sm:px-6 text-gray-600 font-fredoka text-sm sm:text-base whitespace-nowrap">50 MAD</td>
-                                </tr>
-                                <tr class="border-b border-teal-500/10 hover:bg-slate-50/50 transition-colors">
-                                    <td class="py-4 px-2 sm:px-6 border-r border-teal-500/10 text-sm sm:text-base">Enfant supplémentaire</td>
-                                    <td class="py-4 px-2 sm:px-6 text-gray-600 font-fredoka text-sm sm:text-base whitespace-nowrap">150 MAD</td>
-                                </tr>
-                                <tr
-                                    class="border-b border-teal-500/10 bg-[#e0f7fa]/60 hover:bg-[#b2ebf2]/60 transition-colors">
-                                    <td class="py-4 px-2 sm:px-6 border-r border-teal-500/10 text-teal-800 font-semibold text-sm sm:text-base">Prix
-                                        Grande salle du Mardi au Vendredi <span class="block text-xs font-normal text-teal-600/80 mt-0.5">(Hors vacances)</span></td>
-                                    <td class="py-4 px-2 sm:px-6 text-teal-700 font-fredoka text-base sm:text-lg whitespace-nowrap">3200 MAD</td>
-                                </tr>
-                                <tr
-                                    class="border-b border-teal-500/10 bg-[#e0f7fa]/60 hover:bg-[#b2ebf2]/60 transition-colors">
-                                    <td class="py-4 px-2 sm:px-6 border-r border-teal-500/10 text-teal-800 font-semibold text-sm sm:text-base">Prix
-                                        Petite salle du Mardi au Vendredi <span class="block text-xs font-normal text-teal-600/80 mt-0.5">(Hors vacances)</span></td>
-                                    <td class="py-4 px-2 sm:px-6 text-teal-700 font-fredoka text-base sm:text-lg whitespace-nowrap">2200 MAD</td>
-                                </tr>
-                                <tr class="border-b border-teal-500/10 hover:bg-slate-50/50 transition-colors">
-                                    <td class="py-4 px-2 sm:px-6 border-r border-teal-500/10 text-sm sm:text-base">1 Heure Supplémentaire gde salle
-                                    </td>
-                                    <td class="py-4 px-2 sm:px-6 text-gray-600 font-fredoka text-sm sm:text-base whitespace-nowrap">800 MAD</td>
-                                </tr>
-                                <tr class="hover:bg-slate-50/50 transition-colors">
-                                    <td class="py-4 px-2 sm:px-6 border-r border-teal-500/10 text-sm sm:text-base">1 Heure Supplémentaire ptte salle
-                                    </td>
-                                    <td class="py-4 px-2 sm:px-6 text-gray-600 font-fredoka text-sm sm:text-base whitespace-nowrap">400 MAD</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <!-- Welcome Message -->
+                <div class="max-w-4xl mx-auto bg-gradient-to-r from-pink-50 via-purple-50 to-pink-50 rounded-3xl p-8 md:p-10 border border-pink-100 shadow-sm mb-10 text-center">
+                    <p class="font-quicksand font-semibold text-gray-700 text-lg leading-relaxed">
+                        Merci d'avoir choisi Kids Village pour célébrer l'anniversaire de votre enfant ou tout autre événement festif 🎂🎉
+                    </p>
+                    <p class="font-quicksand text-gray-600 mt-4 leading-relaxed">
+                        Notre principe est simple : vous laisser un maximum de liberté dans l'organisation de votre événement. Vous pouvez gérer vous-même les différentes prestations et faire appel aux prestataires de votre choix, ou nous confier tout ou partie de l'organisation avec nos prestataires habituels.
+                    </p>
+                </div>
 
-                    <!-- Contact Bar -->
-                    <div
-                        class="bg-teal-50 border-t-2 border-teal-500/10 p-6 text-center flex flex-col md:flex-row items-center justify-between gap-4">
-                        <p class="font-quicksand font-bold text-teal-950">
-                            Pour plus d'informations, merci de nous contacter sur le : <span
-                                class="text-teal-700 font-fredoka text-lg">0614462986</span>
-                        </p>
-                        <div class="flex gap-3">
-                            <a href="tel:0614462986"
-                                class="bg-teal-600 hover:bg-teal-700 text-white font-fredoka font-semibold px-6 py-2.5 rounded-full shadow-md transition-all hover:scale-105 flex items-center gap-2 text-sm">
-                                <i class="fa-solid fa-phone"></i> Appeler
-                            </a>
-                            <a href="https://wa.me/212614462986" target="_blank"
-                                class="bg-green-500 hover:bg-green-600 text-white font-fredoka font-semibold px-6 py-2.5 rounded-full shadow-md transition-all hover:scale-105 flex items-center gap-2 text-sm">
-                                <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
-                            </a>
+                <!-- SALLE PRIVATIVE OFFERTE -->
+                <div class="max-w-4xl mx-auto mb-10">
+                    <div class="bg-white rounded-3xl shadow-lg border-2 border-teal-400/30 overflow-hidden">
+                        <!-- Header -->
+                        <div class="bg-gradient-to-r from-teal-400 to-cyan-400 px-8 py-6 flex items-center gap-4">
+                            <span class="text-4xl">🎁</span>
+                            <div>
+                                <h4 class="font-fredoka font-bold text-white text-2xl">Notre Offre : La Salle Privative Offerte</h4>
+                                <p class="text-teal-50 font-quicksand font-semibold text-sm mt-1">Aucun frais de location de salle !</p>
+                            </div>
+                        </div>
+                        <!-- Body -->
+                        <div class="p-8">
+                            <p class="font-quicksand text-gray-600 leading-relaxed mb-6">
+                                Dans le cadre de notre offre promotionnelle dédiée aux anniversaires, Kids Village met <strong class="text-teal-600">gratuitement</strong> à votre disposition une salle d'anniversaire privative pendant 4 heures, équipée de tables et de chaises.
+                            </p>
+
+                            <!-- Tarif Dégressif -->
+                            <div class="bg-teal-50 rounded-2xl p-6 mb-6 border border-teal-100">
+                                <p class="font-fredoka font-bold text-gray-700 text-lg mb-4 flex items-center gap-2">
+                                    <span class="text-teal-500">💰</span> Tarification dégressive — adultes &amp; enfants au même tarif
+                                </p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div class="bg-white rounded-xl px-5 py-4 flex items-center justify-between shadow-sm border border-teal-100">
+                                        <span class="font-quicksand font-semibold text-gray-600 text-sm">De 1 à 5 personnes</span>
+                                        <span class="font-fredoka font-bold text-teal-600 text-lg whitespace-nowrap ml-3">300 DH<span class="text-xs font-quicksand font-normal text-gray-400"> / pers.</span></span>
+                                    </div>
+                                    <div class="bg-white rounded-xl px-5 py-4 flex items-center justify-between shadow-sm border border-teal-100">
+                                        <span class="font-quicksand font-semibold text-gray-600 text-sm">De 6 à 13 personnes</span>
+                                        <span class="font-fredoka font-bold text-teal-600 text-lg whitespace-nowrap ml-3">250 DH<span class="text-xs font-quicksand font-normal text-gray-400"> / pers.</span></span>
+                                    </div>
+                                    <div class="bg-white rounded-xl px-5 py-4 flex items-center justify-between shadow-sm border border-teal-100">
+                                        <span class="font-quicksand font-semibold text-gray-600 text-sm">De 14 à 19 personnes</span>
+                                        <span class="font-fredoka font-bold text-teal-600 text-lg whitespace-nowrap ml-3">220 DH<span class="text-xs font-quicksand font-normal text-gray-400"> / pers.</span></span>
+                                    </div>
+                                    <div class="bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl px-5 py-4 flex items-center justify-between shadow-md">
+                                        <span class="font-quicksand font-bold text-white text-sm">À partir de 20 personnes</span>
+                                        <span class="font-fredoka font-bold text-white text-lg whitespace-nowrap ml-3">200 DH<span class="text-xs font-quicksand font-normal text-teal-100"> / pers.</span></span>
+                                    </div>
+                                </div>
+                                <p class="font-quicksand font-semibold text-teal-700 text-sm mt-4 bg-teal-100/60 rounded-xl px-4 py-3">
+                                    👉 Le tarif correspondant au palier atteint s'applique à l'ensemble des participants, sans distinction entre adultes et enfants.
+                                </p>
+                            </div>
+
+                            <!-- Salle offerte selon nombre -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                <div class="flex items-start gap-3 bg-pink-50 rounded-2xl p-5 border border-pink-100">
+                                    <span class="text-3xl">🏠</span>
+                                    <div>
+                                        <p class="font-fredoka font-bold text-gray-800 text-base">Jusqu'à 13 personnes</p>
+                                        <p class="font-quicksand font-semibold text-pink-600 text-sm mt-1">Petite salle privative offerte</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 bg-purple-50 rounded-2xl p-5 border border-purple-100">
+                                    <span class="text-3xl">🏠</span>
+                                    <div>
+                                        <p class="font-fredoka font-bold text-gray-800 text-base">À partir de 14 personnes</p>
+                                        <p class="font-quicksand font-semibold text-purple-600 text-sm mt-1">Grande salle privative offerte</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="font-quicksand font-semibold text-gray-500 text-sm text-center italic border-t border-gray-100 pt-5">
+                                Plus le nombre de participants augmente, plus le tarif par personne devient avantageux — tout en bénéficiant gratuitement de votre salle privative pendant 4 heures ✨
+                            </p>
                         </div>
                     </div>
                 </div>
+
+                <!-- DÉCORATION -->
+                <div class="max-w-4xl mx-auto mb-10">
+                    <div class="bg-white rounded-3xl shadow-md border border-pink-100 overflow-hidden">
+                        <div class="bg-gradient-to-r from-pink-400 to-rose-400 px-8 py-5 flex items-center gap-4">
+                            <span class="text-3xl">🎈</span>
+                            <h4 class="font-fredoka font-bold text-white text-xl">Décoration de la Salle</h4>
+                        </div>
+                        <div class="p-8">
+                            <p class="font-quicksand text-gray-600 mb-6 leading-relaxed">
+                                La salle offerte comprend les tables et les chaises, <strong class="text-gray-700">mais pas la décoration</strong>. Deux possibilités s'offrent à vous :
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Option 1 -->
+                                <div class="bg-pink-50 rounded-2xl p-6 border border-pink-100">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <span class="bg-pink-200 text-pink-700 font-fredoka font-bold text-xs px-3 py-1 rounded-full">Option 1</span>
+                                        <span class="font-fredoka font-bold text-gray-800">Vous décorez vous-même</span>
+                                    </div>
+                                    <p class="font-quicksand text-gray-600 text-sm leading-relaxed">
+                                        Réalisez votre propre décoration ou faites intervenir le prestataire de votre choix. Nous vous permettons d'accéder à la salle <strong class="text-pink-600">3 heures avant</strong> le début de l'anniversaire, sans supplément.
+                                    </p>
+                                    <div class="mt-4 bg-white rounded-xl px-4 py-3 border border-pink-100 text-center">
+                                        <span class="font-fredoka font-bold text-green-600 text-lg">Gratuit ✓</span>
+                                    </div>
+                                </div>
+                                <!-- Option 2 -->
+                                <div class="bg-rose-50 rounded-2xl p-6 border border-rose-100">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <span class="bg-rose-200 text-rose-700 font-fredoka font-bold text-xs px-3 py-1 rounded-full">Option 2</span>
+                                        <span class="font-fredoka font-bold text-gray-800">Nous nous en chargeons</span>
+                                    </div>
+                                    <ul class="font-quicksand text-gray-600 text-sm space-y-1.5 mb-4">
+                                        <li class="flex items-center gap-2"><span class="text-base">🎈</span> Décoration avec ballons</li>
+                                        <li class="flex items-center gap-2"><span class="text-base">🎨</span> Personnalisation &amp; impressions thème</li>
+                                        <li class="flex items-center gap-2"><span class="text-base">🍽️</span> Assiettes et verres à thème enfants</li>
+                                        <li class="flex items-center gap-2"><span class="text-base">🎁</span> Boîtes surprises enfants</li>
+                                    </ul>
+                                    <div class="bg-white rounded-xl px-4 py-3 border border-rose-100 flex justify-between items-center">
+                                        <span class="font-quicksand font-semibold text-gray-500 text-xs">Petite salle</span>
+                                        <span class="font-fredoka font-bold text-rose-500 text-base">2 500 DH</span>
+                                    </div>
+                                    <div class="bg-white rounded-xl px-4 py-3 border border-rose-100 flex justify-between items-center mt-2">
+                                        <span class="font-quicksand font-semibold text-gray-500 text-xs">Grande salle</span>
+                                        <span class="font-fredoka font-bold text-rose-500 text-base">3 000 DH</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3-col options: Gâteau / Clown / Collation -->
+                <div class="max-w-4xl mx-auto mb-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- GÂTEAU -->
+                    <div class="bg-white rounded-3xl shadow-md border border-yellow-100 overflow-hidden flex flex-col">
+                        <div class="bg-gradient-to-r from-yellow-400 to-amber-400 px-6 py-4 flex items-center gap-3">
+                            <span class="text-2xl">🎂</span>
+                            <h4 class="font-fredoka font-bold text-white text-lg">Gâteau d'Anniversaire</h4>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <p class="font-quicksand text-gray-600 text-sm leading-relaxed mb-4">
+                                Vous pouvez apporter votre propre gâteau <strong class="text-green-600">sans frais supplémentaires</strong>, ou nous demander de nous en charger.
+                            </p>
+                            <div class="space-y-2">
+                                <div class="bg-yellow-50 rounded-xl px-4 py-3 border border-yellow-100 flex justify-between items-center">
+                                    <span class="font-quicksand font-semibold text-gray-600 text-xs">~10 enfants</span>
+                                    <span class="font-fredoka font-bold text-amber-600">1 500 DH</span>
+                                </div>
+                                <div class="bg-yellow-50 rounded-xl px-4 py-3 border border-yellow-100 flex justify-between items-center">
+                                    <span class="font-quicksand font-semibold text-gray-600 text-xs">~20 enfants</span>
+                                    <span class="font-fredoka font-bold text-amber-600">2 000 DH</span>
+                                </div>
+                            </div>
+                            <p class="font-quicksand text-gray-400 text-xs mt-3 italic">Gâteau personnalisé + cupcakes + sablés assortis au thème</p>
+                        </div>
+                    </div>
+
+                    <!-- CLOWN / ANIMATION -->
+                    <div class="bg-white rounded-3xl shadow-md border border-purple-100 overflow-hidden flex flex-col">
+                        <div class="bg-gradient-to-r from-purple-400 to-violet-400 px-6 py-4 flex items-center gap-3">
+                            <span class="text-2xl">🤡</span>
+                            <h4 class="font-fredoka font-bold text-white text-lg">Animation &amp; Spectacle</h4>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <p class="font-quicksand text-gray-600 text-sm leading-relaxed mb-4">
+                                Faites appel à votre propre animateur, ou confiez-nous l'animation. Notre prestataire propose <strong class="text-purple-600">3 heures d'animation</strong>.
+                            </p>
+                            <div class="bg-purple-50 rounded-xl px-4 py-3 border border-purple-100 flex justify-between items-center mb-3">
+                                <span class="font-quicksand font-semibold text-gray-600 text-xs">3h d'animation</span>
+                                <span class="font-fredoka font-bold text-purple-600">800 DH</span>
+                            </div>
+                            <ul class="font-quicksand text-gray-500 text-xs space-y-1.5">
+                                <li class="flex items-center gap-1.5"><span>🎉</span> Animation des enfants</li>
+                                <li class="flex items-center gap-1.5"><span>🎲</span> Jeux et activités</li>
+                                <li class="flex items-center gap-1.5"><span>🎩</span> Tours de magie</li>
+                                <li class="flex items-center gap-1.5"><span>🎭</span> Petit spectacle</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- COLLATION / RESTAURATION -->
+                    <div class="bg-white rounded-3xl shadow-md border border-orange-100 overflow-hidden flex flex-col">
+                        <div class="bg-gradient-to-r from-orange-400 to-amber-400 px-6 py-4 flex items-center gap-3">
+                            <span class="text-2xl">☕</span>
+                            <h4 class="font-fredoka font-bold text-white text-lg">Collation &amp; Restauration</h4>
+                        </div>
+                        <div class="p-6 flex-grow">
+                            <p class="font-quicksand text-gray-600 text-sm leading-relaxed mb-4">
+                                Vous êtes libres d'apporter et d'organiser vous-même les boissons, jus, thé, café, plateaux de gâteaux, salés ou autres collations.
+                            </p>
+                            <div class="bg-orange-50 rounded-xl px-4 py-3 border border-orange-100 mb-3">
+                                <p class="font-quicksand font-semibold text-gray-600 text-xs">Budget indicatif par adulte :</p>
+                                <p class="font-fredoka font-bold text-orange-500 text-lg mt-1">200 – 300 DH</p>
+                                <p class="font-quicksand text-gray-400 text-xs italic mt-1">selon la consommation et les produits commandés</p>
+                            </div>
+                            <p class="font-quicksand text-gray-500 text-xs">Si vous souhaitez que Kids Village s'en charge, nous organisons les collations selon vos besoins.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMULE LIBRE - conclusion -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-br from-pink-400 via-purple-400 to-violet-500 rounded-3xl p-8 md:p-10 text-white shadow-xl text-center relative overflow-hidden">
+                        <!-- Decorative circles -->
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                        <div class="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
+                        <div class="relative z-10">
+                            <span class="text-5xl block mb-4">🥳</span>
+                            <h4 class="font-fredoka font-bold text-3xl mb-4">Une Formule Libre &amp; Personnalisable</h4>
+                            <p class="font-quicksand font-semibold text-white/90 leading-relaxed max-w-2xl mx-auto mb-6">
+                                Avec notre formule anniversaire, vous ne payez <strong class="text-yellow-200">aucun frais de location de salle</strong> : la salle privative, les tables et les chaises vous sont offertes pendant 4 heures.
+                                Vous payez uniquement l'accès des participants selon notre tarif dégressif.
+                                La décoration, le gâteau, l'animation et la restauration restent entièrement personnalisables.
+                            </p>
+                            <p class="font-quicksand font-bold text-yellow-200 text-lg mb-8">
+                                Toute l'équipe de Kids Village sera heureuse de vous accueillir et souhaite par avance à votre enfant un très joyeux anniversaire ! 🎂🎈🎉
+                            </p>
+                            <div class="flex flex-wrap gap-4 justify-center">
+                                <a href="https://wa.me/212614462986" target="_blank"
+                                    class="bg-white text-pink-600 hover:bg-pink-50 font-fredoka font-bold px-8 py-3.5 rounded-full shadow-lg hover:scale-105 transition-transform flex items-center gap-2 text-base">
+                                    <i class="fa-brands fa-whatsapp text-green-500 text-xl"></i> Réserver sur WhatsApp
+                                </a>
+                                <a href="tel:0614462986"
+                                    class="bg-white/20 hover:bg-white/30 text-white border-2 border-white/40 font-fredoka font-bold px-8 py-3.5 rounded-full hover:scale-105 transition-transform flex items-center gap-2 text-base">
+                                    <i class="fa-solid fa-phone text-sm"></i> Appeler : 0614 46 29 86
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Complete Formulas Section -->
